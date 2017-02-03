@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
+		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
+		EABCC9EA1E4432D9008A9484 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */; };
+		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */,
+				EABCC9EA1E4432D9008A9484 /* libglfw.3.2.dylib in Frameworks */,
+				EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				EABCC9DE1E442D76008A9484 /* GameEngine */,
 				EABCC9DD1E442D76008A9484 /* Products */,
+				EABCC9E61E442E57008A9484 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +67,27 @@
 		EABCC9DE1E442D76008A9484 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				EABCC9ED1E4436E4008A9484 /* Core */,
 				EABCC9DF1E442D76008A9484 /* main.cpp */,
 			);
 			path = GameEngine;
+			sourceTree = "<group>";
+		};
+		EABCC9E61E442E57008A9484 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */,
+				EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */,
+				EABCC9E71E442E57008A9484 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EABCC9ED1E4436E4008A9484 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +244,13 @@
 		EABCC9E41E442D76008A9484 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +258,13 @@
 		EABCC9E51E442D76008A9484 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
