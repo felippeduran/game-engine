@@ -32,6 +32,7 @@
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineObjectPool.cpp; path = Core/EngineObjectPool.cpp; sourceTree = "<group>"; };
 		EA88A0551E7779C100A2B9B6 /* EngineObjectPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineObjectPool.h; path = Core/EngineObjectPool.h; sourceTree = "<group>"; };
+		EA88A05B1E77A2E500A2B9B6 /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/slot_map.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
 				EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */,
 				EA88A0551E7779C100A2B9B6 /* EngineObjectPool.h */,
+				EA88A05B1E77A2E500A2B9B6 /* slot_map.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
