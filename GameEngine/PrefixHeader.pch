@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  GameEngine
+//
+//  Created by Felippe Durán on 3/14/17.
+//  Copyright © 2017 Felippe Durán. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#include <iostream>
+
+typedef long long object_id;
+
+#endif /* PrefixHeader_pch */
