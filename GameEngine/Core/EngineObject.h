@@ -22,6 +22,8 @@ class EngineObject {
 public:
     EngineObjectTransform *getTransform() const;
     
+    object_id getId() const;
+    
     void setActive(bool active);
     bool isActive() const;
     

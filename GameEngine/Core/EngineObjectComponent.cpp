@@ -11,7 +11,7 @@
 #include "EngineObjectPool.h"
 
 EngineObject *EngineObjectComponent::getObject() const {
-    return object;
+    return objectPool->getObject(objectId);
 }
 
 EngineObjectPool *EngineObjectComponent::getObjectPool() const {
@@ -19,7 +19,7 @@ EngineObjectPool *EngineObjectComponent::getObjectPool() const {
 }
 
 EngineObjectTransform *EngineObjectComponent::getTransform() const {
-    return object->getTransform();
+    return getObject()->getTransform();
 }
 
 void EngineObjectComponent::registerComponent() {

@@ -12,6 +12,10 @@
 
 using namespace std;
 
+object_id EngineObject::getId() const {
+    return id;
+}
+
 EngineObjectTransform *EngineObject::getTransform() const {
     return transform;
 }

@@ -17,7 +17,7 @@ class EngineObjectPool;
 
 class EngineObjectComponent {
 public:
-    EngineObjectComponent(EngineObject *object, EngineObjectPool *objectPool) : object(object), objectPool(objectPool) {};
+    EngineObjectComponent(object_id objectId, EngineObjectPool *objectPool) : objectId(objectId), objectPool(objectPool) {};
     virtual ~EngineObjectComponent() {};
     
     EngineObject *getObject() const;
@@ -35,7 +35,7 @@ public:
     void destroy();
     
 protected:
-    EngineObject *object;
+    object_id objectId;
     EngineObjectPool *objectPool;
 };
 

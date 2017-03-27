@@ -13,7 +13,7 @@
 
 class EngineBehaviourComponent : public EngineObjectComponent {
 public:
-    EngineBehaviourComponent(EngineObject *object, EngineObjectPool *objectPool) : EngineObjectComponent(object, objectPool) {};
+    EngineBehaviourComponent(object_id objectId, EngineObjectPool *objectPool) : EngineObjectComponent(objectId, objectPool) {};
     
     void setEnabled(bool enabled);
     bool isEnabled() const;

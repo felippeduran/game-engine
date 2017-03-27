@@ -63,7 +63,7 @@ private:
 
 template <class T> T* EngineObjectPool::addComponent(EngineObject *object) {
     static_assert(std::is_base_of<EngineObjectComponent, T>::value, "Template class is not a EngineObjectComponent!");
-    T *component = new T(object, this);
+    T *component = new T(object->getId(), this);
     object->insertComponent(component);
     return component;
 }
