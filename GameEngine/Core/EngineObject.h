@@ -14,13 +14,13 @@
 
 #include "EngineObjectComponent.h"
 
-class EngineObjectTransform;
+class EngineTransformComponent;
 class EngineObjectPool;
 template <typename T> class slot_map;
 
 class EngineObject {
 public:
-    EngineObjectTransform *getTransform() const;
+    EngineTransformComponent *getTransform() const;
     
     object_id getId() const;
     
@@ -37,7 +37,7 @@ private:
     object_id id;
     bool active;
     EngineObjectPool *objectPool;
-    EngineObjectTransform *transform;
+    EngineTransformComponent *transform;
     std::vector<EngineObjectComponent *> components;
     
     void * operator new   (size_t size) { return ::operator new(size); };

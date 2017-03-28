@@ -12,7 +12,7 @@
 #include <vector>
 
 class EngineObject;
-class EngineObjectTransform;
+class EngineTransformComponent;
 class EngineObjectPool;
 
 class EngineObjectComponent {
@@ -22,7 +22,7 @@ public:
     
     EngineObject *getObject() const;
     EngineObjectPool *getObjectPool() const;
-    EngineObjectTransform *getTransform() const;
+    EngineTransformComponent *getTransform() const;
     
     virtual void update(double dt) = 0;
     

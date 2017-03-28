@@ -18,7 +18,7 @@ EngineObjectPool *EngineObjectComponent::getObjectPool() const {
     return objectPool;
 }
 
-EngineObjectTransform *EngineObjectComponent::getTransform() const {
+EngineTransformComponent *EngineObjectComponent::getTransform() const {
     return getObject()->getTransform();
 }
 
