@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA091A471E88CA140044C3A1 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA091A451E88CA140044C3A1 /* ShaderManager.cpp */; };
+		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
+		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
 		EA88A0561E7779C100A2B9B6 /* EngineObjectPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */; };
 		EA88A0591E777A5A00A2B9B6 /* EngineObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0571E777A5A00A2B9B6 /* EngineObject.cpp */; };
@@ -22,16 +25,22 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		EABCC9DA1E442D76008A9484 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */,
+				EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA091A451E88CA140044C3A1 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = Core/ShaderManager.cpp; sourceTree = "<group>"; };
+		EA091A461E88CA140044C3A1 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = Core/ShaderManager.h; sourceTree = "<group>"; };
+		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
+		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineObjectPool.cpp; path = Core/EngineObjectPool.cpp; sourceTree = "<group>"; };
@@ -67,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA091A481E88CA220044C3A1 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EA091A491E88CA220044C3A1 /* fragment_shader.glsl */,
+				EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		EABCC9D31E442D76008A9484 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EABCC9ED1E4436E4008A9484 /* Core */,
+				EA091A481E88CA220044C3A1 /* Shaders */,
 				EABCC9DF1E442D76008A9484 /* main.cpp */,
 				EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */,
 			);
@@ -107,6 +126,8 @@
 		EABCC9ED1E4436E4008A9484 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA091A451E88CA140044C3A1 /* ShaderManager.cpp */,
+				EA091A461E88CA140044C3A1 /* ShaderManager.h */,
 				EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */,
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
 				EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */,
@@ -185,6 +206,7 @@
 				EA88A05F1E77B17100A2B9B6 /* EngineBehaviourComponent.cpp in Sources */,
 				EA88A0561E7779C100A2B9B6 /* EngineObjectPool.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
+				EA091A471E88CA140044C3A1 /* ShaderManager.cpp in Sources */,
 				EA88A0591E777A5A00A2B9B6 /* EngineObject.cpp in Sources */,
 				EA88A0621E77B59700A2B9B6 /* EngineTransformComponent.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
