@@ -16,7 +16,7 @@ using namespace std;
 void errorCallback(int error, const char* description);
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-int EngineGLFWInitializer::initialize(function<void (float dt)> updateCallback) {
+int EngineGLFWInitializer::initialize() {
     
     glfwSetErrorCallback(errorCallback);
 
@@ -28,7 +28,7 @@ int EngineGLFWInitializer::initialize(function<void (float dt)> updateCallback) 
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     
-    GLFWwindow *window = glfwCreateWindow(800, 600, "GameEngine", nullptr, nullptr);
+    window = glfwCreateWindow(800, 600, "GameEngine", nullptr, nullptr);
     
     int screenWidth, screenHeight;
     glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
@@ -53,6 +53,10 @@ int EngineGLFWInitializer::initialize(function<void (float dt)> updateCallback) 
     
     glViewport(0, 0, screenWidth, screenHeight);
     
+    return 0;
+}
+
+int EngineGLFWInitializer::runLoop(function<void (float)> updateCallback) {
     double lastTime = glfwGetTime();
     while (!glfwWindowShouldClose(window)) {
         

@@ -8,15 +8,24 @@
 
 #include "EngineGLFWInitializer.h"
 #include "EngineObjectPool.h"
+#include "ShaderManager.h"
 
 using namespace std;
 
 static EngineGLFWInitializer initializer;
 static EngineObjectPool objectPool;
+static ShaderManager shaderManager;
 
 int main(int argc, const char * argv[]) {
     
-    initializer.initialize(bind(&EngineObjectPool::update, &objectPool, placeholders::_1));
     
-    return 0;
+    int error = 0;
+    error = initializer.initialize();
+    if (!error) {
+        shaderManager.createProgram("colorShader", "vertex_shader.glsl", "fragment_shader.glsl");
+        
+        error = initializer.runLoop(bind(&EngineObjectPool::update, &objectPool, placeholders::_1));
+    }
+    
+    return error;
 }

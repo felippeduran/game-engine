@@ -11,9 +11,15 @@
 
 #include <functional>
 
+class GLFWwindow;
+
 class EngineGLFWInitializer {
 public:
-    int initialize(std::function<void (float dt)> updateCallback);
+    int initialize();
+    int runLoop(std::function<void (float dt)> updateCallback);
+    
+private:
+    GLFWwindow *window;
 };
 
 #endif /* EngineGLFWInitializer_h */
