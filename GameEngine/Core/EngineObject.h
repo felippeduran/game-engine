@@ -49,8 +49,8 @@ private:
     
     void insertComponent(EngineObjectComponent *component);
     void removeComponent(EngineObjectComponent *component);
-    void onRegistered() const;
-    void onUnregistered() const;
+    void registerComponents() const;
+    void unregisterComponents() const;
     
     friend class slot_map<EngineObject>;
     friend class EngineLoop;

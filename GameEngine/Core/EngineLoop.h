@@ -24,9 +24,6 @@ public:
     EngineObject* getObject(object_id id);
     void destroyObject(object_id id);
     
-    void registerObject(object_id id);
-    void unregisterObject(object_id id);
-    
     template <class T> T *addComponent(EngineObject *object);
     void destroyComponent(EngineObjectComponent *component);
     
@@ -34,9 +31,6 @@ public:
     void unregisterComponent(EngineObjectComponent *component);
     
 private:
-    std::set<object_id> registeredObjects;
-    std::set<object_id> registeringObjects;
-    std::set<object_id> unregisteringObjects;
     std::set<object_id> destroyedObjects;
     slot_map<EngineObject> objects;
     
@@ -45,8 +39,6 @@ private:
     std::set<EngineObjectComponent *> unregisteringComponents;
     std::set<EngineObjectComponent *> destroyedComponents;
     
-    void registerObjects();
-    void unregisterObjects();
     void unregisterComponents();
     void registerComponents();
     

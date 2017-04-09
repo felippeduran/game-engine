@@ -24,8 +24,8 @@ void EngineObject::setActive(bool active) {
     if (this->active != active) {
         this->active = active;
         std::cout << "EngineObject set active to " << active << "!" << std::endl;
-        if (active) engineLoop->registerObject(id);
-        else engineLoop->unregisterObject(id);
+        if (active) registerComponents();
+        else unregisterComponents();
     }
 }
 
@@ -51,14 +51,14 @@ void EngineObject::removeComponent(EngineObjectComponent *component) {
     component->unregisterComponent();
 }
 
-void EngineObject::onRegistered() const {
+void EngineObject::registerComponents() const {
     std::cout << "EngineObject register components!" << std::endl;
     for (EngineObjectComponent *component : components) {
         component->registerComponent();
     }
 }
 
-void EngineObject::onUnregistered() const {
+void EngineObject::unregisterComponents() const {
     std::cout << "EngineObject unregister components!" << std::endl;
     for (EngineObjectComponent *component : components) {
         component->unregisterComponent();

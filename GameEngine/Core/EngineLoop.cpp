@@ -15,7 +15,6 @@
 object_id EngineLoop::createObject() {
     object_id id = objects.createObject();
     getObject(id)->setEngineLoop(this);
-    registerObject(id);
     return id;
 }
 
@@ -25,14 +24,6 @@ EngineObject* EngineLoop::getObject(object_id id) {
 
 void EngineLoop::destroyObject(object_id id) {
     destroyedObjects.insert(id);
-}
-
-void EngineLoop::registerObject(object_id id) {
-    if (registeredObjects.find(id) == registeredObjects.end()) registeringObjects.insert(id);
-}
-
-void EngineLoop::unregisterObject(object_id id) {
-    if (registeredObjects.find(id) != registeredObjects.end()) unregisteringObjects.insert(id);
 }
 
 void EngineLoop::destroyComponent(EngineObjectComponent *component) {
@@ -49,12 +40,10 @@ void EngineLoop::unregisterComponent(EngineObjectComponent *component) {
 
 void EngineLoop::update(double dt) {
     std::cout << "EngineLoop update!" << " dt: " << dt << std::endl;
-    registerObjects();
     registerComponents();
     
     updateRegisteredComponents(dt);
     
-    unregisterObjects();
     unregisterComponents();
     
     std::cout << "EngineLoop destruction phase!" << " dt: " << dt << std::endl;
@@ -64,26 +53,6 @@ void EngineLoop::update(double dt) {
     destroyComponents();
     
     std::cout << std::endl << std::endl;
-}
-
-void EngineLoop::unregisterObjects() {
-    std::cout << "EngineLoop unregister " << unregisteringObjects.size() << " objects!" << std::endl;
-    for (object_id id : unregisteringObjects) {
-        getObject(id)->onUnregistered();
-    }
-    
-    registeredObjects.erase(unregisteringObjects.begin(), unregisteringObjects.end());
-    unregisteringObjects.clear();
-}
-
-void EngineLoop::registerObjects() {
-    std::cout << "EngineLoop register " << registeringObjects.size() << " objects!" << std::endl;
-    for (object_id id : registeringObjects) {
-        getObject(id)->onRegistered();
-    }
-    
-    registeredObjects.insert(registeringObjects.begin(), registeringObjects.end());
-    registeringObjects.clear();
 }
 
 void EngineLoop::unregisterComponents() {
@@ -120,7 +89,6 @@ void EngineLoop::cleanupDestroyedObjects() {
         for (EngineObjectComponent *component : object->getComponents<EngineObjectComponent>()) {
             destroyComponent(component);
         }
-        registeredObjects.erase(id);
     }
 }
 
