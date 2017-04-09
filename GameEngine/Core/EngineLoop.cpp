@@ -93,7 +93,7 @@ void EngineLoop::cleanupDestroyedObjects() {
 }
 
 void EngineLoop::cleanupDestroyedComponents() {
-    std::cout << "EngineLoop cleanup " << destroyedObjects.size() << " destroyed components!" << std::endl;
+    std::cout << "EngineLoop cleanup " << destroyedComponents.size() << " destroyed components!" << std::endl;
     for (EngineObjectComponent *component : destroyedComponents) {
         unregisterComponent(component);
     }
