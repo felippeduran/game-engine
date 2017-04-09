@@ -7,14 +7,14 @@
 //
 
 #include "EngineBehaviourComponent.h"
-#include "EngineObjectPool.h"
+#include "EngineLoop.h"
 
 void EngineBehaviourComponent::setEnabled(bool enabled) {
     if (this->enabled != enabled) {
         this->enabled = enabled;
         std::cout << "EngineObjectBehaviour set enabled to " << enabled << "!" << std::endl;
-        if (enabled) objectPool->registerComponent(this);
-        else objectPool->unregisterComponent(this);
+        if (enabled) engineLoop->registerComponent(this);
+        else engineLoop->unregisterComponent(this);
     }
 }
 

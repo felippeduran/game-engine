@@ -11,7 +11,7 @@
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
-		EA88A0561E7779C100A2B9B6 /* EngineObjectPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */; };
+		EA88A0561E7779C100A2B9B6 /* EngineLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */; };
 		EA88A0591E777A5A00A2B9B6 /* EngineObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0571E777A5A00A2B9B6 /* EngineObject.cpp */; };
 		EA88A05F1E77B17100A2B9B6 /* EngineBehaviourComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A05D1E77B17100A2B9B6 /* EngineBehaviourComponent.cpp */; };
 		EA88A0621E77B59700A2B9B6 /* EngineTransformComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0601E77B59700A2B9B6 /* EngineTransformComponent.cpp */; };
@@ -43,11 +43,10 @@
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
-		EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineObjectPool.cpp; path = Core/EngineObjectPool.cpp; sourceTree = "<group>"; };
-		EA88A0551E7779C100A2B9B6 /* EngineObjectPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineObjectPool.h; path = Core/EngineObjectPool.h; sourceTree = "<group>"; };
+		EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineLoop.cpp; path = Core/EngineLoop.cpp; sourceTree = "<group>"; };
+		EA88A0551E7779C100A2B9B6 /* EngineLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineLoop.h; path = Core/EngineLoop.h; sourceTree = "<group>"; };
 		EA88A0571E777A5A00A2B9B6 /* EngineObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineObject.cpp; path = Core/EngineObject.cpp; sourceTree = "<group>"; };
 		EA88A0581E777A5A00A2B9B6 /* EngineObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineObject.h; path = Core/EngineObject.h; sourceTree = "<group>"; };
-		EA88A05B1E77A2E500A2B9B6 /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/slot_map.h; sourceTree = "<group>"; };
 		EA88A05D1E77B17100A2B9B6 /* EngineBehaviourComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineBehaviourComponent.cpp; path = Core/EngineBehaviourComponent.cpp; sourceTree = "<group>"; };
 		EA88A05E1E77B17100A2B9B6 /* EngineBehaviourComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineBehaviourComponent.h; path = Core/EngineBehaviourComponent.h; sourceTree = "<group>"; };
 		EA88A0601E77B59700A2B9B6 /* EngineTransformComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineTransformComponent.cpp; path = Core/EngineTransformComponent.cpp; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,15 +126,15 @@
 		EABCC9ED1E4436E4008A9484 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EAFB15DA1E8B602C0026EC1B /* CustomContainers */,
 				EA091A451E88CA140044C3A1 /* ShaderManager.cpp */,
 				EA091A461E88CA140044C3A1 /* ShaderManager.h */,
 				EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */,
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
-				EA88A0541E7779C100A2B9B6 /* EngineObjectPool.cpp */,
-				EA88A0551E7779C100A2B9B6 /* EngineObjectPool.h */,
+				EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */,
+				EA88A0551E7779C100A2B9B6 /* EngineLoop.h */,
 				EA88A0571E777A5A00A2B9B6 /* EngineObject.cpp */,
 				EA88A0581E777A5A00A2B9B6 /* EngineObject.h */,
-				EA88A05B1E77A2E500A2B9B6 /* slot_map.h */,
 				EA88A0631E78B98800A2B9B6 /* EngineObjectComponent.cpp */,
 				EA88A0641E78B98800A2B9B6 /* EngineObjectComponent.h */,
 				EA88A0601E77B59700A2B9B6 /* EngineTransformComponent.cpp */,
@@ -143,6 +143,14 @@
 				EA88A05E1E77B17100A2B9B6 /* EngineBehaviourComponent.h */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		EAFB15DA1E8B602C0026EC1B /* CustomContainers */ = {
+			isa = PBXGroup;
+			children = (
+				EAFB15DB1E8B60740026EC1B /* slot_map.h */,
+			);
+			name = CustomContainers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +212,7 @@
 			files = (
 				EA88A0651E78B98800A2B9B6 /* EngineObjectComponent.cpp in Sources */,
 				EA88A05F1E77B17100A2B9B6 /* EngineBehaviourComponent.cpp in Sources */,
-				EA88A0561E7779C100A2B9B6 /* EngineObjectPool.cpp in Sources */,
+				EA88A0561E7779C100A2B9B6 /* EngineLoop.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
 				EA091A471E88CA140044C3A1 /* ShaderManager.cpp in Sources */,
 				EA88A0591E777A5A00A2B9B6 /* EngineObject.cpp in Sources */,

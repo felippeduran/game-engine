@@ -15,7 +15,7 @@
 #include "EngineObjectComponent.h"
 
 class EngineTransformComponent;
-class EngineObjectPool;
+class EngineLoop;
 template <typename T> class slot_map;
 
 class EngineObject {
@@ -36,7 +36,7 @@ public:
 private:
     object_id id;
     bool active;
-    EngineObjectPool *objectPool;
+    EngineLoop *engineLoop;
     EngineTransformComponent *transform;
     std::vector<EngineObjectComponent *> components;
     
@@ -45,7 +45,7 @@ private:
     void   operator delete   (void *p) { return ::operator delete(p); };
     void   operator delete[] (void *p) { return ::operator delete(p); };
     
-    void setObjectPool(EngineObjectPool *objectPool);
+    void setEngineLoop(EngineLoop *engineLoop);
     
     void insertComponent(EngineObjectComponent *component);
     void removeComponent(EngineObjectComponent *component);
@@ -53,15 +53,15 @@ private:
     void onUnregistered() const;
     
     friend class slot_map<EngineObject>;
-    friend class EngineObjectPool;
+    friend class EngineLoop;
 };
 
 
-#include "EngineObjectPool.h"
+#include "EngineLoop.h"
 
 template <class T> T *EngineObject::addComponent() {
     static_assert(std::is_base_of<EngineObjectComponent, T>::value, "Template class is not a EngineObjectComponent!");
-    return objectPool->addComponent<T>(this);
+    return engineLoop->addComponent<T>(this);
 };
 
 template <class T> T *EngineObject::getComponent() const {

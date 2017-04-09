@@ -8,14 +8,14 @@
 
 #include "EngineObjectComponent.h"
 #include "EngineObject.h"
-#include "EngineObjectPool.h"
+#include "EngineLoop.h"
 
 EngineObject *EngineObjectComponent::getObject() const {
-    return objectPool->getObject(objectId);
+    return engineLoop->getObject(objectId);
 }
 
-EngineObjectPool *EngineObjectComponent::getObjectPool() const {
-    return objectPool;
+EngineLoop *EngineObjectComponent::getEngineLoop() const {
+    return engineLoop;
 }
 
 EngineTransformComponent *EngineObjectComponent::getTransform() const {
@@ -24,14 +24,14 @@ EngineTransformComponent *EngineObjectComponent::getTransform() const {
 
 void EngineObjectComponent::registerComponent() {
     std::cout << "EngineObjectComponent register component!" << std::endl;
-    objectPool->registerComponent(this);
+    engineLoop->registerComponent(this);
 }
 
 void EngineObjectComponent::unregisterComponent() {
     std::cout << "EngineObjectComponent unregister component!" << std::endl;
-    objectPool->unregisterComponent(this);
+    engineLoop->unregisterComponent(this);
 }
 
 void EngineObjectComponent::destroy() {
-    objectPool->destroyComponent(this);
+    engineLoop->destroyComponent(this);
 }

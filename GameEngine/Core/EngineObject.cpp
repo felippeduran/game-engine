@@ -7,7 +7,7 @@
 //
 
 #include "EngineObject.h"
-#include "EngineObjectPool.h"
+#include "EngineLoop.h"
 #include "EngineObjectComponent.h"
 
 using namespace std;
@@ -24,8 +24,8 @@ void EngineObject::setActive(bool active) {
     if (this->active != active) {
         this->active = active;
         std::cout << "EngineObject set active to " << active << "!" << std::endl;
-        if (active) objectPool->registerObject(id);
-        else objectPool->unregisterObject(id);
+        if (active) engineLoop->registerObject(id);
+        else engineLoop->unregisterObject(id);
     }
 }
 
@@ -33,12 +33,12 @@ bool EngineObject::isActive() const {
     return active;
 }
 
-void EngineObject::setObjectPool(EngineObjectPool *objectPool) {
-    this->objectPool = objectPool;
+void EngineObject::setEngineLoop(EngineLoop *engineLoop) {
+    this->engineLoop = engineLoop;
 }
 
 void EngineObject::destroy() {
-    objectPool->destroyObject(id);
+    engineLoop->destroyObject(id);
 }
 
 void EngineObject::insertComponent(EngineObjectComponent *component) {

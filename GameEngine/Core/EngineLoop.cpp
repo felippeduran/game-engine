@@ -1,62 +1,63 @@
 //
-//  EngineObjectPool.cpp
+//  EngineLoop.cpp
 //  GameEngine
 //
 //  Created by Felippe Durán on 3/13/17.
 //  Copyright © 2017 Felippe Durán. All rights reserved.
 //
 
-#include "EngineObjectPool.h"
+#include "EngineLoop.h"
 #include "EngineObject.h"
 #include "EngineObjectComponent.h"
 
-object_id EngineObjectPool::createObject() {
+#include "EngineTransformComponent.h"
+
+object_id EngineLoop::createObject() {
     object_id id = objects.createObject();
-    getObject(id)->setObjectPool(this);
+    getObject(id)->setEngineLoop(this);
     registerObject(id);
     return id;
 }
 
-EngineObject* EngineObjectPool::getObject(object_id id) {
+EngineObject* EngineLoop::getObject(object_id id) {
     return objects.getObject(id);
 }
 
-void EngineObjectPool::destroyObject(object_id id) {
+void EngineLoop::destroyObject(object_id id) {
     destroyedObjects.insert(id);
 }
 
-void EngineObjectPool::registerObject(object_id id) {
+void EngineLoop::registerObject(object_id id) {
     if (registeredObjects.find(id) == registeredObjects.end()) registeringObjects.insert(id);
 }
 
-void EngineObjectPool::unregisterObject(object_id id) {
+void EngineLoop::unregisterObject(object_id id) {
     if (registeredObjects.find(id) != registeredObjects.end()) unregisteringObjects.insert(id);
 }
 
-void EngineObjectPool::destroyComponent(EngineObjectComponent *component) {
+void EngineLoop::destroyComponent(EngineObjectComponent *component) {
     destroyedComponents.insert(component);
 }
 
-void EngineObjectPool::registerComponent(EngineObjectComponent *component) {
+void EngineLoop::registerComponent(EngineObjectComponent *component) {
     if (registeredComponents.find(component) == registeredComponents.end()) registeringComponents.insert(component);
 }
 
-void EngineObjectPool::unregisterComponent(EngineObjectComponent *component) {
+void EngineLoop::unregisterComponent(EngineObjectComponent *component) {
     if (registeredComponents.find(component) != registeredComponents.end()) unregisteringComponents.insert(component);
 }
 
-void EngineObjectPool::update(double dt) {
-    std::cout << "EngineObjectPool update!" << " dt: " << dt << std::endl;
+void EngineLoop::update(double dt) {
+    std::cout << "EngineLoop update!" << " dt: " << dt << std::endl;
     registerObjects();
     registerComponents();
     
-    updateTransforms();
     updateRegisteredComponents(dt);
     
     unregisterObjects();
     unregisterComponents();
     
-    std::cout << "EngineObjectPool destruction phase!" << " dt: " << dt << std::endl;
+    std::cout << "EngineLoop destruction phase!" << " dt: " << dt << std::endl;
     cleanupDestroyedObjects();
     cleanupDestroyedComponents();
     destroyObjects();
@@ -65,8 +66,8 @@ void EngineObjectPool::update(double dt) {
     std::cout << std::endl << std::endl;
 }
 
-void EngineObjectPool::unregisterObjects() {
-    std::cout << "EngineObjectPool unregister " << unregisteringObjects.size() << " objects!" << std::endl;
+void EngineLoop::unregisterObjects() {
+    std::cout << "EngineLoop unregister " << unregisteringObjects.size() << " objects!" << std::endl;
     for (object_id id : unregisteringObjects) {
         getObject(id)->onUnregistered();
     }
@@ -75,8 +76,8 @@ void EngineObjectPool::unregisterObjects() {
     unregisteringObjects.clear();
 }
 
-void EngineObjectPool::registerObjects() {
-    std::cout << "EngineObjectPool register " << registeringObjects.size() << " objects!" << std::endl;
+void EngineLoop::registerObjects() {
+    std::cout << "EngineLoop register " << registeringObjects.size() << " objects!" << std::endl;
     for (object_id id : registeringObjects) {
         getObject(id)->onRegistered();
     }
@@ -85,8 +86,8 @@ void EngineObjectPool::registerObjects() {
     registeringObjects.clear();
 }
 
-void EngineObjectPool::unregisterComponents() {
-    std::cout << "EngineObjectPool unregister " << unregisteringComponents.size() << " components!" << std::endl;
+void EngineLoop::unregisterComponents() {
+    std::cout << "EngineLoop unregister " << unregisteringComponents.size() << " components!" << std::endl;
     for (EngineObjectComponent *component : unregisteringComponents) {
         component->onUnregistered();
         registeredComponents.erase(component);
@@ -94,8 +95,8 @@ void EngineObjectPool::unregisterComponents() {
     unregisteringComponents.clear();
 }
 
-void EngineObjectPool::registerComponents() {
-    std::cout << "EngineObjectPool register " << registeringComponents.size() << " components!" << std::endl;
+void EngineLoop::registerComponents() {
+    std::cout << "EngineLoop register " << registeringComponents.size() << " components!" << std::endl;
     for (EngineObjectComponent *component : registeringComponents) {
         component->onRegistered();
     }
@@ -105,22 +106,15 @@ void EngineObjectPool::registerComponents() {
 }
 
 
-void EngineObjectPool::updateRegisteredComponents(double dt) {
-    std::cout << "EngineObjectPool update " << registeredComponents.size() << " components!" << std::endl;
+void EngineLoop::updateRegisteredComponents(double dt) {
+    std::cout << "EngineLoop update " << registeredComponents.size() << " components!" << std::endl;
     for (EngineObjectComponent *component : registeredComponents) {
         component->update(dt);
     }
 }
 
-void EngineObjectPool::updateTransforms() {
-    std::cout << "EngineObjectPool update " << registeredObjects.size() << " transforms!" << std::endl;
-    for (object_id id : registeredObjects) {
-        objects.getObject(id)->getTransform();
-    }
-}
-
-void EngineObjectPool::cleanupDestroyedObjects() {
-    std::cout << "EngineObjectPool cleanup " << destroyedObjects.size() << " destroyed objects!" << std::endl;
+void EngineLoop::cleanupDestroyedObjects() {
+    std::cout << "EngineLoop cleanup " << destroyedObjects.size() << " destroyed objects!" << std::endl;
     for (object_id id : destroyedObjects) {
         EngineObject *object = getObject(id);
         for (EngineObjectComponent *component : object->getComponents<EngineObjectComponent>()) {
@@ -130,24 +124,24 @@ void EngineObjectPool::cleanupDestroyedObjects() {
     }
 }
 
-void EngineObjectPool::cleanupDestroyedComponents() {
-    std::cout << "EngineObjectPool cleanup " << destroyedObjects.size() << " destroyed components!" << std::endl;
+void EngineLoop::cleanupDestroyedComponents() {
+    std::cout << "EngineLoop cleanup " << destroyedObjects.size() << " destroyed components!" << std::endl;
     for (EngineObjectComponent *component : destroyedComponents) {
         unregisterComponent(component);
     }
     unregisterComponents();
 }
 
-void EngineObjectPool::destroyObjects() {
-    std::cout << "EngineObjectPool purge " << destroyedObjects.size() << " objects!" << std::endl;
+void EngineLoop::destroyObjects() {
+    std::cout << "EngineLoop purge " << destroyedObjects.size() << " objects!" << std::endl;
     for (object_id id : destroyedObjects) {
         objects.destroyObject(id);
     }
     destroyedObjects.clear();
 }
 
-void EngineObjectPool::destroyComponents() {
-    std::cout << "EngineObjectPool purge " << destroyedComponents.size() << " components!" << std::endl;
+void EngineLoop::destroyComponents() {
+    std::cout << "EngineLoop purge " << destroyedComponents.size() << " components!" << std::endl;
     for (EngineObjectComponent *component : destroyedComponents) {
         delete component;
     }

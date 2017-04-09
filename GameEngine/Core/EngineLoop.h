@@ -1,13 +1,13 @@
 //
-//  EngineObjectPool.h
+//  EngineLoop.h
 //  GameEngine
 //
 //  Created by Felippe Durán on 3/13/17.
 //  Copyright © 2017 Felippe Durán. All rights reserved.
 //
 
-#ifndef EngineObjectPool_h
-#define EngineObjectPool_h
+#ifndef EngineLoop_h
+#define EngineLoop_h
 
 #include <set>
 #include <vector>
@@ -16,7 +16,7 @@
 class EngineObject;
 class EngineObjectComponent;
 
-class EngineObjectPool {
+class EngineLoop {
 public:    
     void update(double dt);
     
@@ -51,7 +51,6 @@ private:
     void registerComponents();
     
     void updateRegisteredComponents(double dt);
-    void updateTransforms();
     void cleanupDestroyedObjects();
     void cleanupDestroyedComponents();
     void destroyObjects();
@@ -61,11 +60,11 @@ private:
 
 #include "EngineObject.h"
 
-template <class T> T* EngineObjectPool::addComponent(EngineObject *object) {
+template <class T> T* EngineLoop::addComponent(EngineObject *object) {
     static_assert(std::is_base_of<EngineObjectComponent, T>::value, "Template class is not a EngineObjectComponent!");
     T *component = new T(object->getId(), this);
     object->insertComponent(component);
     return component;
 }
 
-#endif /* EngineObjectPool_h */
+#endif /* EngineLoop_h */

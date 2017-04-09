@@ -13,18 +13,18 @@
 
 class EngineObject;
 class EngineTransformComponent;
-class EngineObjectPool;
+class EngineLoop;
 
 class EngineObjectComponent {
 public:
-    EngineObjectComponent(object_id objectId, EngineObjectPool *objectPool) : objectId(objectId), objectPool(objectPool) {};
+    EngineObjectComponent(object_id objectId, EngineLoop *engineLoop) : objectId(objectId), engineLoop(engineLoop) {};
     virtual ~EngineObjectComponent() {};
     
     EngineObject *getObject() const;
-    EngineObjectPool *getObjectPool() const;
+    EngineLoop *getEngineLoop() const;
     EngineTransformComponent *getTransform() const;
     
-    virtual void update(double dt) = 0;
+    virtual void update(double dt) {};
     
     virtual void onUnregistered() {};
     virtual void onRegistered() {};
@@ -36,7 +36,7 @@ public:
     
 protected:
     object_id objectId;
-    EngineObjectPool *objectPool;
+    EngineLoop *engineLoop;
 };
 
 #endif /* EngineObjectComponent_h */
