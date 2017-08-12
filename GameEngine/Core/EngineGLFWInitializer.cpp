@@ -22,6 +22,7 @@ int EngineGLFWInitializer::initialize() {
 
     glfwInit();
     
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -49,6 +50,11 @@ int EngineGLFWInitializer::initialize() {
         return -1;
     }
     
+    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+    std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
+    std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
+    
     glfwSwapInterval(1);
     
     glViewport(0, 0, screenWidth, screenHeight);
@@ -60,12 +66,12 @@ int EngineGLFWInitializer::runLoop(function<void (float)> updateCallback) {
     double lastTime = glfwGetTime();
     while (!glfwWindowShouldClose(window)) {
         
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
         double time = glfwGetTime();
         updateCallback(time - lastTime);
         lastTime = time;
-        
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glfwSwapBuffers(window);
         glfwPollEvents();
