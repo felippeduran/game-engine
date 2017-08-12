@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
 		EA88A0561E7779C100A2B9B6 /* EngineLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
-		EABCC9EA1E4432D9008A9484 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EAFE82281EC95E72007C5743 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE82261EC95E72007C5743 /* Program.cpp */; };
 		EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */; };
@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
+		EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../../usr/local/Cellar/glfw/HEAD-3ee7f8f/lib/libglfw.3.3.dylib"; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineLoop.cpp; path = Core/EngineLoop.cpp; sourceTree = "<group>"; };
@@ -58,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */,
 				EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */,
-				EABCC9EA1E4432D9008A9484 /* libglfw.3.2.dylib in Frameworks */,
 				EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +108,7 @@
 		EABCC9E61E442E57008A9484 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */,
 				EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */,
 				EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */,
 				EABCC9E71E442E57008A9484 /* OpenGL.framework */,
@@ -314,6 +316,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
+					"/usr/local/Cellar/glfw/HEAD-3ee7f8f/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -332,6 +335,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
+					"/usr/local/Cellar/glfw/HEAD-3ee7f8f/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
