@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA091A471E88CA140044C3A1 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA091A451E88CA140044C3A1 /* ShaderManager.cpp */; };
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
@@ -16,6 +15,8 @@
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EA1E4432D9008A9484 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
+		EAFE82281EC95E72007C5743 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE82261EC95E72007C5743 /* Program.cpp */; };
+		EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +34,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA091A451E88CA140044C3A1 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = Core/ShaderManager.cpp; sourceTree = "<group>"; };
-		EA091A461E88CA140044C3A1 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = Core/ShaderManager.h; sourceTree = "<group>"; };
 		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
@@ -48,6 +47,10 @@
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
+		EAFE82261EC95E72007C5743 /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Program.cpp; path = Core/Rendering/Program.cpp; sourceTree = "<group>"; };
+		EAFE82271EC95E72007C5743 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Program.h; path = Core/Rendering/Program.h; sourceTree = "<group>"; };
+		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = Core/Rendering/ShaderManager.cpp; sourceTree = "<group>"; };
+		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = Core/Rendering/ShaderManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				EAFB15DA1E8B602C0026EC1B /* CustomContainers */,
-				EA091A451E88CA140044C3A1 /* ShaderManager.cpp */,
-				EA091A461E88CA140044C3A1 /* ShaderManager.h */,
+				EAFE82251EC95E54007C5743 /* Rendering */,
 				EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */,
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
 				EA88A0541E7779C100A2B9B6 /* EngineLoop.cpp */,
@@ -131,6 +133,17 @@
 				EAFB15DB1E8B60740026EC1B /* slot_map.h */,
 			);
 			name = CustomContainers;
+			sourceTree = "<group>";
+		};
+		EAFE82251EC95E54007C5743 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE82261EC95E72007C5743 /* Program.cpp */,
+				EAFE82271EC95E72007C5743 /* Program.h */,
+				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
+				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
+			);
+			name = Rendering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFE82281EC95E72007C5743 /* Program.cpp in Sources */,
 				EA88A0561E7779C100A2B9B6 /* EngineLoop.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
-				EA091A471E88CA140044C3A1 /* ShaderManager.cpp in Sources */,
+				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
