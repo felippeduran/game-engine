@@ -7,24 +7,20 @@
 //
 
 #include "EngineGLFWInitializer.h"
-#include "EngineLoop.h"
 #include "ShaderManager.h"
+#include "Application.h"
 
 using namespace std;
 
-static EngineGLFWInitializer initializer;
-static EngineLoop engineLoop;
-static ShaderManager shaderManager;
-
 int main(int argc, const char * argv[]) {
     
+    EngineGLFWInitializer initializer;
     
     int error = 0;
     error = initializer.initialize();
     if (!error) {
-        shaderManager.createProgram("colorShader", "vertex_shader.glsl", "fragment_shader.glsl");
-        
-        error = initializer.runLoop(bind(&EngineLoop::update, &engineLoop, placeholders::_1));
+        Application application;
+        error = initializer.runLoop(bind(&Application::update, &application, placeholders::_1));
     }
     
     return error;

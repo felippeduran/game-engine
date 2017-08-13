@@ -7,11 +7,16 @@
 //
 
 #include "Application.h"
+#include "ShaderManager.h"
 
 using namespace entityx;
 
 Application::Application() {
     systems.configure();
+    
+    shaderManager = new ShaderManager();
+Application::~Application() {
+    delete shaderManager;
 }
 
 void Application::update(TimeDelta dt) {

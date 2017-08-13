@@ -11,11 +11,16 @@
 
 #include <entityx.h>
 
+class ShaderManager;
+
 class Application : public entityx::EntityX {
 public:
     explicit Application();
+    ~Application();
     
     void update(entityx::TimeDelta dt);
+    
+    ShaderManager *shaderManager;
 };
 
 #endif /* Application_h */
