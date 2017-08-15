@@ -12,11 +12,15 @@
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
+		EA8D71B11F42AD6D00FC79DE /* Bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71A61F42AD6C00FC79DE /* Bitmap.cpp */; };
+		EA8D71B21F42AD6D00FC79DE /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71A81F42AD6C00FC79DE /* Camera.cpp */; };
+		EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AB1F42AD6C00FC79DE /* Program.cpp */; };
+		EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */; };
+		EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */; };
-		EAFE82281EC95E72007C5743 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE82261EC95E72007C5743 /* Program.cpp */; };
 		EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,16 @@
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EA8D71A61F42AD6C00FC79DE /* Bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmap.cpp; sourceTree = "<group>"; };
+		EA8D71A71F42AD6C00FC79DE /* Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmap.h; sourceTree = "<group>"; };
+		EA8D71A81F42AD6C00FC79DE /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		EA8D71A91F42AD6C00FC79DE /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		EA8D71AB1F42AD6C00FC79DE /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
+		EA8D71AC1F42AD6C00FC79DE /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Program.h; sourceTree = "<group>"; };
+		EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		EA8D71AE1F42AD6C00FC79DE /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		EA8D71B01F42AD6C00FC79DE /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -52,8 +66,6 @@
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
-		EAFE82261EC95E72007C5743 /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Program.cpp; path = Core/Rendering/Program.cpp; sourceTree = "<group>"; };
-		EAFE82271EC95E72007C5743 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Program.h; path = Core/Rendering/Program.h; sourceTree = "<group>"; };
 		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = Core/Rendering/ShaderManager.cpp; sourceTree = "<group>"; };
 		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = Core/Rendering/ShaderManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,9 +110,35 @@
 			name = Systems;
 			sourceTree = "<group>";
 		};
+		EA8D71A21F42AD6C00FC79DE /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				EA8D71A51F42AD6C00FC79DE /* tdogl */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		EA8D71A51F42AD6C00FC79DE /* tdogl */ = {
+			isa = PBXGroup;
+			children = (
+				EA8D71A61F42AD6C00FC79DE /* Bitmap.cpp */,
+				EA8D71A71F42AD6C00FC79DE /* Bitmap.h */,
+				EA8D71A81F42AD6C00FC79DE /* Camera.cpp */,
+				EA8D71A91F42AD6C00FC79DE /* Camera.h */,
+				EA8D71AB1F42AD6C00FC79DE /* Program.cpp */,
+				EA8D71AC1F42AD6C00FC79DE /* Program.h */,
+				EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */,
+				EA8D71AE1F42AD6C00FC79DE /* Shader.h */,
+				EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */,
+				EA8D71B01F42AD6C00FC79DE /* Texture.h */,
+			);
+			path = tdogl;
+			sourceTree = "<group>";
+		};
 		EABCC9D31E442D76008A9484 = {
 			isa = PBXGroup;
 			children = (
+				EA8D71A21F42AD6C00FC79DE /* thirdparty */,
 				EABCC9DE1E442D76008A9484 /* GameEngine */,
 				EABCC9DD1E442D76008A9484 /* Products */,
 				EABCC9E61E442E57008A9484 /* Frameworks */,
@@ -164,8 +202,6 @@
 		EAFE82251EC95E54007C5743 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				EAFE82261EC95E72007C5743 /* Program.cpp */,
-				EAFE82271EC95E72007C5743 /* Program.h */,
 				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
 				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
 			);
@@ -229,10 +265,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFE82281EC95E72007C5743 /* Program.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
+				EA8D71B11F42AD6D00FC79DE /* Bitmap.cpp in Sources */,
+				EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */,
+				EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */,
+				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
+				EA8D71B21F42AD6D00FC79DE /* Camera.cpp in Sources */,
 				EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +380,7 @@
 					/usr/local/include,
 					"$(SRCROOT)/entityx/entityx",
 					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/thirdparty/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
@@ -363,6 +404,7 @@
 					/usr/local/include,
 					"$(SRCROOT)/entityx/entityx",
 					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/thirdparty/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,

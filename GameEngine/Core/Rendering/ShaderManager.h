@@ -9,33 +9,26 @@
 #ifndef ShaderManager_h
 #define ShaderManager_h
 
-#include <OpenGL/gl3.h>
-#include <fstream>
-#include <iostream>
+#include <GL/glew.h>
 #include <map>
-#include <vector>
 
-class Program;
+namespace tdogl {
+    class Program;
+};
 
 class ShaderManager {
-    
 public:
     ShaderManager() {};
     ~ShaderManager();
     
-    //modify char* to std::string
     void createProgram(const std::string& shaderName, const std::string& VertexShaderFilename, const std::string& FragmentShaderFilename);
     GLuint createProgram(std::string vertex_shader_code, std::string fragment_shader_code);
     
-    Program *getProgram(const std::string& programName);
+    tdogl::Program *getProgram(const std::string& programName);
     
 private:
-    //modify char* to std::string
-    std::string readShader(const std::string& filename);
-    //modify char* to std::string
-    GLuint createShader(GLenum shaderType, const std::string& source, const std::string& shaderName);
     
-    std::map<std::string, Program *> programs;
+    std::map<std::string, tdogl::Program *> programs;
 };
 
 #endif /* ShaderManager_h */
