@@ -7,11 +7,18 @@
 //
 
 #include "Application.h"
+
+#include <entityx/deps/Dependencies.h>
+#include "Transform.h"
+#include "TransformSystem.h"
 #include "ShaderManager.h"
 
 using namespace entityx;
 
 Application::Application() {
+    systems.add<deps::Dependency<Parent, Transform, Position, Rotation, Scale>>();
+    systems.add<deps::Dependency<Transform, Position, Rotation, Scale, Parent>>();
+    systems.add<TransformSystem>();
     systems.configure();
     
     shaderManager = new ShaderManager();
