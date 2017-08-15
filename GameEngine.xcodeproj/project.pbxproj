@@ -49,6 +49,8 @@
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EA8D71681F427A2F00FC79DE /* TriangleRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TriangleRenderer.h; path = Core/Components/TriangleRenderer.h; sourceTree = "<group>"; };
+		EA8D716A1F427ECA00FC79DE /* TriangleRendererSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TriangleRendererSystem.h; path = Core/Systems/TriangleRendererSystem.h; sourceTree = "<group>"; };
 		EA8D71A61F42AD6C00FC79DE /* Bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmap.cpp; sourceTree = "<group>"; };
 		EA8D71A71F42AD6C00FC79DE /* Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmap.h; sourceTree = "<group>"; };
 		EA8D71A81F42AD6C00FC79DE /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EA16ABBE1F40A0DA0030FF64 /* Transform.h */,
+				EA8D71681F427A2F00FC79DE /* TriangleRenderer.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -106,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */,
+				EA8D716A1F427ECA00FC79DE /* TriangleRendererSystem.h */,
 			);
 			name = Systems;
 			sourceTree = "<group>";
