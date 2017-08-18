@@ -22,9 +22,9 @@ public:
         glBindBuffer(GL_ARRAY_BUFFER, vertVBO);
         
         vertexData = new glm::vec3[3];
-        vertexData[0] = glm::vec3(0.0f, 0.8f, 0.0f);
-        vertexData[1] = glm::vec3(-0.8f,-0.8f, 0.0f);
-        vertexData[2] = glm::vec3(0.8f,-0.8f, 0.0f);
+        vertexData[0] = glm::vec3(-1.0f, 1.0f, 0.0f);
+        vertexData[1] = glm::vec3(-1.0f, -1.0f, 0.0f);
+        vertexData[2] = glm::vec3(1.0f, -1.0f, 0.0f);
         
         glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(glm::vec3), vertexData, GL_STATIC_DRAW);
         
