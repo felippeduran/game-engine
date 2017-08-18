@@ -25,7 +25,7 @@ struct Rotation {
 };
 
 struct Scale {
-    Scale(glm::vec3 localScale = glm::vec3()) : localScale(localScale) {};
+    Scale(glm::vec3 localScale = glm::vec3(1.0f, 1.0f, 1.0f)) : localScale(localScale) {};
     
     glm::vec3 localScale;
 };
