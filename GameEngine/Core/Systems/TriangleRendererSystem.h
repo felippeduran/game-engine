@@ -19,6 +19,8 @@ struct TriangleRendererSystem : public System<TriangleRendererSystem> {
         es.each<TriangleRenderer, Transform>([dt] (Entity entity, TriangleRenderer &renderer, Transform &transform) {
             renderer.program->use();
             
+            renderer.program->setUniform("model", transform.localToWorldMatrix);
+            
             glBindVertexArray(renderer.VAO);
             
             glDrawArrays(GL_TRIANGLES, 0, 3);
