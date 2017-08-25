@@ -16,9 +16,11 @@
 using namespace entityx;
 
 Application::Application() {
-    systems.add<deps::Dependency<Parent, Transform, Position, Rotation, Scale>>();
-    systems.add<deps::Dependency<Transform, Position, Rotation, Scale, Parent>>();
+    systems.add<deps::Dependency<TriangleRenderer, Transform>>();
+    systems.add<deps::Dependency<Camera, Transform>>();
+    systems.add<CameraSystem>();
     systems.add<TransformSystem>();
+    
     systems.configure();
     
     shaderManager = new ShaderManager();

@@ -9,36 +9,20 @@
 #ifndef Transform_h
 #define Transform_h
 
+#include <entityx.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
 
-struct Position {
-    Position(glm::vec3 localPosition = glm::vec3()) : localPosition(localPosition) {};
+struct Transform {
+    Transform() : localScale(glm::vec3(1.0f, 1.0f, 1.0f)), parent(entityx::Entity()) {};
+    
+    void setTransform(const glm::mat4& modelMatrix);
     
     glm::vec3 localPosition;
-};
-
-struct Rotation {
-    Rotation(glm::quat localRotation = glm::quat()) : localRotation(localRotation) {};
-    
-    glm::quat localRotation;
-};
-
-struct Scale {
-    Scale(glm::vec3 localScale = glm::vec3(1.0f, 1.0f, 1.0f)) : localScale(localScale) {};
-    
     glm::vec3 localScale;
-};
-
-struct Parent {
-    Parent(entityx::Entity parent = entityx::Entity()) : parent(parent) {};
-    
-    entityx::Entity parent;
-};
-
-struct Transform {
-    glm::mat4 modelMatrix;
+    glm::quat localRotation;
     glm::mat4 localToWorldMatrix;
+    entityx::Entity parent;
 };
 
 
