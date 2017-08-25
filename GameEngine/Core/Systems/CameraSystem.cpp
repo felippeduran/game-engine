@@ -26,7 +26,7 @@ void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, Time
         renderer.program->use();
         
         renderer.program->setUniform("projection", projection);
-        renderer.program->setUniform("camera", view);
+        renderer.program->setUniform("view", view);
         renderer.program->setUniform("model", transform.localToWorldMatrix);
         
         glBindVertexArray(renderer.VAO);
