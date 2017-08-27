@@ -12,10 +12,11 @@
 #include <functional>
 
 class GLFWwindow;
+class InputHandler;
 
 class EngineGLFWInitializer {
 public:
-    int initialize();
+    int initialize(InputHandler *inputHandler);
     int runLoop(std::function<void (float dt)> updateCallback);
     
 private:

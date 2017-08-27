@@ -10,13 +10,21 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include "InputHandler.h"
 
 using namespace std;
 
+static InputHandler *inputHandler = nullptr;
+
 void errorCallback(int error, const char* description);
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+void cursorEnterCallback(GLFWwindow* window, int entered);
 
-int EngineGLFWInitializer::initialize() {
+int EngineGLFWInitializer::initialize(InputHandler *inputHandler) {
+    inputHandler = inputHandler;
     
     glfwSetErrorCallback(errorCallback);
 
@@ -41,6 +49,10 @@ int EngineGLFWInitializer::initialize() {
     }
     
     glfwSetKeyCallback(window, keyCallback);
+    glfwSetMouseButtonCallback(window, mouseButtonCallback);
+    glfwSetCursorPosCallback(window, cursorPosCallback);
+    glfwSetScrollCallback(window, scrollCallback);
+    glfwSetCursorEnterCallback(window, cursorEnterCallback);
     
     glfwMakeContextCurrent(window);
     glewExperimental = GL_TRUE;
@@ -84,6 +96,23 @@ int EngineGLFWInitializer::runLoop(function<void (float)> updateCallback) {
 void errorCallback(int error, const char* description) {
     fprintf(stderr, "Error: %s\n", description);
 }
+
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-//    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) glfwSetWindowShouldClose(window, GLFW_TRUE);
+    inputHandler->keyCallback(window, key, scancode, action, mods);
+}
+
+void cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
+    inputHandler->cursorPosCallback(window, xpos,ypos);
+}
+
+void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    inputHandler->mouseButtonCallback(window, button, action, mods);
+}
+
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+    inputHandler->scrollCallback(window, xoffset, yoffset);
+}
+
+void cursorEnterCallback(GLFWwindow* window, int entered) {
+    inputHandler->cursorEnterCallback(window, entered);
 }

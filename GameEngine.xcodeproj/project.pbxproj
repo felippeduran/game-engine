@@ -13,6 +13,7 @@
 		EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */; };
 		EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */; };
 		EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BED1F4FDDDB006C49A5 /* TransformSystem.cpp */; };
+		EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */; };
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
@@ -55,6 +56,8 @@
 		EA4C8BE81F4FC5AA006C49A5 /* CameraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraSystem.h; path = Core/Systems/CameraSystem.h; sourceTree = "<group>"; };
 		EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = Core/Components/Transform.cpp; sourceTree = "<group>"; };
 		EA4C8BED1F4FDDDB006C49A5 /* TransformSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TransformSystem.cpp; path = Core/Systems/TransformSystem.cpp; sourceTree = "<group>"; };
+		EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InputHandler.cpp; path = Core/InputHandler.cpp; sourceTree = "<group>"; };
+		EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Core/InputHandler.h; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
 				EA1980201F3FCF9C00350E7F /* Application.cpp */,
 				EA1980211F3FCF9C00350E7F /* Application.h */,
+				EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */,
+				EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
+				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,
 				EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
