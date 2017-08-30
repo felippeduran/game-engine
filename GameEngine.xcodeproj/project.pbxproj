@@ -24,6 +24,8 @@
 		EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22B91F54FCED0012AED5 /* Mesh.cpp */; };
 		EA8F22BE1F54FECC0012AED5 /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */; };
 		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
+		EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */; };
+		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
@@ -38,7 +40,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */,
 				EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */,
+				EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */,
 				EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +68,6 @@
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		EA8D71681F427A2F00FC79DE /* TriangleRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TriangleRenderer.h; path = Core/Components/TriangleRenderer.h; sourceTree = "<group>"; };
 		EA8D71A61F42AD6C00FC79DE /* Bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmap.cpp; sourceTree = "<group>"; };
 		EA8D71A71F42AD6C00FC79DE /* Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmap.h; sourceTree = "<group>"; };
 		EA8D71AB1F42AD6C00FC79DE /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
 		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
+		EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_vertex_shader.glsl; sourceTree = "<group>"; };
+		EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_fragment_shader.glsl; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -108,6 +113,8 @@
 		EA091A481E88CA220044C3A1 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */,
+				EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */,
 				EA091A491E88CA220044C3A1 /* fragment_shader.glsl */,
 				EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */,
 			);
@@ -119,7 +126,6 @@
 			children = (
 				EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */,
 				EA16ABBE1F40A0DA0030FF64 /* Transform.h */,
-				EA8D71681F427A2F00FC79DE /* TriangleRenderer.h */,
 				EA2D88B51F46A24E00ED7B8D /* Camera.cpp */,
 				EA2D88B41F469F7400ED7B8D /* Camera.h */,
 				EA8F22B91F54FCED0012AED5 /* Mesh.cpp */,

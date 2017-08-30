@@ -9,31 +9,41 @@
 #include "CameraSystem.h"
 #include "Camera.h"
 #include "Transform.h"
-#include "TriangleRenderer.h"
+#include "Mesh.h"
+#include "MeshRenderer.h"
+#include "Material.h"
 
 using namespace entityx;
 using namespace glm;
 
 void CameraSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
-    std::cout << "CameraSystem" << std::endl;
     es.each<Camera, Transform>([this, &es, &events, dt] (Entity entity, Camera &camera, Transform &transform) {
         updateRenderers(es, events, dt, camera.projection, transform.localToWorldMatrix);
     });
 };
 
 void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, TimeDelta dt, mat4& projection, mat4& view) {
-    es.each<TriangleRenderer, Transform>([dt, projection, view] (Entity entity, TriangleRenderer &renderer, Transform &transform) {
-        renderer.program->use();
+    es.each<MeshRenderer, Transform>([dt, projection, view] (Entity entity, MeshRenderer &renderer, Transform &transform) {
+        Material *material = renderer.material;
+        material->program->use();
         
-        renderer.program->setUniform("projection", projection);
-        renderer.program->setUniform("view", view);
-        renderer.program->setUniform("model", transform.localToWorldMatrix);
+        material->program->setUniform("projection", projection);
+        material->program->setUniform("view", view);
+        material->program->setUniform("model", transform.localToWorldMatrix);
+        if (material->texture) {
+            material->program->setUniform("materialTex", 0); //set to 0 because the texture will be bound to GL_TEXTURE0
+            
+            //bind the texture
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, material->texture->object());
+        }
         
-        glBindVertexArray(renderer.VAO);
+        glBindVertexArray(renderer.vao);
         
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawArrays(GL_TRIANGLES, 0, renderer.mesh->vertexCount);
         
         glBindVertexArray(0);
-        renderer.program->stopUsing();
+        if (material->texture) glBindTexture(GL_TEXTURE_2D, 0);
+        material->program->stopUsing();
     });
 }

@@ -11,12 +11,13 @@
 #include <entityx/deps/Dependencies.h>
 #include "Transform.h"
 #include "TransformSystem.h"
+#include "MeshRenderer.h"
 #include "ShaderManager.h"
 
 using namespace entityx;
 
 Application::Application() {
-    systems.add<deps::Dependency<TriangleRenderer, Transform>>();
+    systems.add<deps::Dependency<MeshRenderer, Transform>>();
     systems.add<deps::Dependency<Camera, Transform>>();
     systems.add<CameraSystem>();
     systems.add<TransformSystem>();
