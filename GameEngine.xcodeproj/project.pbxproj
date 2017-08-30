@@ -21,6 +21,9 @@
 		EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AB1F42AD6C00FC79DE /* Program.cpp */; };
 		EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */; };
 		EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */; };
+		EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22B91F54FCED0012AED5 /* Mesh.cpp */; };
+		EA8F22BE1F54FECC0012AED5 /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */; };
+		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
@@ -70,6 +73,12 @@
 		EA8D71AE1F42AD6C00FC79DE /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		EA8D71B01F42AD6C00FC79DE /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		EA8F22B91F54FCED0012AED5 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Core/Components/Mesh.cpp; sourceTree = "<group>"; };
+		EA8F22BA1F54FCED0012AED5 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Core/Components/Mesh.h; sourceTree = "<group>"; };
+		EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = Core/Components/MeshRenderer.cpp; sourceTree = "<group>"; };
+		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
+		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
+		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -113,6 +122,10 @@
 				EA8D71681F427A2F00FC79DE /* TriangleRenderer.h */,
 				EA2D88B51F46A24E00ED7B8D /* Camera.cpp */,
 				EA2D88B41F469F7400ED7B8D /* Camera.h */,
+				EA8F22B91F54FCED0012AED5 /* Mesh.cpp */,
+				EA8F22BA1F54FCED0012AED5 /* Mesh.h */,
+				EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */,
+				EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -222,6 +235,8 @@
 			children = (
 				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
 				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
+				EA8F22BF1F5504B70012AED5 /* Material.cpp */,
+				EA8F22C01F5504B70012AED5 /* Material.h */,
 			);
 			name = Rendering;
 			sourceTree = "<group>";
@@ -293,6 +308,9 @@
 				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
+				EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */,
+				EA8F22BE1F54FECC0012AED5 /* MeshRenderer.cpp in Sources */,
+				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,
 				EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */,
