@@ -71,6 +71,8 @@ int EngineGLFWInitializer::initialize(InputHandler *inputHandler) {
     
     glViewport(0, 0, screenWidth, screenHeight);
     
+    glEnable(GL_DEPTH_TEST);
+    
     return 0;
 }
 
