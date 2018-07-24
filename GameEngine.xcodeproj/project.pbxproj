@@ -91,8 +91,8 @@
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
-		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = Core/Rendering/ShaderManager.cpp; sourceTree = "<group>"; };
-		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = Core/Rendering/ShaderManager.h; sourceTree = "<group>"; };
+		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
+		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +145,15 @@
 				EA4C8BE81F4FC5AA006C49A5 /* CameraSystem.h */,
 			);
 			name = Systems;
+			sourceTree = "<group>";
+		};
+		EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
+				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
+			);
+			path = ResourceManagement;
 			sourceTree = "<group>";
 		};
 		EA8D71A21F42AD6C00FC79DE /* thirdparty */ = {
@@ -214,6 +223,7 @@
 		EABCC9ED1E4436E4008A9484 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */,
 				EA16ABBD1F40A0A20030FF64 /* Systems */,
 				EA16ABBC1F40A0980030FF64 /* Components */,
 				EAFB15DA1E8B602C0026EC1B /* CustomContainers */,
@@ -239,8 +249,6 @@
 		EAFE82251EC95E54007C5743 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
-				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
 				EA8F22BF1F5504B70012AED5 /* Material.cpp */,
 				EA8F22C01F5504B70012AED5 /* Material.h */,
 			);
