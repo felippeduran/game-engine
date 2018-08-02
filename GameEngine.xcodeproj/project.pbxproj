@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
 		EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* Application.cpp */; };
+		EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */; };
+		EA1B3D821F6B69C2003CEA9E /* MaterialLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */; };
+		EA1B3D851F6B69D0003CEA9E /* TextureLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */; };
 		EA2D88B61F46A24E00ED7B8D /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2D88B51F46A24E00ED7B8D /* Camera.cpp */; };
 		EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */; };
 		EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */; };
@@ -22,8 +25,8 @@
 		EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */; };
 		EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */; };
 		EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22B91F54FCED0012AED5 /* Mesh.cpp */; };
-		EA8F22BE1F54FECC0012AED5 /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */; };
 		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
+		EA8F22C81F55250F0012AED5 /* platform_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22C71F55246F0012AED5 /* platform_osx.mm */; };
 		EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */; };
 		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
@@ -57,6 +60,12 @@
 		EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../../usr/local/Cellar/glfw/HEAD-3ee7f8f/lib/libglfw.3.3.dylib"; sourceTree = "<group>"; };
 		EA1980201F3FCF9C00350E7F /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = Core/Application.cpp; sourceTree = "<group>"; };
 		EA1980211F3FCF9C00350E7F /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Application.h; path = Core/Application.h; sourceTree = "<group>"; };
+		EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MeshLibrary.cpp; sourceTree = "<group>"; };
+		EA1B3D7E1F6B6986003CEA9E /* MeshLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshLibrary.h; sourceTree = "<group>"; };
+		EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaterialLibrary.cpp; sourceTree = "<group>"; };
+		EA1B3D811F6B69C2003CEA9E /* MaterialLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialLibrary.h; sourceTree = "<group>"; };
+		EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureLibrary.cpp; sourceTree = "<group>"; };
+		EA1B3D841F6B69D0003CEA9E /* TextureLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureLibrary.h; sourceTree = "<group>"; };
 		EA1B3D881F6B6EDD003CEA9E /* tiny_obj_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_obj_loader.h; sourceTree = "<group>"; };
 		EA2D88B41F469F7400ED7B8D /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Core/Components/Camera.h; sourceTree = "<group>"; };
 		EA2D88B51F46A24E00ED7B8D /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Core/Components/Camera.cpp; sourceTree = "<group>"; };
@@ -77,12 +86,13 @@
 		EA8D71AE1F42AD6C00FC79DE /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		EA8D71B01F42AD6C00FC79DE /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
-		EA8F22B91F54FCED0012AED5 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Core/Components/Mesh.cpp; sourceTree = "<group>"; };
-		EA8F22BA1F54FCED0012AED5 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Core/Components/Mesh.h; sourceTree = "<group>"; };
-		EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = Core/Components/MeshRenderer.cpp; sourceTree = "<group>"; };
+		EA8F22B91F54FCED0012AED5 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		EA8F22BA1F54FCED0012AED5 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
 		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
+		EA8F22C61F55246F0012AED5 /* platform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = platform.hpp; sourceTree = "<group>"; };
+		EA8F22C71F55246F0012AED5 /* platform_osx.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_osx.mm; sourceTree = "<group>"; };
 		EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_vertex_shader.glsl; sourceTree = "<group>"; };
 		EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_fragment_shader.glsl; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +139,6 @@
 				EA16ABBE1F40A0DA0030FF64 /* Transform.h */,
 				EA2D88B51F46A24E00ED7B8D /* Camera.cpp */,
 				EA2D88B41F469F7400ED7B8D /* Camera.h */,
-				EA8F22B91F54FCED0012AED5 /* Mesh.cpp */,
-				EA8F22BA1F54FCED0012AED5 /* Mesh.h */,
-				EA8F22BC1F54FECC0012AED5 /* MeshRenderer.cpp */,
 				EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */,
 			);
 			name = Components;
@@ -153,6 +160,12 @@
 			children = (
 				EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */,
 				EAFE822D1EC95F79007C5743 /* ShaderManager.h */,
+				EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */,
+				EA1B3D7E1F6B6986003CEA9E /* MeshLibrary.h */,
+				EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */,
+				EA1B3D811F6B69C2003CEA9E /* MaterialLibrary.h */,
+				EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */,
+				EA1B3D841F6B69D0003CEA9E /* TextureLibrary.h */,
 			);
 			path = ResourceManagement;
 			sourceTree = "<group>";
@@ -187,6 +200,16 @@
 				EA8D71B01F42AD6C00FC79DE /* Texture.h */,
 			);
 			path = tdogl;
+			sourceTree = "<group>";
+		};
+		EA8F22C51F55246F0012AED5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F22C61F55246F0012AED5 /* platform.hpp */,
+				EA8F22C71F55246F0012AED5 /* platform_osx.mm */,
+			);
+			name = Utils;
+			path = Core/Utils;
 			sourceTree = "<group>";
 		};
 		EABCC9D31E442D76008A9484 = {
@@ -234,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */,
+				EA8F22C51F55246F0012AED5 /* Utils */,
 				EA16ABBD1F40A0A20030FF64 /* Systems */,
 				EA16ABBC1F40A0980030FF64 /* Components */,
 				EAFB15DA1E8B602C0026EC1B /* CustomContainers */,
@@ -259,6 +283,8 @@
 		EAFE82251EC95E54007C5743 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
+				EA8F22B91F54FCED0012AED5 /* Mesh.cpp */,
+				EA8F22BA1F54FCED0012AED5 /* Mesh.h */,
 				EA8F22BF1F5504B70012AED5 /* Material.cpp */,
 				EA8F22C01F5504B70012AED5 /* Material.h */,
 			);
@@ -322,18 +348,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8F22C81F55250F0012AED5 /* platform_osx.mm in Sources */,
 				EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */,
+				EA1B3D821F6B69C2003CEA9E /* MaterialLibrary.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
 				EA8D71B11F42AD6D00FC79DE /* Bitmap.cpp in Sources */,
 				EA2D88B61F46A24E00ED7B8D /* Camera.cpp in Sources */,
 				EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */,
+				EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */,
 				EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */,
+				EA1B3D851F6B69D0003CEA9E /* TextureLibrary.cpp in Sources */,
 				EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */,
 				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
 				EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */,
-				EA8F22BE1F54FECC0012AED5 /* MeshRenderer.cpp in Sources */,
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,

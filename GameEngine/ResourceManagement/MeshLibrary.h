@@ -10,13 +10,14 @@
 #define MeshLibrary_h
 
 class MaterialLibrary;
+class Mesh;
 
 class MeshLibrary {
 public:
     MeshLibrary(MaterialLibrary *materialLibrary) : materialLibrary(materialLibrary) {};
     ~MeshLibrary();
     
-    void loadMesh(const std::string& filename);
+    Mesh *loadMesh(const std::string& filename);
     
 private:
     MaterialLibrary *materialLibrary;

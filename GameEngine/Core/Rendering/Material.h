@@ -14,10 +14,9 @@
 #include "tdogl/Texture.h"
 
 struct Material {
-    Material(tdogl::Program* program, glm::vec4 color = glm::vec4(1.0, 1.0, 1.0, 1.0), tdogl::Texture* texture = nullptr) : program(program), color(color), texture(texture) {};
+    Material(tdogl::Program* program, tdogl::Texture* texture = nullptr) : program(program), texture(texture) {};
     tdogl::Program* program;
     tdogl::Texture* texture;
-    glm::vec4 color;
 };
 
 #endif /* Material_h */

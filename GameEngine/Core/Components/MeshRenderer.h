@@ -13,16 +13,12 @@
 #include <glm/glm.hpp>
 #include <entityx.h>
 
-struct Mesh;
+class Mesh;
 struct Material;
 
 struct MeshRenderer {
-    MeshRenderer(const entityx::ComponentHandle<Mesh>& mesh, Material *material);
-    ~MeshRenderer();
-    
-    entityx::ComponentHandle<Mesh> mesh;
-    Material *material;
-    GLuint vao;
+    MeshRenderer(Mesh *mesh) : mesh(mesh) {};
+    Mesh *mesh;
 };
 
 #endif /* MeshRenderer_h */

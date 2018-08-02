@@ -7,3 +7,16 @@
 //
 
 #include "MaterialLibrary.h"
+#include "Material.h"
+#include "TextureLibrary.h"
+#include "ShaderManager.h"
+
+using namespace tdogl;
+using namespace tinyobj;
+
+Material *MaterialLibrary::getMaterial(material_t materialData) {
+    Texture *texture = textureLibrary->getTexture(materialData.diffuse_texname);
+    Program *program = shaderManager->getProgram("basic_program");
+    Material *material = new Material(program, texture);
+    return material;
+}
