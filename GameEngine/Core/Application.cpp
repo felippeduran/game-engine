@@ -25,6 +25,11 @@ Application::Application() {
     systems.configure();
     
     shaderManager = new ShaderManager();
+    shaderManager->createProgram("basic_program", "vertex_shader.glsl", "fragment_shader.glsl");
+
+    TextureLibrary *textureLibrary = new TextureLibrary();
+    MaterialLibrary *materialLibrary = new MaterialLibrary(shaderManager, textureLibrary);
+    MeshLibrary *meshLibrary = new MeshLibrary(materialLibrary);
 Application::~Application() {
     delete shaderManager;
 }
