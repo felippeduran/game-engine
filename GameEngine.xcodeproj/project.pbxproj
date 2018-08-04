@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
-		EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* Application.cpp */; };
+		EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* GameEngine.cpp */; };
 		EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */; };
 		EA1B3D821F6B69C2003CEA9E /* MaterialLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */; };
 		EA1B3D851F6B69D0003CEA9E /* TextureLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */; };
@@ -59,8 +59,8 @@
 		EA16ABBE1F40A0DA0030FF64 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = Core/Components/Transform.h; sourceTree = "<group>"; };
 		EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TransformSystem.h; path = Core/Systems/TransformSystem.h; sourceTree = "<group>"; };
 		EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../../usr/local/Cellar/glfw/HEAD-3ee7f8f/lib/libglfw.3.3.dylib"; sourceTree = "<group>"; };
-		EA1980201F3FCF9C00350E7F /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = Core/Application.cpp; sourceTree = "<group>"; };
-		EA1980211F3FCF9C00350E7F /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Application.h; path = Core/Application.h; sourceTree = "<group>"; };
+		EA1980201F3FCF9C00350E7F /* GameEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameEngine.cpp; path = Core/GameEngine.cpp; sourceTree = "<group>"; };
+		EA1980211F3FCF9C00350E7F /* GameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEngine.h; path = Core/GameEngine.h; sourceTree = "<group>"; };
 		EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MeshLibrary.cpp; sourceTree = "<group>"; };
 		EA1B3D7E1F6B6986003CEA9E /* MeshLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshLibrary.h; sourceTree = "<group>"; };
 		EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaterialLibrary.cpp; sourceTree = "<group>"; };
@@ -157,6 +157,15 @@
 			name = Systems;
 			sourceTree = "<group>";
 		};
+		EA1B3D761F6B6529003CEA9E /* TestApplication */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A69FA210D0E7C005788EE /* Source */,
+				EA8F22C21F5522690012AED5 /* Resources */,
+			);
+			path = TestApplication;
+			sourceTree = "<group>";
+		};
 		EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +188,14 @@
 				EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */,
 			);
 			path = tinyobjloader;
+			sourceTree = "<group>";
+		};
+		EA5A69FA210D0E7C005788EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EABCC9DF1E442D76008A9484 /* main.cpp */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		EA8D71A21F42AD6C00FC79DE /* thirdparty */ = {
@@ -218,6 +235,7 @@
 		EABCC9D31E442D76008A9484 = {
 			isa = PBXGroup;
 			children = (
+				EA1B3D761F6B6529003CEA9E /* TestApplication */,
 				EABCC9DE1E442D76008A9484 /* GameEngine */,
 				EABCC9DD1E442D76008A9484 /* Products */,
 				EABCC9E61E442E57008A9484 /* Frameworks */,
@@ -237,8 +255,6 @@
 			children = (
 				EA8D71A21F42AD6C00FC79DE /* thirdparty */,
 				EABCC9ED1E4436E4008A9484 /* Core */,
-				EA091A481E88CA220044C3A1 /* Shaders */,
-				EABCC9DF1E442D76008A9484 /* main.cpp */,
 				EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */,
 			);
 			path = GameEngine;
@@ -259,6 +275,7 @@
 		EABCC9ED1E4436E4008A9484 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA091A481E88CA220044C3A1 /* Shaders */,
 				EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */,
 				EA8F22C51F55246F0012AED5 /* Utils */,
 				EA16ABBD1F40A0A20030FF64 /* Systems */,
@@ -267,8 +284,8 @@
 				EAFE82251EC95E54007C5743 /* Rendering */,
 				EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */,
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
-				EA1980201F3FCF9C00350E7F /* Application.cpp */,
-				EA1980211F3FCF9C00350E7F /* Application.h */,
+				EA1980201F3FCF9C00350E7F /* GameEngine.cpp */,
+				EA1980211F3FCF9C00350E7F /* GameEngine.h */,
 				EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */,
 				EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */,
 			);
@@ -370,7 +387,7 @@
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,
-				EA1980221F3FCF9C00350E7F /* Application.cpp in Sources */,
+				EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
