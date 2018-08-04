@@ -33,6 +33,7 @@
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */; };
+		EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */; };
 		EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
+		EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiny_obj_loader.cc; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
 		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
 		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				EA1B3D881F6B6EDD003CEA9E /* tiny_obj_loader.h */,
+				EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */,
 			);
 			path = tinyobjloader;
 			sourceTree = "<group>";
@@ -215,7 +218,6 @@
 		EABCC9D31E442D76008A9484 = {
 			isa = PBXGroup;
 			children = (
-				EA8D71A21F42AD6C00FC79DE /* thirdparty */,
 				EABCC9DE1E442D76008A9484 /* GameEngine */,
 				EABCC9DD1E442D76008A9484 /* Products */,
 				EABCC9E61E442E57008A9484 /* Frameworks */,
@@ -233,6 +235,7 @@
 		EABCC9DE1E442D76008A9484 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				EA8D71A21F42AD6C00FC79DE /* thirdparty */,
 				EABCC9ED1E4436E4008A9484 /* Core */,
 				EA091A481E88CA220044C3A1 /* Shaders */,
 				EABCC9DF1E442D76008A9484 /* main.cpp */,
@@ -362,6 +365,7 @@
 				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
+				EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */,
 				EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */,
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
