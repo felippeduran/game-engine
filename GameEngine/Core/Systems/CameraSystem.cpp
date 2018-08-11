@@ -18,7 +18,8 @@ using namespace glm;
 
 void CameraSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Camera, Transform>([this, &es, &events, dt] (Entity entity, Camera &camera, Transform &transform) {
-        updateRenderers(es, events, dt, camera.projection, transform.localToWorldMatrix);
+        mat4 worldToLocalMatrix = inverse(transform.localToWorldMatrix);
+        updateRenderers(es, events, dt, camera.projection, worldToLocalMatrix);
     });
 };
 
