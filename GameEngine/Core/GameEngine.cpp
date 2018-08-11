@@ -16,6 +16,7 @@
 #include "Camera.h"
 #include "CameraSystem.h"
 #include "MeshRenderer.h"
+#include "InputCleanupSystem.h"
 
 #include "ShaderManager.h"
 #include "Program.h"
@@ -28,16 +29,11 @@ using namespace entityx;
 using namespace std;
 
 GameEngine::GameEngine() {
-    systems.add<deps::Dependency<MeshRenderer, Transform>>();
-    systems.add<deps::Dependency<Camera, Transform>>();
-    systems.add<CameraSystem>();
-    systems.add<TransformSystem>();
-    
-    systems.configure();
+    systems.add<InputCleanupSystem>();
 }
 
 int GameEngine::initialize() {
-    inputHandler = new InputHandler();
+    inputHandler = new InputHandler(this);
     initializer = new EngineGLFWInitializer();
     
     int error = 0;
