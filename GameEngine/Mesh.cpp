@@ -19,13 +19,17 @@ Mesh::Mesh(vector<vec3> combinedVertices, vector<vec3> combinedNormals, vector<v
     
     glBufferData(GL_ARRAY_BUFFER, this->combinedVertices.size() * sizeof(vec3), &this->combinedVertices[0], GL_STATIC_DRAW);
     
-    glGenBuffers(1, &uvVBO);
-    glBindBuffer(GL_ARRAY_BUFFER, uvVBO);
-    glBufferData(GL_ARRAY_BUFFER, this->combinedTexCoords.size() * sizeof(vec2), &this->combinedTexCoords[0], GL_STATIC_DRAW);
+    if (!combinedTexCoords.empty()) {
+        glGenBuffers(1, &uvVBO);
+        glBindBuffer(GL_ARRAY_BUFFER, uvVBO);
+        glBufferData(GL_ARRAY_BUFFER, this->combinedTexCoords.size() * sizeof(vec2), &this->combinedTexCoords[0], GL_STATIC_DRAW);
+    }
     
-    glGenBuffers(1, &normalVBO);
-    glBindBuffer(GL_ARRAY_BUFFER, normalVBO);
-    glBufferData(GL_ARRAY_BUFFER, this->combinedNormals.size() * sizeof(vec3), &this->combinedNormals[0], GL_STATIC_DRAW);
+    if (!combinedNormals.empty()) {
+        glGenBuffers(1, &normalVBO);
+        glBindBuffer(GL_ARRAY_BUFFER, normalVBO);
+        glBufferData(GL_ARRAY_BUFFER, this->combinedNormals.size() * sizeof(vec3), &this->combinedNormals[0], GL_STATIC_DRAW);
+    }
     
     glGenBuffers(1, &IBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
@@ -47,13 +51,17 @@ Mesh::Mesh(vector<vec3> combinedVertices, vector<vec3> combinedNormals, vector<v
         glEnableVertexAttribArray(material->program->attrib("vert"));
         glVertexAttribPointer(material->program->attrib("vert"), 3, GL_FLOAT, GL_FALSE, sizeof(vec3), NULL);
         
-        glBindBuffer(GL_ARRAY_BUFFER, normalVBO);
-        glEnableVertexAttribArray(material->program->attrib("vertNormal"));
-        glVertexAttribPointer(material->program->attrib("vertNormal"), 3, GL_FLOAT, GL_TRUE, sizeof(vec3), NULL);
+        if (!combinedNormals.empty()) {
+            glBindBuffer(GL_ARRAY_BUFFER, normalVBO);
+            glEnableVertexAttribArray(material->program->attrib("vertNormal"));
+            glVertexAttribPointer(material->program->attrib("vertNormal"), 3, GL_FLOAT, GL_TRUE, sizeof(vec3), NULL);
+        }
         
-        glBindBuffer(GL_ARRAY_BUFFER, uvVBO);
-        glEnableVertexAttribArray(material->program->attrib("vertTexCoord"));
-        glVertexAttribPointer(material->program->attrib("vertTexCoord"), 2, GL_FLOAT, GL_TRUE, sizeof(vec2), NULL);
+        if (!combinedTexCoords.empty()) {
+            glBindBuffer(GL_ARRAY_BUFFER, uvVBO);
+            glEnableVertexAttribArray(material->program->attrib("vertTexCoord"));
+            glVertexAttribPointer(material->program->attrib("vertTexCoord"), 2, GL_FLOAT, GL_TRUE, sizeof(vec2), NULL);
+        }
         
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindVertexArray(0);

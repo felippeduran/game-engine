@@ -26,7 +26,7 @@ void CameraSystem::update(EntityManager &es, EventManager &events, TimeDelta dt)
 void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, TimeDelta dt, mat4& projection, mat4& view) {
     es.each<MeshRenderer, Transform>([dt, projection, view] (Entity entity, MeshRenderer &renderer, Transform &transform) {
         Mesh *mesh = renderer.mesh;
-        for (int i = mesh->submeshes.size() - 1; i >=0; i--) {
+        for (int i = (int)mesh->submeshes.size() - 1; i >=0; i--) {
             Submesh submesh = mesh->submeshes[i];
             Material *material = mesh->materials[submesh.materialId];
             material->program->use();
@@ -34,6 +34,10 @@ void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, Time
             material->program->setUniform("projection", projection);
             material->program->setUniform("view", view);
             material->program->setUniform("model", transform.localToWorldMatrix);
+            
+            material->program->setUniform("materialAmbient", material->colorAmbient);
+            material->program->setUniform("materialDiffuse", material->colorDiffuse);
+            material->program->setUniform("materialSpecular", material->colorSpecular);
             
             if (material->texture) {
                 material->program->setUniform("materialTex", 0); //set to 0 because the texture will be bound to GL_TEXTURE0

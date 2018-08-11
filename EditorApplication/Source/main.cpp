@@ -69,7 +69,6 @@ int main(int argc, const char * argv[]) {
 void setupScene() {
     Entity parentEntity = engine.entities.create();
     parentEntity.assign<Transform>();
-    parentEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 0.0f, 0.0f);
     parentEntity.assign<Name>("Root");
     
     Entity mouseEntity = engine.entities.create();

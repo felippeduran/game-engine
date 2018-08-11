@@ -15,8 +15,9 @@ using namespace tdogl;
 using namespace tinyobj;
 
 Material *MaterialLibrary::getMaterial(material_t materialData) {
-    Texture *texture = textureLibrary->getTexture(materialData.diffuse_texname);
+    Texture *texture = nullptr;
+    if (!materialData.diffuse_texname.empty()) texture = textureLibrary->getTexture(materialData.diffuse_texname);
     Program *program = shaderManager->getProgram("basic_program");
-    Material *material = new Material(program, texture);
+    Material *material = new Material(materialData, program, texture);
     return material;
 }
