@@ -14,7 +14,7 @@
 
 using namespace std;
 
-static InputHandler *inputHandler = nullptr;
+static InputHandler *inputHandlerPtr = nullptr;
 
 void errorCallback(int error, const char* description);
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
@@ -24,7 +24,7 @@ void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 void cursorEnterCallback(GLFWwindow* window, int entered);
 
 int EngineGLFWInitializer::initialize(InputHandler *inputHandler) {
-    inputHandler = inputHandler;
+    inputHandlerPtr = inputHandler;
     
     glfwSetErrorCallback(errorCallback);
 
@@ -102,21 +102,21 @@ void errorCallback(int error, const char* description) {
 }
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    inputHandler->keyCallback(window, key, scancode, action, mods);
+    inputHandlerPtr->keyCallback(window, key, scancode, action, mods);
 }
 
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
-    inputHandler->cursorPosCallback(window, xpos,ypos);
+    inputHandlerPtr->cursorPosCallback(window, xpos,ypos);
 }
 
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-    inputHandler->mouseButtonCallback(window, button, action, mods);
+    inputHandlerPtr->mouseButtonCallback(window, button, action, mods);
 }
 
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
-    inputHandler->scrollCallback(window, xoffset, yoffset);
+    inputHandlerPtr->scrollCallback(window, xoffset, yoffset);
 }
 
 void cursorEnterCallback(GLFWwindow* window, int entered) {
-    inputHandler->cursorEnterCallback(window, entered);
+    inputHandlerPtr->cursorEnterCallback(window, entered);
 }
