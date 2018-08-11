@@ -17,6 +17,8 @@ struct Transform {
     Transform() : localScale(glm::vec3(1.0f, 1.0f, 1.0f)), parent(entityx::Entity()) {};
     
     void setTransform(const glm::mat4& modelMatrix);
+    glm::vec3 forward();
+    glm::vec3 right();
     
     glm::vec3 localPosition;
     glm::vec3 localScale;

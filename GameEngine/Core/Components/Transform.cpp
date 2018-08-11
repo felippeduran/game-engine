@@ -16,3 +16,11 @@ void Transform::setTransform(const mat4& modelMatrix) {
     vec4 perspective;
     decompose(modelMatrix, localScale, localRotation, localPosition, skew, perspective);
 }
+
+vec3 Transform::forward() {
+    return localToWorldMatrix * vec4(vec3(0.0f, 0.0f, 1.0f), 0.0f);
+}
+
+vec3 Transform::right() {
+    return localToWorldMatrix * vec4(vec3(1.0f, 0.0f, 0.0f), 0.0f);
+}
