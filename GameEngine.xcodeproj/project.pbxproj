@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA135B8A211F3BD900C6C231 /* KeyboardInputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */; };
 		EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
 		EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* GameEngine.cpp */; };
 		EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */; };
@@ -34,6 +35,7 @@
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */; };
 		EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */; };
+		EADEAAA821165C2000450F5F /* InputCleanupSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADEAAA721165C2000450F5F /* InputCleanupSystem.cpp */; };
 		EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
+		EA135B88211F3BD900C6C231 /* KeyboardInputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardInputSystem.h; path = Core/Systems/KeyboardInputSystem.h; sourceTree = "<group>"; };
+		EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardInputSystem.cpp; path = Core/Systems/KeyboardInputSystem.cpp; sourceTree = "<group>"; };
 		EA16ABBE1F40A0DA0030FF64 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = Core/Components/Transform.h; sourceTree = "<group>"; };
 		EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TransformSystem.h; path = Core/Systems/TransformSystem.h; sourceTree = "<group>"; };
 		EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../../usr/local/Cellar/glfw/HEAD-3ee7f8f/lib/libglfw.3.3.dylib"; sourceTree = "<group>"; };
@@ -103,6 +107,13 @@
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiny_obj_loader.cc; sourceTree = "<group>"; };
+		EADEAAA12116510800450F5F /* KeyboardInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardInput.h; path = Core/Components/KeyboardInput.h; sourceTree = "<group>"; };
+		EADEAAA22116515200450F5F /* MouseInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseInput.h; path = Core/Components/MouseInput.h; sourceTree = "<group>"; };
+		EADEAAA32116527F00450F5F /* MouseEnter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseEnter.h; path = Core/Components/MouseEnter.h; sourceTree = "<group>"; };
+		EADEAAA42116529800450F5F /* MousePositionEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MousePositionEvent.h; path = Core/Components/MousePositionEvent.h; sourceTree = "<group>"; };
+		EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseScrollPositionEvent.h; path = Core/Components/MouseScrollPositionEvent.h; sourceTree = "<group>"; };
+		EADEAAA621165C2000450F5F /* InputCleanupSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputCleanupSystem.h; path = Core/Systems/InputCleanupSystem.h; sourceTree = "<group>"; };
+		EADEAAA721165C2000450F5F /* InputCleanupSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InputCleanupSystem.cpp; path = Core/Systems/InputCleanupSystem.cpp; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
 		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
 		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
@@ -142,6 +153,11 @@
 				EA2D88B51F46A24E00ED7B8D /* Camera.cpp */,
 				EA2D88B41F469F7400ED7B8D /* Camera.h */,
 				EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */,
+				EADEAAA12116510800450F5F /* KeyboardInput.h */,
+				EADEAAA22116515200450F5F /* MouseInput.h */,
+				EADEAAA32116527F00450F5F /* MouseEnter.h */,
+				EADEAAA42116529800450F5F /* MousePositionEvent.h */,
+				EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -153,6 +169,10 @@
 				EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */,
 				EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */,
 				EA4C8BE81F4FC5AA006C49A5 /* CameraSystem.h */,
+				EADEAAA621165C2000450F5F /* InputCleanupSystem.h */,
+				EADEAAA721165C2000450F5F /* InputCleanupSystem.cpp */,
+				EA135B88211F3BD900C6C231 /* KeyboardInputSystem.h */,
+				EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */,
 			);
 			name = Systems;
 			sourceTree = "<group>";
@@ -374,6 +394,7 @@
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
 				EA8D71B11F42AD6D00FC79DE /* Bitmap.cpp in Sources */,
 				EA2D88B61F46A24E00ED7B8D /* Camera.cpp in Sources */,
+				EADEAAA821165C2000450F5F /* InputCleanupSystem.cpp in Sources */,
 				EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */,
 				EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */,
 				EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */,
@@ -382,6 +403,7 @@
 				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
+				EA135B8A211F3BD900C6C231 /* KeyboardInputSystem.cpp in Sources */,
 				EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */,
 				EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */,
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
