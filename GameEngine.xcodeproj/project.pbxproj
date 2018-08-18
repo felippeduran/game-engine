@@ -10,6 +10,8 @@
 		EA135B7F211E741800C6C231 /* KeyboardMovementSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA135B7E211E741800C6C231 /* KeyboardMovementSystem.cpp */; };
 		EA135B82211E74FE00C6C231 /* EditorCameraRotationEnableSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA135B81211E74FE00C6C231 /* EditorCameraRotationEnableSystem.cpp */; };
 		EA135B8A211F3BD900C6C231 /* KeyboardInputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */; };
+		EA135B92211F561300C6C231 /* axes.mtl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA135B90211F546100C6C231 /* axes.mtl */; };
+		EA135B93211F561300C6C231 /* axes.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA135B91211F546100C6C231 /* axes.obj */; };
 		EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
 		EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* GameEngine.cpp */; };
 		EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */; };
@@ -20,6 +22,8 @@
 		EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */; };
 		EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BED1F4FDDDB006C49A5 /* TransformSystem.cpp */; };
 		EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */; };
+		EA64EA7E21209B190026EAD9 /* cube.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA64EA7B212095FD0026EAD9 /* cube.obj */; };
+		EA64EA7F21209B190026EAD9 /* cube.mtl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA64EA7C212096150026EAD9 /* cube.mtl */; };
 		EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */; };
@@ -52,6 +56,10 @@
 			dstSubfolderSpec = 16;
 			files = (
 				EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */,
+				EA64EA7E21209B190026EAD9 /* cube.obj in CopyFiles */,
+				EA64EA7F21209B190026EAD9 /* cube.mtl in CopyFiles */,
+				EA135B92211F561300C6C231 /* axes.mtl in CopyFiles */,
+				EA135B93211F561300C6C231 /* axes.obj in CopyFiles */,
 				EA7EB3231E8A17A300DABAA6 /* fragment_shader.glsl in CopyFiles */,
 				EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */,
 				EA7EB3241E8A17A300DABAA6 /* vertex_shader.glsl in CopyFiles */,
@@ -73,6 +81,8 @@
 		EA135B86211E7A8A00C6C231 /* EditorCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorCamera.h; sourceTree = "<group>"; };
 		EA135B88211F3BD900C6C231 /* KeyboardInputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardInputSystem.h; path = Core/Systems/KeyboardInputSystem.h; sourceTree = "<group>"; };
 		EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardInputSystem.cpp; path = Core/Systems/KeyboardInputSystem.cpp; sourceTree = "<group>"; };
+		EA135B90211F546100C6C231 /* axes.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.mtl; sourceTree = "<group>"; };
+		EA135B91211F546100C6C231 /* axes.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.obj; sourceTree = "<group>"; };
 		EA135B95211FBCFF00C6C231 /* DirectionalLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectionalLight.h; path = Core/Components/DirectionalLight.h; sourceTree = "<group>"; };
 		EA16ABBE1F40A0DA0030FF64 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = Core/Components/Transform.h; sourceTree = "<group>"; };
 		EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TransformSystem.h; path = Core/Systems/TransformSystem.h; sourceTree = "<group>"; };
@@ -94,6 +104,8 @@
 		EA4C8BED1F4FDDDB006C49A5 /* TransformSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TransformSystem.cpp; path = Core/Systems/TransformSystem.cpp; sourceTree = "<group>"; };
 		EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InputHandler.cpp; path = Core/InputHandler.cpp; sourceTree = "<group>"; };
 		EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Core/InputHandler.h; sourceTree = "<group>"; };
+		EA64EA7B212095FD0026EAD9 /* cube.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
+		EA64EA7C212096150026EAD9 /* cube.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.mtl; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
 		EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineGLFWInitializer.h; path = Core/EngineGLFWInitializer.h; sourceTree = "<group>"; };
 		EA88A0671E78CAE800A2B9B6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -168,6 +180,15 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		EA135B8F211F546100C6C231 /* Axes */ = {
+			isa = PBXGroup;
+			children = (
+				EA135B90211F546100C6C231 /* axes.mtl */,
+				EA135B91211F546100C6C231 /* axes.obj */,
+			);
+			path = Axes;
+			sourceTree = "<group>";
+		};
 		EA16ABBC1F40A0980030FF64 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +257,15 @@
 			path = tinyobjloader;
 			sourceTree = "<group>";
 		};
+		EA5A69E8210D0857005788EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA64EA7A212095EA0026EAD9 /* Primitives */,
+				EA135B8F211F546100C6C231 /* Axes */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EA5A69FA210D0E7C005788EE /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +274,15 @@
 				EABCC9DF1E442D76008A9484 /* main.cpp */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		EA64EA7A212095EA0026EAD9 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				EA64EA7B212095FD0026EAD9 /* cube.obj */,
+				EA64EA7C212096150026EAD9 /* cube.mtl */,
+			);
+			path = Primitives;
 			sourceTree = "<group>";
 		};
 		EA8D71A21F42AD6C00FC79DE /* thirdparty */ = {
@@ -268,6 +307,14 @@
 				EA8D71B01F42AD6C00FC79DE /* Texture.h */,
 			);
 			path = tdogl;
+			sourceTree = "<group>";
+		};
+		EA8F22C21F5522690012AED5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A69E8210D0857005788EE /* Models */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EA8F22C51F55246F0012AED5 /* Utils */ = {
