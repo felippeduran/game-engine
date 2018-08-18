@@ -13,18 +13,19 @@
 #include "MeshRenderer.h"
 #include "Material.h"
 
+using namespace std;
 using namespace entityx;
 using namespace glm;
 
 void CameraSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Camera, Transform>([this, &es, &events, dt] (Entity entity, Camera &camera, Transform &transform) {
         mat4 worldToLocalMatrix = inverse(transform.localToWorldMatrix);
-        updateRenderers(es, events, dt, camera.projection, worldToLocalMatrix);
+        updateRenderers(es, events, dt, camera.projection, worldToLocalMatrix, transform.localPosition);
     });
 };
 
-void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, TimeDelta dt, mat4& projection, mat4& view) {
-    es.each<MeshRenderer, Transform>([dt, projection, view] (Entity entity, MeshRenderer &renderer, Transform &transform) {
+void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, TimeDelta dt, mat4& projection, mat4& view, vec3& viewPosition) {
+    es.each<MeshRenderer, Transform>([dt, &projection, &view, &viewPosition] (Entity entity, MeshRenderer &renderer, Transform &transform) {
         Mesh *mesh = renderer.mesh;
         for (int i = (int)mesh->submeshes.size() - 1; i >=0; i--) {
             Submesh submesh = mesh->submeshes[i];
@@ -34,18 +35,49 @@ void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, Time
             material->program->setUniform("projection", projection);
             material->program->setUniform("view", view);
             material->program->setUniform("model", transform.localToWorldMatrix);
+            material->program->setUniform("viewPos", viewPosition);
             
-            material->program->setUniform("materialAmbient", material->colorAmbient);
-            material->program->setUniform("materialDiffuse", material->colorDiffuse);
-            material->program->setUniform("materialSpecular", material->colorSpecular);
+            material->program->setUniform("light.position", vec3(0.0f, 15.0f, -20.0f));
+            material->program->setUniform("light.ambient", vec3(1.0f, 1.0f, 1.0f));
+            material->program->setUniform("light.diffuse", vec3(1.0f, 1.0f, 1.0f));
+            material->program->setUniform("light.specular", vec3(1.0f, 1.0f, 1.0f));
             
-            if (material->texture) {
-                material->program->setUniform("materialTex", 0); //set to 0 because the texture will be bound to GL_TEXTURE0
+            unsigned int diffuseNr = 0;
+            unsigned int specularNr = 0;
+            unsigned int normalNr = 0;
+            for (int i = 0; i < material->textures.size(); i++)
+            {
+                tdogl::Texture *texture = material->textures[i];
+                TextureType type = material->textureTypes[i];
                 
-                //bind the texture
-                glActiveTexture(GL_TEXTURE0);
-                glBindTexture(GL_TEXTURE_2D, material->texture->object());
+                glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
+                // retrieve texture number (the N in diffuse_textureN)
+                string number;
+                string name;
+                if (type == TextureType::Diffuse) {
+                    number = to_string(diffuseNr++);
+                    name = "diffuse";
+                }
+                if (type == TextureType::Specular) {
+                    number = to_string(specularNr++);
+                    name = "specular";
+                }
+                if (type == TextureType::Normal) {
+                    number = to_string(normalNr++);
+                    name = "normal";
+                }
+                
+                material->program->setUniform(("material." + name + number).c_str(), i);
+                glBindTexture(GL_TEXTURE_2D, texture->object());
             }
+            
+            material->program->setUniform("material.ambient", material->colorAmbient);
+            if (!diffuseNr) material->program->setUniform("material.diffuse", material->colorDiffuse);
+            if (!specularNr) material->program->setUniform("material.specular", material->colorSpecular);
+            material->program->setUniform("material.shininess", material->specularExponent);
+            material->program->setUniform("material.dissolve", material->dissolve);
+            
+            glActiveTexture(GL_TEXTURE0);
             
             glBindVertexArray(mesh->shapeVAOs[i]);
             

@@ -16,7 +16,7 @@ struct CameraSystem : public entityx::System<CameraSystem> {
     void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
     
 private:
-    void updateRenderers(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt, glm::mat4& projection, glm::mat4& view);
+    void updateRenderers(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt, glm::mat4& projection, glm::mat4& view, glm::vec3& viewPosition);
 };
 
 #endif /* CameraSystem_h */

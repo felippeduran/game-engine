@@ -20,7 +20,7 @@ class MaterialLibrary {
 public:
     MaterialLibrary(ShaderManager *shaderManager, TextureLibrary *textureLibrary) : shaderManager(shaderManager), textureLibrary(textureLibrary) {};
     
-    Material *getMaterial(tinyobj::material_t material);
+    Material *getMaterial(tinyobj::material_t& material);
     
 private:
     ShaderManager *shaderManager;

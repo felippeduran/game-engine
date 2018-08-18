@@ -14,22 +14,35 @@
 #include "tdogl/Program.h"
 #include "tdogl/Texture.h"
 
+typedef enum {
+    Diffuse = 0,
+    Normal = 1,
+    Specular = 2,
+    Count = 3
+} TextureType;
+
 struct Material {
-    Material(tinyobj::material_t& materialData, tdogl::Program* program, tdogl::Texture* texture = nullptr) :
+    Material(tinyobj::material_t& materialData, tdogl::Program *program, std::vector<tdogl::Texture *>& textures, std::vector<TextureType>& textureTypes) :
         colorAmbient(glm::vec3(materialData.ambient[0], materialData.ambient[1], materialData.ambient[2])),
         colorDiffuse(glm::vec3(materialData.diffuse[0], materialData.diffuse[1], materialData.diffuse[2])),
         colorSpecular(glm::vec3(materialData.specular[0], materialData.specular[1], materialData.specular[2])),
+        specularExponent(materialData.shininess),
+        refractionIndex(materialData.ior),
+        dissolve(materialData.dissolve),
+        illuminationModel(materialData.illum),
         program(program),
-        texture(texture) {};
+        textures(textures),
+        textureTypes(textureTypes) {};
     
     tdogl::Program* program;
-    tdogl::Texture* texture;
+    std::vector<tdogl::Texture*> textures;
+    std::vector<TextureType> textureTypes;
     glm::vec3 colorAmbient; // Ka
     glm::vec3 colorDiffuse; // Kd
     glm::vec3 colorSpecular; // Ks
     float specularExponent; // Ns
     float refractionIndex; // Ni
-    float transparency; // d
+    float dissolve; // d
     int illuminationModel; // illum
 };
 
