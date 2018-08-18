@@ -33,12 +33,13 @@
 		EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */; };
 		EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22B91F54FCED0012AED5 /* Mesh.cpp */; };
 		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
-		EA8F22C81F55250F0012AED5 /* platform_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22C71F55246F0012AED5 /* platform_osx.mm */; };
 		EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */; };
 		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
+		EAD00E1D2128D800002BF92B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1C2128D800002BF92B /* FileReader.cpp */; };
+		EAD00E202128D843002BF92B /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */; };
 		EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */; };
 		EADEAAA02116509800450F5F /* MouseMovementSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9F2116509800450F5F /* MouseMovementSystem.cpp */; };
@@ -122,8 +123,6 @@
 		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
 		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
-		EA8F22C61F55246F0012AED5 /* platform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = platform.hpp; sourceTree = "<group>"; };
-		EA8F22C71F55246F0012AED5 /* platform_osx.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_osx.mm; sourceTree = "<group>"; };
 		EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_vertex_shader.glsl; sourceTree = "<group>"; };
 		EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_fragment_shader.glsl; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +131,10 @@
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		EAD00E1A2128CCD8002BF92B /* Name.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Name.h; path = Core/Components/Name.h; sourceTree = "<group>"; };
+		EAD00E1B2128D800002BF92B /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		EAD00E1C2128D800002BF92B /* FileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
+		EAD00E1E2128D843002BF92B /* FileWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileWriter.h; sourceTree = "<group>"; };
+		EAD00E1F2128D843002BF92B /* FileWriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileWriter.cpp; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiny_obj_loader.cc; sourceTree = "<group>"; };
 		EADEAA9E2116509800450F5F /* MouseMovementSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseMovementSystem.h; sourceTree = "<group>"; };
@@ -322,8 +325,10 @@
 		EA8F22C51F55246F0012AED5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				EA8F22C61F55246F0012AED5 /* platform.hpp */,
-				EA8F22C71F55246F0012AED5 /* platform_osx.mm */,
+				EAD00E1B2128D800002BF92B /* FileReader.h */,
+				EAD00E1C2128D800002BF92B /* FileReader.cpp */,
+				EAD00E1E2128D843002BF92B /* FileWriter.h */,
+				EAD00E1F2128D843002BF92B /* FileWriter.cpp */,
 			);
 			name = Utils;
 			path = Core/Utils;
@@ -496,8 +501,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8F22C81F55250F0012AED5 /* platform_osx.mm in Sources */,
+				EAD00E202128D843002BF92B /* FileWriter.cpp in Sources */,
 				EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */,
+				EAD00E1D2128D800002BF92B /* FileReader.cpp in Sources */,
 				EA1B3D821F6B69C2003CEA9E /* MaterialLibrary.cpp in Sources */,
 				EA88A0521E776D1700A2B9B6 /* EngineGLFWInitializer.cpp in Sources */,
 				EA135B7F211E741800C6C231 /* KeyboardMovementSystem.cpp in Sources */,

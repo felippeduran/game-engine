@@ -8,7 +8,6 @@
 
 #include "TextureLibrary.h"
 #include "Texture.h"
-#include "platform.hpp"
 
 using namespace std;
 using namespace tdogl;
@@ -17,7 +16,7 @@ Texture *TextureLibrary::getTexture(string filename) {
     Texture *texture = nullptr;
     if (textures.find(filename) != textures.end()) texture = textures[filename];
     else {
-        Bitmap bmp = Bitmap::bitmapFromFile(ResourcePath(filename));
+        Bitmap bmp = Bitmap::bitmapFromFile(filename);
         bmp.flipVertically();
         texture = new Texture(bmp);
         textures[filename] = texture;
