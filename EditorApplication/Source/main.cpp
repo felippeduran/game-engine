@@ -9,6 +9,7 @@
 #include "GameEngine.h"
 #include <entityx/deps/Dependencies.h>
 
+#include "Name.h"
 #include "Transform.h"
 #include "TransformSystem.h"
 #include "Camera.h"

@@ -131,6 +131,7 @@
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		EAD00E1A2128CCD8002BF92B /* Name.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Name.h; path = Core/Components/Name.h; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiny_obj_loader.cc; sourceTree = "<group>"; };
 		EADEAA9E2116509800450F5F /* MouseMovementSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseMovementSystem.h; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 				EADEAAA42116529800450F5F /* MousePositionEvent.h */,
 				EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */,
 				EA135B95211FBCFF00C6C231 /* DirectionalLight.h */,
+				EAD00E1A2128CCD8002BF92B /* Name.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
