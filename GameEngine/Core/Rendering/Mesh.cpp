@@ -8,6 +8,7 @@
 
 #include "Mesh.h"
 #include "Material.h"
+#include "Submesh.h"
 
 using namespace std;
 using namespace glm;

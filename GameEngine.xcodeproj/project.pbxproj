@@ -31,7 +31,6 @@
 		EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AB1F42AD6C00FC79DE /* Program.cpp */; };
 		EA8D71B41F42AD6D00FC79DE /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AD1F42AD6C00FC79DE /* Shader.cpp */; };
 		EA8D71B51F42AD6D00FC79DE /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */; };
-		EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22B91F54FCED0012AED5 /* Mesh.cpp */; };
 		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
 		EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */; };
 		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
@@ -40,6 +39,7 @@
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EAD00E1D2128D800002BF92B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1C2128D800002BF92B /* FileReader.cpp */; };
 		EAD00E202128D843002BF92B /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
+		EAD00E25212A4F5E002BF92B /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E24212A4F5E002BF92B /* Mesh.cpp */; };
 		EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */; };
 		EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */; };
 		EADEAAA02116509800450F5F /* MouseMovementSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADEAA9F2116509800450F5F /* MouseMovementSystem.cpp */; };
@@ -118,8 +118,6 @@
 		EA8D71AE1F42AD6C00FC79DE /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		EA8D71B01F42AD6C00FC79DE /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
-		EA8F22B91F54FCED0012AED5 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
-		EA8F22BA1F54FCED0012AED5 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
 		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
@@ -135,6 +133,9 @@
 		EAD00E1C2128D800002BF92B /* FileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
 		EAD00E1E2128D843002BF92B /* FileWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileWriter.h; sourceTree = "<group>"; };
 		EAD00E1F2128D843002BF92B /* FileWriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileWriter.cpp; sourceTree = "<group>"; };
+		EAD00E22212A4F41002BF92B /* Submesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Submesh.h; path = Core/Rendering/Submesh.h; sourceTree = "<group>"; };
+		EAD00E23212A4F5E002BF92B /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Core/Rendering/Mesh.h; sourceTree = "<group>"; };
+		EAD00E24212A4F5E002BF92B /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Core/Rendering/Mesh.cpp; sourceTree = "<group>"; };
 		EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEntityX.a; path = build/Debug/libEntityX.a; sourceTree = "<group>"; };
 		EADEAA9A2115E79500450F5F /* tiny_obj_loader.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiny_obj_loader.cc; sourceTree = "<group>"; };
 		EADEAA9E2116509800450F5F /* MouseMovementSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseMovementSystem.h; sourceTree = "<group>"; };
@@ -436,10 +437,11 @@
 		EAFE82251EC95E54007C5743 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				EA8F22B91F54FCED0012AED5 /* Mesh.cpp */,
-				EA8F22BA1F54FCED0012AED5 /* Mesh.h */,
+				EAD00E24212A4F5E002BF92B /* Mesh.cpp */,
+				EAD00E23212A4F5E002BF92B /* Mesh.h */,
 				EA8F22BF1F5504B70012AED5 /* Material.cpp */,
 				EA8F22C01F5504B70012AED5 /* Material.h */,
+				EAD00E22212A4F41002BF92B /* Submesh.h */,
 			);
 			name = Rendering;
 			sourceTree = "<group>";
@@ -521,13 +523,13 @@
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
 				EA135B8A211F3BD900C6C231 /* KeyboardInputSystem.cpp in Sources */,
 				EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */,
-				EA8F22BB1F54FCED0012AED5 /* Mesh.cpp in Sources */,
 				EADEAAB7211689E800450F5F /* EditorCameraRotationSystem.cpp in Sources */,
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
 				EADEAAB22116742C00450F5F /* VelocitySystem.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 				EA135B82211E74FE00C6C231 /* EditorCameraRotationEnableSystem.cpp in Sources */,
 				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,
+				EAD00E25212A4F5E002BF92B /* Mesh.cpp in Sources */,
 				EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,17 +12,9 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <tiny_obj_loader.h>
+#include "Submesh.h"
 
 class Material;
-
-
-struct Submesh {
-    int materialId;
-    int offsetIBO;
-    int size;
-    
-    Submesh(int materialId, int offsetIBO, int size) : materialId(materialId), offsetIBO(offsetIBO), size(size) {};
-};
 
 class Mesh {
 public:
