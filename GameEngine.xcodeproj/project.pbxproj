@@ -17,6 +17,7 @@
 		EA1B3D7F1F6B6986003CEA9E /* MeshLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */; };
 		EA1B3D821F6B69C2003CEA9E /* MaterialLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */; };
 		EA1B3D851F6B69D0003CEA9E /* TextureLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */; };
+		EA25ED35213CE42100A5743D /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA25ED34213CE42100A5743D /* libimgui.a */; };
 		EA2D88B61F46A24E00ED7B8D /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2D88B51F46A24E00ED7B8D /* Camera.cpp */; };
 		EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */; };
 		EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */; };
@@ -97,6 +98,7 @@
 		EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureLibrary.cpp; sourceTree = "<group>"; };
 		EA1B3D841F6B69D0003CEA9E /* TextureLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureLibrary.h; sourceTree = "<group>"; };
 		EA1B3D881F6B6EDD003CEA9E /* tiny_obj_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_obj_loader.h; sourceTree = "<group>"; };
+		EA25ED34213CE42100A5743D /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2D88B41F469F7400ED7B8D /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Core/Components/Camera.h; sourceTree = "<group>"; };
 		EA2D88B51F46A24E00ED7B8D /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Core/Components/Camera.cpp; sourceTree = "<group>"; };
 		EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CameraSystem.cpp; path = Core/Systems/CameraSystem.cpp; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA25ED35213CE42100A5743D /* libimgui.a in Frameworks */,
 				EAD2BF111F3FDD9F0020CDE2 /* libEntityX.a in Frameworks */,
 				EA19801D1F3FBFE800350E7F /* libglfw.3.3.dylib in Frameworks */,
 				EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */,
@@ -366,6 +369,7 @@
 		EABCC9E61E442E57008A9484 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA25ED34213CE42100A5743D /* libimgui.a */,
 				EAD2BF101F3FDD9F0020CDE2 /* libEntityX.a */,
 				EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */,
 				EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */,
@@ -633,11 +637,13 @@
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GameEngine/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"$(SRCROOT)/entityx/entityx",
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/GameEngine/thirdparty/**",
+					"$(SRCROOT)/imgui/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
@@ -662,6 +668,7 @@
 					"$(SRCROOT)/entityx/entityx",
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/GameEngine/thirdparty/**",
+					"$(SRCROOT)/imgui/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
