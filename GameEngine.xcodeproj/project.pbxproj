@@ -38,6 +38,7 @@
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
+		EACB6DAE2145EE200092AF4F /* EntitySorter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB6DAD2145EE200092AF4F /* EntitySorter.cpp */; };
 		EAD00E1D2128D800002BF92B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1C2128D800002BF92B /* FileReader.cpp */; };
 		EAD00E202128D843002BF92B /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EAD00E25212A4F5E002BF92B /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E24212A4F5E002BF92B /* Mesh.cpp */; };
@@ -130,6 +131,8 @@
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		EACB6DAC2145EE200092AF4F /* EntitySorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntitySorter.h; sourceTree = "<group>"; };
+		EACB6DAD2145EE200092AF4F /* EntitySorter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntitySorter.cpp; sourceTree = "<group>"; };
 		EAD00E1A2128CCD8002BF92B /* Name.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Name.h; path = Core/Components/Name.h; sourceTree = "<group>"; };
 		EAD00E1B2128D800002BF92B /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		EAD00E1C2128D800002BF92B /* FileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				EAD00E1C2128D800002BF92B /* FileReader.cpp */,
 				EAD00E1E2128D843002BF92B /* FileWriter.h */,
 				EAD00E1F2128D843002BF92B /* FileWriter.cpp */,
+				EACB6DAC2145EE200092AF4F /* EntitySorter.h */,
+				EACB6DAD2145EE200092AF4F /* EntitySorter.cpp */,
 			);
 			name = Utils;
 			path = Core/Utils;
@@ -524,6 +529,7 @@
 				EA4C8BEB1F4FCCDC006C49A5 /* Transform.cpp in Sources */,
 				EA8D71B31F42AD6D00FC79DE /* Program.cpp in Sources */,
 				EAFE822E1EC95F79007C5743 /* ShaderManager.cpp in Sources */,
+				EACB6DAE2145EE200092AF4F /* EntitySorter.cpp in Sources */,
 				EA4C8BEE1F4FDDDB006C49A5 /* TransformSystem.cpp in Sources */,
 				EA135B8A211F3BD900C6C231 /* KeyboardInputSystem.cpp in Sources */,
 				EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */,
