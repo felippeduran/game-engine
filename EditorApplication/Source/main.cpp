@@ -33,6 +33,12 @@
 #include "KeyboardMovementSystem.h"
 #include "EditorCameraRotationEnableSystem.h"
 
+#include "MenuSystem.h"
+#include "Menu.h"
+
+#include "SceneHierarchySystem.h"
+#include "SceneHierarchy.h"
+
 #include "Velocity.h"
 #include "Movable.h"
 #include "Rotatable.h"
@@ -54,6 +60,9 @@ int main(int argc, const char * argv[]) {
     engine.systems.add<EditorCameraRotationSystem>();
     engine.systems.add<VelocitySystem>();
     
+    engine.systems.add<MenuSystem>();
+    engine.systems.add<SceneHierarchySystem>();
+    
     engine.systems.add<deps::Dependency<Velocity, Transform>>();
     engine.systems.add<deps::Dependency<Movable, Velocity>>();
     engine.systems.add<deps::Dependency<Rotatable, Transform>>();
@@ -68,6 +77,12 @@ int main(int argc, const char * argv[]) {
 }
 
 void setupScene() {
+    Entity menuEntity = engine.entities.create();
+    menuEntity.assign<Menu>();
+    
+    Entity sceneHierarchyEntity = engine.entities.create();
+    sceneHierarchyEntity.assign<SceneHierarchy>();
+    
     Entity parentEntity = engine.entities.create();
     parentEntity.assign<Transform>();
     parentEntity.assign<Name>("Root");

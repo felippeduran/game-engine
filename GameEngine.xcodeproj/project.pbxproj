@@ -35,6 +35,8 @@
 		EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
 		EA8F22CC1F5668640012AED5 /* color_vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */; };
 		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
+		EA9C971E215F087600EB4461 /* MenuSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C971A215F087600EB4461 /* MenuSystem.cpp */; };
+		EA9C971F215F087600EB4461 /* SceneHierarchySystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
@@ -126,11 +128,17 @@
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
 		EA8F22CA1F5668640012AED5 /* color_vertex_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_vertex_shader.glsl; sourceTree = "<group>"; };
 		EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = color_fragment_shader.glsl; sourceTree = "<group>"; };
+		EA9C971A215F087600EB4461 /* MenuSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuSystem.cpp; sourceTree = "<group>"; };
+		EA9C971B215F087600EB4461 /* SceneHierarchySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneHierarchySystem.h; sourceTree = "<group>"; };
+		EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneHierarchySystem.cpp; sourceTree = "<group>"; };
+		EA9C971D215F087600EB4461 /* MenuSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSystem.h; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EABCC9E91E4432D9008A9484 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		EACB6DA5214387540092AF4F /* Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		EACB6DAB21442FD90092AF4F /* SceneHierarchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneHierarchy.h; sourceTree = "<group>"; };
 		EACB6DAC2145EE200092AF4F /* EntitySorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntitySorter.h; sourceTree = "<group>"; };
 		EACB6DAD2145EE200092AF4F /* EntitySorter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntitySorter.cpp; sourceTree = "<group>"; };
 		EAD00E1A2128CCD8002BF92B /* Name.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Name.h; path = Core/Components/Name.h; sourceTree = "<group>"; };
@@ -343,6 +351,17 @@
 			path = Core/Utils;
 			sourceTree = "<group>";
 		};
+		EA9C9719215F087600EB4461 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EA9C971D215F087600EB4461 /* MenuSystem.h */,
+				EA9C971A215F087600EB4461 /* MenuSystem.cpp */,
+				EA9C971B215F087600EB4461 /* SceneHierarchySystem.h */,
+				EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		EABCC9D31E442D76008A9484 = {
 			isa = PBXGroup;
 			children = (
@@ -404,9 +423,19 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		EACB6DAA21442FBB0092AF4F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EACB6DA5214387540092AF4F /* Menu.h */,
+				EACB6DAB21442FD90092AF4F /* SceneHierarchy.h */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		EADEAA9D2116508B00450F5F /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				EA9C9719215F087600EB4461 /* UI */,
 				EADEAA9E2116509800450F5F /* MouseMovementSystem.h */,
 				EADEAA9F2116509800450F5F /* MouseMovementSystem.cpp */,
 				EADEAAB02116742C00450F5F /* VelocitySystem.h */,
@@ -424,6 +453,7 @@
 		EADEAAAC2116690300450F5F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EACB6DAA21442FBB0092AF4F /* UI */,
 				EADEAAAE21166B7700450F5F /* Movable.h */,
 				EADEAAAF2116734900450F5F /* Velocity.h */,
 				EADEAAB321167F5500450F5F /* Rotatable.h */,
@@ -535,10 +565,12 @@
 				EADEAA9B2115E79500450F5F /* tiny_obj_loader.cc in Sources */,
 				EADEAAB7211689E800450F5F /* EditorCameraRotationSystem.cpp in Sources */,
 				EA8F22C11F5504B70012AED5 /* Material.cpp in Sources */,
+				EA9C971E215F087600EB4461 /* MenuSystem.cpp in Sources */,
 				EADEAAB22116742C00450F5F /* VelocitySystem.cpp in Sources */,
 				EABCC9E01E442D76008A9484 /* main.cpp in Sources */,
 				EA135B82211E74FE00C6C231 /* EditorCameraRotationEnableSystem.cpp in Sources */,
 				EA4C8BF31F51D1D1006C49A5 /* InputHandler.cpp in Sources */,
+				EA9C971F215F087600EB4461 /* SceneHierarchySystem.cpp in Sources */,
 				EAD00E25212A4F5E002BF92B /* Mesh.cpp in Sources */,
 				EA1980221F3FCF9C00350E7F /* GameEngine.cpp in Sources */,
 			);
