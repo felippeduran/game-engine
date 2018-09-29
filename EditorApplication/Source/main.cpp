@@ -36,6 +36,9 @@
 #include "MenuSystem.h"
 #include "Menu.h"
 
+#include "InspectorSystem.h"
+#include "Inspector.h"
+
 #include "SceneHierarchySystem.h"
 #include "SceneHierarchy.h"
 
@@ -62,6 +65,7 @@ int main(int argc, const char * argv[]) {
     
     engine.systems.add<MenuSystem>();
     engine.systems.add<SceneHierarchySystem>();
+    engine.systems.add<InspectorSystem>();
     
     engine.systems.add<deps::Dependency<Velocity, Transform>>();
     engine.systems.add<deps::Dependency<Movable, Velocity>>();
@@ -82,6 +86,9 @@ void setupScene() {
     
     Entity sceneHierarchyEntity = engine.entities.create();
     sceneHierarchyEntity.assign<SceneHierarchy>();
+    
+    Entity inspectorEntity = engine.entities.create();
+    inspectorEntity.assign<Inspector>();
     
     Entity parentEntity = engine.entities.create();
     parentEntity.assign<Transform>();

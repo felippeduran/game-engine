@@ -37,6 +37,7 @@
 		EA8F22CD1F5668640012AED5 /* color_fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA8F22CB1F5668640012AED5 /* color_fragment_shader.glsl */; };
 		EA9C971E215F087600EB4461 /* MenuSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C971A215F087600EB4461 /* MenuSystem.cpp */; };
 		EA9C971F215F087600EB4461 /* SceneHierarchySystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */; };
+		EA9C9723215F185D00EB4461 /* InspectorSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C9722215F185D00EB4461 /* InspectorSystem.cpp */; };
 		EABCC9E01E442D76008A9484 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABCC9DF1E442D76008A9484 /* main.cpp */; };
 		EABCC9E81E442E57008A9484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EABCC9EC1E4432F2008A9484 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
@@ -132,6 +133,10 @@
 		EA9C971B215F087600EB4461 /* SceneHierarchySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneHierarchySystem.h; sourceTree = "<group>"; };
 		EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneHierarchySystem.cpp; sourceTree = "<group>"; };
 		EA9C971D215F087600EB4461 /* MenuSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSystem.h; sourceTree = "<group>"; };
+		EA9C9720215F183D00EB4461 /* Inspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inspector.h; sourceTree = "<group>"; };
+		EA9C9721215F185D00EB4461 /* InspectorSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspectorSystem.h; sourceTree = "<group>"; };
+		EA9C9722215F185D00EB4461 /* InspectorSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InspectorSystem.cpp; sourceTree = "<group>"; };
+		EA9C9724215F1CEA00EB4461 /* InspectorHighlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspectorHighlight.h; sourceTree = "<group>"; };
 		EABCC9DC1E442D76008A9484 /* GameEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCC9DF1E442D76008A9484 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EABCC9E71E442E57008A9484 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -358,6 +363,8 @@
 				EA9C971A215F087600EB4461 /* MenuSystem.cpp */,
 				EA9C971B215F087600EB4461 /* SceneHierarchySystem.h */,
 				EA9C971C215F087600EB4461 /* SceneHierarchySystem.cpp */,
+				EA9C9721215F185D00EB4461 /* InspectorSystem.h */,
+				EA9C9722215F185D00EB4461 /* InspectorSystem.cpp */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -428,6 +435,8 @@
 			children = (
 				EACB6DA5214387540092AF4F /* Menu.h */,
 				EACB6DAB21442FD90092AF4F /* SceneHierarchy.h */,
+				EA9C9720215F183D00EB4461 /* Inspector.h */,
+				EA9C9724215F1CEA00EB4461 /* InspectorHighlight.h */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -542,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9C9723215F185D00EB4461 /* InspectorSystem.cpp in Sources */,
 				EAD00E202128D843002BF92B /* FileWriter.cpp in Sources */,
 				EA4C8BE91F4FC5AA006C49A5 /* CameraSystem.cpp in Sources */,
 				EAD00E1D2128D800002BF92B /* FileReader.cpp in Sources */,
