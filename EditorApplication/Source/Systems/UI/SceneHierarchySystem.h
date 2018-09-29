@@ -18,7 +18,7 @@ struct SceneHierarchySystem : public entityx::System<SceneHierarchySystem> {
     void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
     
 private:
-    void showChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId, int& selection_mask, int& node_clicked);
+    void showChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId, entityx::Entity& node_clicked);
     int countChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId);
 };
 
