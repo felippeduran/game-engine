@@ -20,8 +20,7 @@ void InspectorSystem::update(EntityManager &es, EventManager &events, TimeDelta 
             es.each<InspectorHighlight>([this, &es, &events, dt] (Entity entity, InspectorHighlight &highlight) {
                 
             });
-            
-            ImGui::End();
         }
+        ImGui::End();
     });
 };

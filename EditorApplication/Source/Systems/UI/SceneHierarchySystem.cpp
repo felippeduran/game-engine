@@ -33,9 +33,8 @@ void SceneHierarchySystem::update(EntityManager &es, EventManager &events, TimeD
                     node_clicked.assign<InspectorHighlight>();
                 }
             }
-            
-            ImGui::End();
         }
+        ImGui::End();
     });
 };
 
