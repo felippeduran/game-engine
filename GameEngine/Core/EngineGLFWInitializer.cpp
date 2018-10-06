@@ -42,7 +42,7 @@ int EngineGLFWInitializer::initialize(InputHandler *inputHandler) {
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     
-    window = glfwCreateWindow(800, 600, "GameEngine", nullptr, nullptr);
+    window = glfwCreateWindow(1024, 768, "GameEngine", nullptr, nullptr);
     
     int screenWidth, screenHeight;
     glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
