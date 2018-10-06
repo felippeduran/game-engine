@@ -30,10 +30,12 @@ struct Material {
         refractionIndex(materialData.ior),
         dissolve(materialData.dissolve),
         illuminationModel(materialData.illum),
+        name(materialData.name),
         program(program),
         textures(textures),
         textureTypes(textureTypes) {};
     
+    std::string name;
     tdogl::Program* program;
     std::vector<tdogl::Texture*> textures;
     std::vector<TextureType> textureTypes;
