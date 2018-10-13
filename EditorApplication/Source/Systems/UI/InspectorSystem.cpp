@@ -34,10 +34,10 @@ void InspectorSystem::update(EntityManager &es, EventManager &events, TimeDelta 
                         transform->localPosition = vec3(position[0], position[1], position[2]);
                     }
                     
-                    vec3 rotation = glm::eulerAngles(transform->localRotation);
+                    vec3 rotation = glm::degrees(glm::eulerAngles(transform->localRotation));
                     float localRotation[3] = { rotation.x, rotation.y, rotation.z };
                     if (ImGui::InputFloat3("Rotation", localRotation)) {
-                        transform->localRotation = glm::quat(vec3(localRotation[0], localRotation[1], localRotation[2]));
+                        transform->localRotation = glm::quat(glm::radians(vec3(localRotation[0], localRotation[1], localRotation[2])));
                     }
                     
                     float localScale[3] = { transform->localScale.x, transform->localScale.y, transform->localScale.z };
