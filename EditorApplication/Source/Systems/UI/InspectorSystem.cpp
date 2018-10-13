@@ -14,6 +14,7 @@
 #include "Name.h"
 #include "Transform.h"
 #include "MeshRenderer.h"
+#include "Camera.h"
 
 #include "Mesh.h"
 #include "Material.h"
@@ -80,6 +81,16 @@ void InspectorSystem::update(EntityManager &es, EventManager &events, TimeDelta 
                         }
                     }
                     ImGui::EndChild();
+                }
+                
+                if (entity.has_component<Camera>() && ImGui::CollapsingHeader("Camera")) {
+                    ComponentHandle<Camera> camera = entity.component<Camera>();
+                    ImGui::PushItemWidth(100);
+                    ImGui::InputFloat("Field Of View", &camera->fieldOfView);
+                    ImGui::InputFloat("Aspect Ratio", &camera->aspectRatio);
+                    ImGui::InputFloat("Near Plane", &camera->zNear);
+                    ImGui::InputFloat("Far Plane", &camera->zFar);
+                    ImGui::PopItemWidth();
                 }
             });
         }
