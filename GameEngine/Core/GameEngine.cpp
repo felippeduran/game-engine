@@ -11,12 +11,14 @@
 #include "InputHandler.h"
 
 #include <entityx/deps/Dependencies.h>
-#include "Transform.h"
 #include "TransformSystem.h"
-#include "Camera.h"
 #include "CameraSystem.h"
-#include "MeshRenderer.h"
 #include "InputCleanupSystem.h"
+
+#include "Transform.h"
+#include "Camera.h"
+#include "MeshRenderer.h"
+#include "DirectionalLight.h"
 
 #include "ShaderManager.h"
 #include "Program.h"
@@ -41,6 +43,7 @@ int GameEngine::initialize() {
     
     systems.add<deps::Dependency<MeshRenderer, Transform>>();
     systems.add<deps::Dependency<Camera, Transform>>();
+    systems.add<deps::Dependency<DirectionalLight, Transform>>();
     systems.add<CameraSystem>();
     systems.add<TransformSystem>();
     

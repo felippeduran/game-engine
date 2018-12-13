@@ -12,9 +12,9 @@
 #include <glm/glm.hpp>
 
 struct DirectionalLight {
-    DirectionalLight(glm::vec3 direction, glm::vec3 ambient, glm::vec3 diffuse, glm::vec3 specular) : direction(direction), ambient(ambient), diffuse(diffuse), specular(specular) {};
+    DirectionalLight() : DirectionalLight(glm::vec3(), glm::vec3(), glm::vec3()) {};
+    DirectionalLight(glm::vec3 ambient, glm::vec3 diffuse, glm::vec3 specular) : ambient(ambient), diffuse(diffuse), specular(specular) {};
     
-    glm::vec3 direction;
     glm::vec3 ambient;
     glm::vec3 diffuse;
     glm::vec3 specular;

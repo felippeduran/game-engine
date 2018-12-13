@@ -21,6 +21,7 @@ uniform Material material;
 
 struct Light {
     vec3 position;
+    vec3 direction;
     
     vec3 ambient;
     vec3 diffuse;
@@ -30,7 +31,8 @@ struct Light {
 uniform Light light;
 
 void main(void) {
-    vec3 lightDir = - normalize(light.position - fragPos);
+//    vec3 lightDir = - normalize(light.position - fragPos);
+    vec3 lightDir = normalize(light.direction);
     vec3 viewDir = normalize(viewPos - fragPos);
     vec3 halfwayDir = normalize(lightDir + viewDir);
     vec4 sampledColor = texture(material.diffuse0, fragTexCoord);
