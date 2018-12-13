@@ -15,7 +15,7 @@ uniform mat4 model;
 
 void main() {
     fragTexCoord = vertTexCoord;
-    fragNormal = vertNormal;
+    fragNormal = normalize(vec3(model * vec4(vertNormal, 0.0)));
     fragPos = vec3(model * vec4(vert, 1.0));
     gl_Position = projection * view * model * vec4(vert, 1.0);//w is 1.0, also notice cast to a vec4
 }

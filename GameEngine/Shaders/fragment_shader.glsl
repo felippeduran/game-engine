@@ -30,20 +30,20 @@ struct Light {
 uniform Light light;
 
 void main(void) {
-    vec3 lightDir = normalize(light.position - fragPos);
+    vec3 lightDir = - normalize(light.position - fragPos);
     vec3 viewDir = normalize(viewPos - fragPos);
     vec3 halfwayDir = normalize(lightDir + viewDir);
     vec4 sampledColor = texture(material.diffuse0, fragTexCoord);
 
-//    blinn
     float spec = 0.0;
-    if(dot(fragNormal, lightDir) > 0) {
-        spec = pow(max(dot(fragNormal, halfwayDir), 0.0), material.shininess);
-    }
+//    blinn
+//    if(dot(fragNormal, lightDir) > 0) {
+//        spec = pow(max(dot(fragNormal, halfwayDir), 0.0), material.shininess);
+//    }
 
 //    phong
-//    vec3 reflectDir = reflect(-lightDir, fragNormal);
-//    spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+    vec3 reflectDir = reflect(lightDir, fragNormal);
+    spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
     
     vec3 specular = material.specular * spec;
     
