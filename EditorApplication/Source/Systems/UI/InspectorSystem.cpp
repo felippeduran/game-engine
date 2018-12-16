@@ -14,6 +14,7 @@
 #include "Name.h"
 #include "Transform.h"
 #include "MeshRenderer.h"
+#include "DirectionalLight.h"
 #include "Camera.h"
 
 #include "Mesh.h"
@@ -91,6 +92,28 @@ void InspectorSystem::update(EntityManager &es, EventManager &events, TimeDelta 
                     ImGui::InputFloat("Near Plane", &camera->zNear);
                     ImGui::InputFloat("Far Plane", &camera->zFar);
                     ImGui::PopItemWidth();
+                }
+                
+                if (entity.has_component<DirectionalLight>() && ImGui::CollapsingHeader("Directional Light")) {
+                    ComponentHandle<DirectionalLight> light = entity.component<DirectionalLight>();
+                    
+                    std::string ambientName = "Ambient Color##" + std::to_string((long)light);
+                    float ambient[3] = { light->ambient.r, light->ambient.g, light->ambient.b };
+                    if (ImGui::InputFloat3(ambientName.c_str(), ambient)) {
+                        light->ambient = vec3(ambient[0], ambient[1], ambient[2]);
+                    }
+                    
+                    std::string diffuseName = "Diffuse Color##" + std::to_string((long)light);
+                    float diffuse[3] = { light->diffuse.r, light->diffuse.g, light->diffuse.b };
+                    if (ImGui::InputFloat3(diffuseName.c_str(), diffuse)) {
+                        light->diffuse = vec3(diffuse[0], diffuse[1], diffuse[2]);
+                    }
+                    
+                    std::string specularName = "Specular Color##" + std::to_string((long)light);
+                    float specular[3] = { light->specular.r, light->specular.g, light->specular.b };
+                    if (ImGui::InputFloat3(specularName.c_str(), specular)) {
+                        light->specular = vec3(specular[0], specular[1], specular[2]);
+                    }
                 }
             });
         }
