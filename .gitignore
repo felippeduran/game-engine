@@ -16,7 +16,6 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-!default.xcworkspace
 xcuserdata
 profile
 *.moved-aside
@@ -24,8 +23,6 @@ DerivedData
 .idea/
 *.bak
 Pods/
-*.xcworkspace
-*.xcworkspace/
 *_PList.Dir/
 bin/
 *.udf

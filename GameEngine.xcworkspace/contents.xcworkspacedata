@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:EngineEditor.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GameDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:GameEngine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:EntityX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:imgui.xcodeproj">
+   </FileRef>
+</Workspace>
