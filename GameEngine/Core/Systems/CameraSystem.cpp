@@ -76,8 +76,8 @@ void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, Time
                 }
                 
                 material->program->setUniform("material.ambient", material->colorAmbient);
-                if (!diffuseNr) material->program->setUniform("material.diffuse", material->colorDiffuse);
-                if (!specularNr) material->program->setUniform("material.specular", material->colorSpecular);
+                material->program->setUniform("material.diffuse", material->colorDiffuse);
+                material->program->setUniform("material.specular", material->colorSpecular);
                 material->program->setUniform("material.shininess", material->specularExponent);
                 material->program->setUniform("material.dissolve", material->dissolve);
                 
