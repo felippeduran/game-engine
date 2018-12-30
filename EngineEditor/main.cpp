@@ -11,21 +11,8 @@
 
 #include "Name.h"
 #include "Transform.h"
-#include "TransformSystem.h"
-#include "Camera.h"
 #include "EditorCamera.h"
-#include "CameraSystem.h"
-#include "Mesh.h"
-#include "MeshRenderer.h"
-#include "Material.h"
-
-#include "ShaderManager.h"
-#include "Program.h"
-
-#include <glm/glm.hpp>
-
-#include "MaterialLibrary.h"
-#include "MeshLibrary.h"
+#include "DirectionalLight.h"
 
 #include "VelocitySystem.h"
 #include "MouseMovementSystem.h"
@@ -57,6 +44,8 @@ GameEngine engine;
 void setupScene();
 
 int main(int argc, const char * argv[]) {
+    int error = engine.initialize();
+    
     engine.systems.add<MouseMovementSystem>();
     engine.systems.add<KeyboardMovementSystem>();
     engine.systems.add<EditorCameraRotationEnableSystem>();
@@ -74,13 +63,20 @@ int main(int argc, const char * argv[]) {
     engine.systems.add<deps::Dependency<Velocity2d, Position2d>>();
     engine.systems.add<deps::Dependency<Mouse, Velocity2d>>();
     
-    int error = engine.initialize();
+    engine.configure();
+
     setupScene();
     if (!error) error = engine.start();
     return error;
 }
 
 void setupScene() {
+    Entity lightEntity = engine.entities.create();
+    lightEntity.assign<Name>("Light");
+    lightEntity.assign<DirectionalLight>();
+    lightEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 15.0f, -20.0f);
+    
+    
     Entity menuEntity = engine.entities.create();
     menuEntity.assign<Menu>();
     
@@ -93,14 +89,15 @@ void setupScene() {
     Entity parentEntity = engine.entities.create();
     parentEntity.assign<Transform>();
     parentEntity.assign<Name>("Root");
-    
+
     Entity mouseEntity = engine.entities.create();
     mouseEntity.assign<Name>("Mouse");
     mouseEntity.assign<Mouse>();
-    
+
     Entity cameraEntity = engine.entities.create();
     cameraEntity.assign<Name>("EditorCamera");
     cameraEntity.assign<EditorCamera>();
     cameraEntity.assign<Movable>();
+    cameraEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 0.0f, 5.0f);
     cameraEntity.component<Velocity>()->speed = 10.0f;
 }

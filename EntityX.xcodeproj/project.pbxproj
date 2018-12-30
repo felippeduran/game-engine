@@ -25,6 +25,23 @@
 		EA80CD8D1F3FDAE000647F95 /* System.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD741F3FDAE000647F95 /* System.cc */; };
 		EA80CD8E1F3FDAE000647F95 /* System.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD751F3FDAE000647F95 /* System.h */; };
 		EA80CD901F3FDAE000647F95 /* TagsComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD781F3FDAE000647F95 /* TagsComponent.h */; };
+		EA8BE54B21C884D30023A6E6 /* Entity.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD651F3FDAE000647F95 /* Entity.cc */; };
+		EA8BE54C21C884D30023A6E6 /* Event.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD691F3FDAE000647F95 /* Event.cc */; };
+		EA8BE54D21C884D30023A6E6 /* Pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD6E1F3FDAE000647F95 /* Pool.cc */; };
+		EA8BE54E21C884D30023A6E6 /* Timer.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD711F3FDAE000647F95 /* Timer.cc */; };
+		EA8BE54F21C884D30023A6E6 /* System.cc in Sources */ = {isa = PBXBuildFile; fileRef = EA80CD741F3FDAE000647F95 /* System.cc */; };
+		EA8BE55021C885160023A6E6 /* simplesignal.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD5F1F3FDAE000647F95 /* simplesignal.h */; };
+		EA8BE55121C885160023A6E6 /* Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD661F3FDAE000647F95 /* Entity.h */; };
+		EA8BE55221C885160023A6E6 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD6A1F3FDAE000647F95 /* Event.h */; };
+		EA8BE55321C885160023A6E6 /* NonCopyable.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD6D1F3FDAE000647F95 /* NonCopyable.h */; };
+		EA8BE55421C885160023A6E6 /* Pool.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD6F1F3FDAE000647F95 /* Pool.h */; };
+		EA8BE55521C885160023A6E6 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD721F3FDAE000647F95 /* Timer.h */; };
+		EA8BE55621C885160023A6E6 /* quick.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD731F3FDAE000647F95 /* quick.h */; };
+		EA8BE55721C885160023A6E6 /* System.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD751F3FDAE000647F95 /* System.h */; };
+		EA8BE55821C885160023A6E6 /* TagsComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD781F3FDAE000647F95 /* TagsComponent.h */; };
+		EA8BE55921C8852D0023A6E6 /* catch.hpp in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD5E1F3FDAE000647F95 /* catch.hpp */; };
+		EA8BE55A21C8852D0023A6E6 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD631F3FDAE000647F95 /* Dependencies.h */; };
+		EA8BE55B21C885420023A6E6 /* entityx.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80CD681F3FDAE000647F95 /* entityx.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +71,18 @@
 		EA80CD781F3FDAE000647F95 /* TagsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsComponent.h; sourceTree = "<group>"; };
 		EA80CD791F3FDAE000647F95 /* TagsComponent_test.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TagsComponent_test.cc; sourceTree = "<group>"; };
 		EA80CD921F3FDC8600647F95 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		EA8BE54721C8844B0023A6E6 /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACE68F71F3FDA2B00F7A46A /* libEntityX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEntityX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA8BE54521C8844B0023A6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACE68F41F3FDA2B00F7A46A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				EACE68F71F3FDA2B00F7A46A /* libEntityX.a */,
+				EA8BE54721C8844B0023A6E6 /* libEntityXLibrary.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +179,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		EA8BE54321C8844B0023A6E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8BE55B21C885420023A6E6 /* entityx.h in Headers */,
+				EA8BE55921C8852D0023A6E6 /* catch.hpp in Headers */,
+				EA8BE55A21C8852D0023A6E6 /* Dependencies.h in Headers */,
+				EA8BE55021C885160023A6E6 /* simplesignal.h in Headers */,
+				EA8BE55121C885160023A6E6 /* Entity.h in Headers */,
+				EA8BE55221C885160023A6E6 /* Event.h in Headers */,
+				EA8BE55321C885160023A6E6 /* NonCopyable.h in Headers */,
+				EA8BE55421C885160023A6E6 /* Pool.h in Headers */,
+				EA8BE55521C885160023A6E6 /* Timer.h in Headers */,
+				EA8BE55621C885160023A6E6 /* quick.h in Headers */,
+				EA8BE55721C885160023A6E6 /* System.h in Headers */,
+				EA8BE55821C885160023A6E6 /* TagsComponent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACE68F51F3FDA2B00F7A46A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +220,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EA8BE54621C8844B0023A6E6 /* EntityXLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA8BE54A21C8844B0023A6E6 /* Build configuration list for PBXNativeTarget "EntityXLibrary" */;
+			buildPhases = (
+				EA8BE54321C8844B0023A6E6 /* Headers */,
+				EA8BE54421C8844B0023A6E6 /* Sources */,
+				EA8BE54521C8844B0023A6E6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EntityXLibrary;
+			productName = EntityXLibrary;
+			productReference = EA8BE54721C8844B0023A6E6 /* libEntityXLibrary.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		EACE68F61F3FDA2B00F7A46A /* EntityX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EACE69021F3FDA2B00F7A46A /* Build configuration list for PBXNativeTarget "EntityX" */;
@@ -201,6 +263,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Felippe Durán";
 				TargetAttributes = {
+					EA8BE54621C8844B0023A6E6 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
 					EACE68F61F3FDA2B00F7A46A = {
 						CreatedOnToolsVersion = 9.0;
 					};
@@ -219,11 +285,24 @@
 			projectRoot = "";
 			targets = (
 				EACE68F61F3FDA2B00F7A46A /* EntityX */,
+				EA8BE54621C8844B0023A6E6 /* EntityXLibrary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA8BE54421C8844B0023A6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8BE54B21C884D30023A6E6 /* Entity.cc in Sources */,
+				EA8BE54C21C884D30023A6E6 /* Event.cc in Sources */,
+				EA8BE54D21C884D30023A6E6 /* Pool.cc in Sources */,
+				EA8BE54E21C884D30023A6E6 /* Timer.cc in Sources */,
+				EA8BE54F21C884D30023A6E6 /* System.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACE68F31F3FDA2B00F7A46A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +319,55 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		EA8BE54821C8844B0023A6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = .;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"entityx/entityx/**",
+					entityx,
+				);
+				LIBRARY_SEARCH_PATHS = entityx/entityx/;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA8BE54921C8844B0023A6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = .;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"entityx/entityx/**",
+					entityx,
+				);
+				LIBRARY_SEARCH_PATHS = entityx/entityx/;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		EACE69001F3FDA2B00F7A46A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -376,6 +504,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA8BE54A21C8844B0023A6E6 /* Build configuration list for PBXNativeTarget "EntityXLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8BE54821C8844B0023A6E6 /* Debug */,
+				EA8BE54921C8844B0023A6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EACE68F21F3FDA2B00F7A46A /* Build configuration list for PBXProject "EntityX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

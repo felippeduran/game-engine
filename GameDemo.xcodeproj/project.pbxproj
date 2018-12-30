@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA0343F121C6A148007C86C3 /* libGameEngineLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */; };
+		EA0343F321C6A148007C86C3 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F221C6A148007C86C3 /* libimgui.a */; };
+		EA0CF89521C69AAE0032A8DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF89421C69AAE0032A8DD /* main.cpp */; };
+		EA0CF8A321C69BFC0032A8DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF89421C69AAE0032A8DD /* main.cpp */; };
+		EA29FAB521C9CEE0004656FC /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */; };
+		EA2DABE521D97025009D050D /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */; };
+		EA2DABE621D97025009D050D /* libGameEngineLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */; };
+		EA2DABE721D97025009D050D /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F221C6A148007C86C3 /* libimgui.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA0CF88F21C69AAE0032A8DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2DABE821D97038009D050D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA0343EE21C6A148007C86C3 /* libEntityX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntityX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngineLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0343F221C6A148007C86C3 /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0CF89121C69AAE0032A8DD /* GameDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0CF89421C69AAE0032A8DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EA0CF89F21C69AFD0032A8DD /* libGameDemoLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameDemoLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA0CF88E21C69AAE0032A8DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA29FAB521C9CEE0004656FC /* libEntityXLibrary.dylib in Frameworks */,
+				EA0343F121C6A148007C86C3 /* libGameEngineLibrary.dylib in Frameworks */,
+				EA0343F321C6A148007C86C3 /* libimgui.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0CF89D21C69AFD0032A8DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2DABE521D97025009D050D /* libEntityXLibrary.dylib in Frameworks */,
+				EA2DABE621D97025009D050D /* libGameEngineLibrary.dylib in Frameworks */,
+				EA2DABE721D97025009D050D /* libimgui.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA0343ED21C6A148007C86C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */,
+				EA0343EE21C6A148007C86C3 /* libEntityX.a */,
+				EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */,
+				EA0343F221C6A148007C86C3 /* libimgui.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0CF88821C69AAE0032A8DD = {
+			isa = PBXGroup;
+			children = (
+				EA0CF89321C69AAE0032A8DD /* GameDemo */,
+				EA0CF89221C69AAE0032A8DD /* Products */,
+				EA0343ED21C6A148007C86C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA0CF89221C69AAE0032A8DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CF89121C69AAE0032A8DD /* GameDemo */,
+				EA0CF89F21C69AFD0032A8DD /* libGameDemoLib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA0CF89321C69AAE0032A8DD /* GameDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CF8DA21C69D0F0032A8DD /* Resources */,
+				EA0CF89421C69AAE0032A8DD /* main.cpp */,
+			);
+			path = GameDemo;
+			sourceTree = "<group>";
+		};
+		EA0CF8D721C69D0F0032A8DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA0CF8D921C69D0F0032A8DD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scenes;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA0CF8DA21C69D0F0032A8DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CF8D721C69D0F0032A8DD /* Models */,
+				EA0CF8D921C69D0F0032A8DD /* Scenes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EA0CF89B21C69AFD0032A8DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EA0CF89021C69AAE0032A8DD /* GameDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0CF89821C69AAE0032A8DD /* Build configuration list for PBXNativeTarget "GameDemo" */;
+			buildPhases = (
+				EA0CF88D21C69AAE0032A8DD /* Sources */,
+				EA0CF88E21C69AAE0032A8DD /* Frameworks */,
+				EA0CF88F21C69AAE0032A8DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameDemo;
+			productName = GameDemo;
+			productReference = EA0CF89121C69AAE0032A8DD /* GameDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+		EA0CF89E21C69AFD0032A8DD /* GameDemoLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0CF8A021C69AFD0032A8DD /* Build configuration list for PBXNativeTarget "GameDemoLib" */;
+			buildPhases = (
+				EA0CF89B21C69AFD0032A8DD /* Headers */,
+				EA0CF89C21C69AFD0032A8DD /* Sources */,
+				EA0CF89D21C69AFD0032A8DD /* Frameworks */,
+				EA2DABE821D97038009D050D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameDemoLib;
+			productName = GameDemoLib;
+			productReference = EA0CF89F21C69AFD0032A8DD /* libGameDemoLib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA0CF88921C69AAE0032A8DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Felippe Durán";
+				TargetAttributes = {
+					EA0CF89021C69AAE0032A8DD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					EA0CF89E21C69AFD0032A8DD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = EA0CF88C21C69AAE0032A8DD /* Build configuration list for PBXProject "GameDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA0CF88821C69AAE0032A8DD;
+			productRefGroup = EA0CF89221C69AAE0032A8DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA0CF89021C69AAE0032A8DD /* GameDemo */,
+				EA0CF89E21C69AFD0032A8DD /* GameDemoLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA0CF88D21C69AAE0032A8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0CF89521C69AAE0032A8DD /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0CF89C21C69AFD0032A8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0CF8A321C69BFC0032A8DD /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EA0CF89621C69AAE0032A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EA0CF89721C69AAE0032A8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EA0CF89921C69AAE0032A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/imgui/**",
+					"$(SRCROOT)/GameEngine/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA0CF89A21C69AAE0032A8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/imgui/**",
+					"$(SRCROOT)/GameEngine/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA0CF8A121C69AFD0032A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/imgui/**",
+					"$(SRCROOT)/GameEngine/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA0CF8A221C69AFD0032A8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					"$(SRCROOT)/imgui/**",
+					"$(SRCROOT)/GameEngine/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA0CF88C21C69AAE0032A8DD /* Build configuration list for PBXProject "GameDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0CF89621C69AAE0032A8DD /* Debug */,
+				EA0CF89721C69AAE0032A8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0CF89821C69AAE0032A8DD /* Build configuration list for PBXNativeTarget "GameDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0CF89921C69AAE0032A8DD /* Debug */,
+				EA0CF89A21C69AAE0032A8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0CF8A021C69AFD0032A8DD /* Build configuration list for PBXNativeTarget "GameDemoLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0CF8A121C69AFD0032A8DD /* Debug */,
+				EA0CF8A221C69AFD0032A8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA0CF88921C69AAE0032A8DD /* Project object */;
+}

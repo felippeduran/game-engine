@@ -28,7 +28,25 @@
 		EACB6DA1214319380092AF4F /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB6D9D214319370092AF4F /* imgui_impl_glfw.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA0CF88421C69A4E0032A8DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0CF87F21C69A4E0032A8DD /* GameDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA0CF85A21C699CA0032A8DD;
+			remoteInfo = GameDemo;
+		};
+		EA0CF88621C69A4E0032A8DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0CF87F21C69A4E0032A8DD /* GameDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA0CF86821C699F40032A8DD;
+			remoteInfo = GameDemoLib;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EA0CF87F21C69A4E0032A8DD /* GameDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GameDemo.xcodeproj; path = GameDemo/GameDemo.xcodeproj; sourceTree = "<group>"; };
 		EA25EBB7213CD62100A5743D /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA25ECE8213CD6C000A5743D /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
 		EA25ECE9213CD6C000A5743D /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_truetype.h; sourceTree = "<group>"; };
@@ -73,9 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA0CF88021C69A4E0032A8DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CF88521C69A4E0032A8DD /* GameDemo */,
+				EA0CF88721C69A4E0032A8DD /* libGameDemoLib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EA25EBAE213CD62100A5743D = {
 			isa = PBXGroup;
 			children = (
+				EA0CF87F21C69A4E0032A8DD /* GameDemo.xcodeproj */,
 				EA25EBB9213CD62100A5743D /* imgui */,
 				EA25EBB8213CD62100A5743D /* Products */,
 				EA25ED15213CDA0100A5743D /* Frameworks */,
@@ -239,12 +267,35 @@
 			mainGroup = EA25EBAE213CD62100A5743D;
 			productRefGroup = EA25EBB8213CD62100A5743D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA0CF88021C69A4E0032A8DD /* Products */;
+					ProjectRef = EA0CF87F21C69A4E0032A8DD /* GameDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EA25EBB6213CD62100A5743D /* imgui */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EA0CF88521C69A4E0032A8DD /* GameDemo */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = GameDemo;
+			remoteRef = EA0CF88421C69A4E0032A8DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EA0CF88721C69A4E0032A8DD /* libGameDemoLib.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libGameDemoLib.dylib;
+			remoteRef = EA0CF88621C69A4E0032A8DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA25EBB4213CD62100A5743D /* Sources */ = {

@@ -47,8 +47,6 @@ int GameEngine::initialize() {
     systems.add<CameraSystem>();
     systems.add<TransformSystem>();
     
-    systems.configure();
-    
     shaderManager = new ShaderManager();
     
     shaderManager->createProgram("basic_program", "vertex_shader.glsl", "fragment_shader.glsl");
@@ -58,6 +56,10 @@ int GameEngine::initialize() {
     meshLibrary = new MeshLibrary(materialLibrary);
     
     return error;
+}
+
+void GameEngine::configure() {
+    systems.configure();
 }
 
 int GameEngine::start() {

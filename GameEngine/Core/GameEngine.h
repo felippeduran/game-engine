@@ -24,6 +24,7 @@ public:
     ~GameEngine();
     
     int initialize();
+    void configure();
     int start();
     
     void update(entityx::TimeDelta dt);
