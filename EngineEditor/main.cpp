@@ -11,6 +11,7 @@
 
 #include "Name.h"
 #include "Transform.h"
+#include "Camera.h"
 #include "EditorCamera.h"
 #include "DirectionalLight.h"
 
