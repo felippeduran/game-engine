@@ -9,12 +9,14 @@
 #ifndef MouseInput_h
 #define MouseInput_h
 
-struct MouseInput {
-    MouseInput(int order, int key, int state) : order(order), key(key), state(state) {};
-    
-    int order;
-    int key;
-    int state;
+namespace GameEngine {
+    struct MouseInput {
+        MouseInput(int order, int key, int state) : order(order), key(key), state(state) {};
+        
+        int order;
+        int key;
+        int state;
+    };
 };
 
 #endif /* MouseInput_h */

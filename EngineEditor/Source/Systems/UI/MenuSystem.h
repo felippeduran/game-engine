@@ -12,11 +12,15 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct MenuSystem : public entityx::System<MenuSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
-    
-private:
-    void ShowMenuFile();
+namespace GameEngine {
+    namespace Editor {
+        struct MenuSystem : public entityx::System<MenuSystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+            
+        private:
+            void ShowMenuFile();
+        };
+    };
 };
 
 #endif /* MenuSystem_h */

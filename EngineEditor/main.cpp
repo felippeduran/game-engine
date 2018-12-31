@@ -6,7 +6,7 @@
 //  Copyright © 2017 Felippe Durán. All rights reserved.
 //
 
-#include "GameEngine.h"
+#include "Engine.h"
 #include <entityx/deps/Dependencies.h>
 
 #include "Name.h"
@@ -39,12 +39,13 @@
 
 using namespace std;
 using namespace entityx;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
-GameEngine engine;
-
-void setupScene();
+void setupScene(Engine& engine);
 
 int main(int argc, const char * argv[]) {
+    Engine engine;
     int error = engine.initialize();
     
     engine.systems.add<MouseMovementSystem>();
@@ -66,12 +67,12 @@ int main(int argc, const char * argv[]) {
     
     engine.configure();
 
-    setupScene();
+    setupScene(engine);
     if (!error) error = engine.start();
     return error;
 }
 
-void setupScene() {
+void setupScene(Engine& engine) {
     Entity lightEntity = engine.entities.create();
     lightEntity.assign<Name>("Light");
     lightEntity.assign<DirectionalLight>();

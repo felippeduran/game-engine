@@ -15,6 +15,7 @@
 using namespace std;
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine::Editor;
 
 void MouseMovementSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     

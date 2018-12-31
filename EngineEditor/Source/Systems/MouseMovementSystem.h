@@ -12,12 +12,16 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct MouseMovementSystem : public entityx::System<MouseMovementSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
-    
-private:
-    void enableCameraAim(entityx::EntityManager &es);
-    void disableCameraAim(entityx::EntityManager &es);
+namespace GameEngine {
+    namespace Editor {
+        struct MouseMovementSystem : public entityx::System<MouseMovementSystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+            
+        private:
+            void enableCameraAim(entityx::EntityManager &es);
+            void disableCameraAim(entityx::EntityManager &es);
+        };
+    };
 };
 
 #endif /* MouseMovementSystem_h */

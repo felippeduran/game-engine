@@ -17,6 +17,7 @@
 #include "imgui_impl_opengl3.h"
 
 using namespace std;
+using namespace GameEngine;
 
 static InputHandler *inputHandlerPtr = nullptr;
 

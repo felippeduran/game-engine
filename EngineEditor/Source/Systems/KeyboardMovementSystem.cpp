@@ -16,6 +16,8 @@
 using namespace std;
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
 void KeyboardMovementSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     const EntityManager::View<KeyboardInput>& entities = es.entities_with_components<KeyboardInput>();

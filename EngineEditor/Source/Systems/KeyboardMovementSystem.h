@@ -12,8 +12,12 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct KeyboardMovementSystem : public entityx::System<KeyboardMovementSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+namespace GameEngine {
+    namespace Editor {
+        struct KeyboardMovementSystem : public entityx::System<KeyboardMovementSystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+        };
+    };
 };
 
 #endif /* KeyboardMovementSystem_h */

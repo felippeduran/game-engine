@@ -13,12 +13,14 @@
 #include <glm/glm.hpp>
 #include <entityx.h>
 
-class Mesh;
-struct Material;
+namespace GameEngine {
+    class Mesh;
+    struct Material;
 
-struct MeshRenderer {
-    MeshRenderer(Mesh *mesh) : mesh(mesh) {};
-    Mesh *mesh;
+    struct MeshRenderer {
+        MeshRenderer(Mesh *mesh) : mesh(mesh) {};
+        Mesh *mesh;
+    };
 };
 
 #endif /* MeshRenderer_h */

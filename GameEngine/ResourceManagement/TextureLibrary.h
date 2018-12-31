@@ -16,12 +16,14 @@ namespace tdogl {
     class Texture;
 }
 
-class TextureLibrary {
-public:
-    tdogl::Texture *getTexture(std::string texture);
-    
-private:
-    std::unordered_map<std::string, tdogl::Texture *> textures;
+namespace GameEngine {
+    class TextureLibrary {
+    public:
+        tdogl::Texture *getTexture(std::string texture);
+        
+    private:
+        std::unordered_map<std::string, tdogl::Texture *> textures;
+    };
 };
 
 #endif /* TextureLibrary_h */

@@ -9,6 +9,10 @@
 #ifndef Rotatable_h
 #define Rotatable_h
 
-struct Rotatable {};
+namespace GameEngine {
+    namespace Editor {
+        struct Rotatable {};
+    };
+};
 
 #endif /* Rotatable_h */

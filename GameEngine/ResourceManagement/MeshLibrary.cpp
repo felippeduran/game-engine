@@ -13,6 +13,7 @@
 
 using namespace std;
 using namespace tinyobj;
+using namespace GameEngine;
 
 void CalcNormal(float n[3], float v0[3], float v1[3], float v2[3]);
 

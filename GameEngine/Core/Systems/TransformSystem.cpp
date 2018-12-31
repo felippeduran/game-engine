@@ -15,6 +15,7 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
 
 void logMat4(mat4& mat) {
     std::cout << "<mat4> " << &mat << std::endl;

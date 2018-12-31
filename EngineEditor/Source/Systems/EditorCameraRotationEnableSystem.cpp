@@ -13,6 +13,7 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine::Editor;
 
 void EditorCameraRotationEnableSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<MouseInput>([this, &es, &events, dt] (Entity entity, MouseInput &mouseInput) {

@@ -16,6 +16,8 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
 void EditorCameraRotationSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<EditorCamera, Transform, Rotatable>([this, &es, &events, dt] (Entity entity, EditorCamera &camera, Transform &transform, Rotatable &rotatable) {

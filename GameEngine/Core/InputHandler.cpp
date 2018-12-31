@@ -8,7 +8,7 @@
 
 #include "InputHandler.h"
 #include <GLFW/glfw3.h>
-#include "GameEngine.h"
+#include "Engine.h"
 #include "KeyboardInput.h"
 #include "MouseInput.h"
 #include "MouseEnter.h"
@@ -17,6 +17,7 @@
 
 using namespace glm;
 using namespace entityx;
+using namespace GameEngine;
 
 void InputHandler::resetOrder() {
     order = 0;

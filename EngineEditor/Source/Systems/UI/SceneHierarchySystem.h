@@ -14,12 +14,16 @@
 #include "Transform.h"
 #include "Name.h"
 
-struct SceneHierarchySystem : public entityx::System<SceneHierarchySystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
-    
-private:
-    void showChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId, entityx::Entity& node_clicked);
-    int countChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId);
+namespace GameEngine {
+    namespace Editor {
+        struct SceneHierarchySystem : public entityx::System<SceneHierarchySystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+            
+        private:
+            void showChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId, entityx::Entity& node_clicked);
+            int countChildNodes(entityx::EntityManager::View<Transform, Name> view, entityx::Entity::Id parentId);
+        };
+    };
 };
 
 #endif /* SceneHierarchySystem_h */

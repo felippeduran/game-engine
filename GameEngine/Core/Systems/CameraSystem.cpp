@@ -17,6 +17,7 @@
 using namespace std;
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
 
 void CameraSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Camera, Transform>([this, &es, &events, dt] (Entity entity, Camera &camera, Transform &transform) {

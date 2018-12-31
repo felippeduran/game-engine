@@ -1,12 +1,12 @@
 //
-//  GameEngine.cpp
+//  Engine.cpp
 //  GameEngine
 //
 //  Created by Felippe Durán on 12/08/17.
 //  Copyright © 2017 Felippe Durán. All rights reserved.
 //
 
-#include "GameEngine.h"
+#include "Engine.h"
 #include "EngineGLFWInitializer.h"
 #include "InputHandler.h"
 
@@ -29,12 +29,13 @@
 
 using namespace entityx;
 using namespace std;
+using namespace GameEngine;
 
-GameEngine::GameEngine() {
+Engine::Engine() {
     systems.add<InputCleanupSystem>();
 }
 
-int GameEngine::initialize() {
+int Engine::initialize() {
     inputHandler = new InputHandler(this);
     initializer = new EngineGLFWInitializer();
     
@@ -58,15 +59,15 @@ int GameEngine::initialize() {
     return error;
 }
 
-void GameEngine::configure() {
+void Engine::configure() {
     systems.configure();
 }
 
-int GameEngine::start() {
-    return initializer->runLoop(bind(&GameEngine::update, this, placeholders::_1));
+int Engine::start() {
+    return initializer->runLoop(bind(&Engine::update, this, placeholders::_1));
 }
 
-GameEngine::~GameEngine() {
+Engine::~Engine() {
     delete inputHandler;
     delete initializer;
     delete shaderManager;
@@ -75,6 +76,6 @@ GameEngine::~GameEngine() {
     delete meshLibrary;
 }
 
-void GameEngine::update(TimeDelta dt) {
+void Engine::update(TimeDelta dt) {
     systems.update_all(dt);
 }

@@ -12,11 +12,13 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct KeyboardInputSystem : public entityx::System<KeyboardInputSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
-    
-private:
-    std::vector<int> keysIds;
+namespace GameEngine {
+    struct KeyboardInputSystem : public entityx::System<KeyboardInputSystem> {
+        void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+        
+    private:
+        std::vector<int> keysIds;
+    };
 };
 
 #endif /* KeyboardInputSystem_h */

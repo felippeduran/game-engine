@@ -16,6 +16,8 @@
 using namespace entityx;
 using namespace glm;
 using namespace std;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
 void SceneHierarchySystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<SceneHierarchy>([this, &es, &events, dt] (Entity entity, SceneHierarchy &menu) {

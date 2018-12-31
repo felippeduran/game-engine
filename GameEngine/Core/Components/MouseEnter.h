@@ -9,10 +9,12 @@
 #ifndef MouseEnter_h
 #define MouseEnter_h
 
-struct MouseEnter {
-    MouseEnter(bool entered) : entered(entered) {};
-    
-    bool entered;
+namespace GameEngine {
+    struct MouseEnter {
+        MouseEnter(bool entered) : entered(entered) {};
+        
+        bool entered;
+    };
 };
 
 #endif /* MouseEnter_h */

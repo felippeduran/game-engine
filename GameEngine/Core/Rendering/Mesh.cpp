@@ -13,6 +13,7 @@
 using namespace std;
 using namespace glm;
 using namespace tinyobj;
+using namespace GameEngine;
 
 Mesh::Mesh(vector<vec3> combinedVertices, vector<vec3> combinedNormals, vector<vec2> combinedTexCoords, vector<int> combinedIndices, vector<Submesh> submeshes, vector<Material *> materials) : combinedVertices(combinedVertices), combinedNormals(combinedNormals), combinedTexCoords(combinedTexCoords), combinedIndices(combinedIndices), submeshes(submeshes), materials(materials) {
     glGenBuffers(1, &vertexVBO);

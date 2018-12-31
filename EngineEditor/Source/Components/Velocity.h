@@ -11,11 +11,15 @@
 
 #include <glm/glm.hpp>
 
-struct Velocity {
-    Velocity() : Velocity(0.0f, glm::vec3()) {};
-    Velocity(float speed, glm::vec3 direction) : speed(speed), direction(direction) {};
-    float speed;
-    glm::vec3 direction;
+namespace GameEngine {
+    namespace Editor {
+        struct Velocity {
+            Velocity() : Velocity(0.0f, glm::vec3()) {};
+            Velocity(float speed, glm::vec3 direction) : speed(speed), direction(direction) {};
+            float speed;
+            glm::vec3 direction;
+        };
+    };
 };
 
 #endif /* Velocity_h */

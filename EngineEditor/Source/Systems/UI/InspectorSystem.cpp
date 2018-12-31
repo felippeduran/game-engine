@@ -22,6 +22,8 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
 void InspectorSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Inspector>([this, &es, &events, dt] (Entity entity, Inspector &inspector) {

@@ -9,9 +9,11 @@
 #ifndef Name_h
 #define Name_h
 
-struct Name {
-    Name(std::string name = "") : name(name) {};
-    std::string name;
+namespace GameEngine {
+    struct Name {
+        Name(std::string name = "") : name(name) {};
+        std::string name;
+    };
 };
 
 #endif /* Name_h */

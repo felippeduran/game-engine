@@ -28,7 +28,7 @@
 		EA0343DE21C6A105007C86C3 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F22BF1F5504B70012AED5 /* Material.cpp */; };
 		EA0343DF21C6A105007C86C3 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */; };
 		EA0343E021C6A105007C86C3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E24212A4F5E002BF92B /* Mesh.cpp */; };
-		EA0343E121C6A105007C86C3 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* GameEngine.cpp */; };
+		EA0343E121C6A105007C86C3 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* Engine.cpp */; };
 		EA0343E321C6A105007C86C3 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
 		EA0343E421C6A105007C86C3 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EA0343E521C6A105007C86C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
@@ -48,6 +48,7 @@
 		EA0CF8E521C69F1E0032A8DD /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
+		EA2DABFD21DABA1A009D050D /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1980211F3FCF9C00350E7F /* Engine.h */; };
 		EA8BE55D21C8858D0023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +77,8 @@
 		EA16ABBE1F40A0DA0030FF64 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = Core/Components/Transform.h; sourceTree = "<group>"; };
 		EA16ABBF1F40A78E0030FF64 /* TransformSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TransformSystem.h; path = Core/Systems/TransformSystem.h; sourceTree = "<group>"; };
 		EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../../usr/local/Cellar/glfw/HEAD-3ee7f8f/lib/libglfw.3.3.dylib"; sourceTree = "<group>"; };
-		EA1980201F3FCF9C00350E7F /* GameEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameEngine.cpp; path = Core/GameEngine.cpp; sourceTree = "<group>"; };
-		EA1980211F3FCF9C00350E7F /* GameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEngine.h; path = Core/GameEngine.h; sourceTree = "<group>"; };
+		EA1980201F3FCF9C00350E7F /* Engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Engine.cpp; path = Core/Engine.cpp; sourceTree = "<group>"; };
+		EA1980211F3FCF9C00350E7F /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = Core/Engine.h; sourceTree = "<group>"; };
 		EA1B3D7D1F6B6986003CEA9E /* MeshLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MeshLibrary.cpp; sourceTree = "<group>"; };
 		EA1B3D7E1F6B6986003CEA9E /* MeshLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshLibrary.h; sourceTree = "<group>"; };
 		EA1B3D801F6B69C2003CEA9E /* MaterialLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaterialLibrary.cpp; sourceTree = "<group>"; };
@@ -311,8 +312,8 @@
 				EAFE82251EC95E54007C5743 /* Rendering */,
 				EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */,
 				EA88A0511E776D1700A2B9B6 /* EngineGLFWInitializer.h */,
-				EA1980201F3FCF9C00350E7F /* GameEngine.cpp */,
-				EA1980211F3FCF9C00350E7F /* GameEngine.h */,
+				EA1980201F3FCF9C00350E7F /* Engine.cpp */,
+				EA1980211F3FCF9C00350E7F /* Engine.h */,
 				EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */,
 				EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */,
 			);
@@ -346,6 +347,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2DABFD21DABA1A009D050D /* Engine.h in Headers */,
 				EA0343FD21C6A1F4007C86C3 /* CameraSystem.h in Headers */,
 				EA0343FB21C6A1ED007C86C3 /* EntitySorter.h in Headers */,
 				EA0343F421C6A1D9007C86C3 /* Transform.h in Headers */,
@@ -441,7 +443,7 @@
 				EA0343DE21C6A105007C86C3 /* Material.cpp in Sources */,
 				EA0343DF21C6A105007C86C3 /* InputHandler.cpp in Sources */,
 				EA0343E021C6A105007C86C3 /* Mesh.cpp in Sources */,
-				EA0343E121C6A105007C86C3 /* GameEngine.cpp in Sources */,
+				EA0343E121C6A105007C86C3 /* Engine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

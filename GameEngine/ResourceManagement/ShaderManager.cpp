@@ -14,6 +14,7 @@
 
 using namespace std;
 using namespace tdogl;
+using namespace GameEngine;
 
 ShaderManager::~ShaderManager() {
     for (auto& programPair : programs) {

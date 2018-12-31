@@ -9,18 +9,20 @@
 #ifndef MeshLibrary_h
 #define MeshLibrary_h
 
-class MaterialLibrary;
-class Mesh;
+namespace GameEngine {
+    class MaterialLibrary;
+    class Mesh;
 
-class MeshLibrary {
-public:
-    MeshLibrary(MaterialLibrary *materialLibrary) : materialLibrary(materialLibrary) {};
-    ~MeshLibrary();
-    
-    Mesh *loadMesh(const std::string& filename);
-    
-private:
-    MaterialLibrary *materialLibrary;
+    class MeshLibrary {
+    public:
+        MeshLibrary(MaterialLibrary *materialLibrary) : materialLibrary(materialLibrary) {};
+        ~MeshLibrary();
+        
+        Mesh *loadMesh(const std::string& filename);
+        
+    private:
+        MaterialLibrary *materialLibrary;
+    };
 };
 
 #endif /* MeshLibrary_h */

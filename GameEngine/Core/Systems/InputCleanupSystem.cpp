@@ -15,6 +15,7 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
 
 void InputCleanupSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<KeyboardInput>([this, &es, &events, dt] (Entity entity, KeyboardInput &keyInput) {

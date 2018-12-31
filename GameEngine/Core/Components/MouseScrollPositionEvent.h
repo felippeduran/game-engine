@@ -11,11 +11,13 @@
 
 #include <glm/glm.hpp>
 
-struct MouseScrollPositionEvent {
-    MouseScrollPositionEvent(int order, glm::vec2 position) : order(order), position(position) {};
-    
-    int order;
-    glm::vec2 position;
+namespace GameEngine {
+    struct MouseScrollPositionEvent {
+        MouseScrollPositionEvent(int order, glm::vec2 position) : order(order), position(position) {};
+        
+        int order;
+        glm::vec2 position;
+    };
 };
 
 #endif /* MouseScrollPositionEvent_h */

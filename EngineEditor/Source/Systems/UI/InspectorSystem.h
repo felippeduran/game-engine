@@ -12,8 +12,12 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct InspectorSystem : public entityx::System<InspectorSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+namespace GameEngine {
+    namespace Editor {
+        struct InspectorSystem : public entityx::System<InspectorSystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+        };
+    };
 };
 
 #endif /* InspectorSystem_h */

@@ -11,10 +11,14 @@
 
 #include <glm/glm.hpp>
 
-struct Velocity2d {
-    Velocity2d() : Velocity2d(glm::vec3()) {};
-    Velocity2d(glm::vec3 velocity) : velocity(velocity) {};
-    glm::vec2 velocity;
+namespace GameEngine {
+    namespace Editor {
+        struct Velocity2d {
+            Velocity2d() : Velocity2d(glm::vec3()) {};
+            Velocity2d(glm::vec3 velocity) : velocity(velocity) {};
+            glm::vec2 velocity;
+        };
+    };
 };
 
 #endif /* Velocity2d_h */

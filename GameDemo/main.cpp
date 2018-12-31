@@ -7,15 +7,17 @@
 //
 
 #include <iostream>
-#include "GameEngine.h"
+
+#include "Engine.h"
 
 using namespace std;
 using namespace entityx;
+using namespace GameEngine;
 
-extern "C" int initialize(GameEngine& engine);
+extern "C" int initialize(Engine& engine);
 
 int main(int argc, const char * argv[]) {
-    GameEngine engine;
+    Engine engine;
     int error = engine.initialize();
     engine.configure();
     initialize(engine);
@@ -23,6 +25,6 @@ int main(int argc, const char * argv[]) {
     return error;
 }
 
-int initialize(GameEngine& engine) {
+int initialize(Engine& engine) {
     return 0;
 }

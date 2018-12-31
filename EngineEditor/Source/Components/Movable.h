@@ -9,6 +9,10 @@
 #ifndef Movable_h
 #define Movable_h
 
-struct Movable {};
+namespace GameEngine {
+    namespace Editor {
+        struct Movable {};
+    }
+}
 
 #endif /* Movable_h */

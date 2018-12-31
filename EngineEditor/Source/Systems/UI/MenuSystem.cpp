@@ -12,6 +12,7 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine::Editor;
 
 void MenuSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Menu>([this, &es, &events, dt] (Entity entity, Menu &menu) {

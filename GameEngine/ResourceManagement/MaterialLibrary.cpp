@@ -14,6 +14,7 @@
 using namespace std;
 using namespace tdogl;
 using namespace tinyobj;
+using namespace GameEngine;
 
 Material *MaterialLibrary::getMaterial(material_t& materialData) {
     vector<Texture *> textures;

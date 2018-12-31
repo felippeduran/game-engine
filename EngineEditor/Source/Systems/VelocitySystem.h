@@ -12,8 +12,12 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct VelocitySystem : public entityx::System<VelocitySystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+namespace GameEngine {
+    namespace Editor {
+        struct VelocitySystem : public entityx::System<VelocitySystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+        };
+    };
 };
 
 #endif /* VelocitySystem_h */

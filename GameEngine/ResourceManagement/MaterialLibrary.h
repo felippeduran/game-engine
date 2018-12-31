@@ -12,19 +12,21 @@
 #include <stdio.h>
 #include <tiny_obj_loader.h>
 
-class Material;
-class ShaderManager;
-class TextureLibrary;
+namespace GameEngine {
+    class Material;
+    class ShaderManager;
+    class TextureLibrary;
 
-class MaterialLibrary {
-public:
-    MaterialLibrary(ShaderManager *shaderManager, TextureLibrary *textureLibrary) : shaderManager(shaderManager), textureLibrary(textureLibrary) {};
-    
-    Material *getMaterial(tinyobj::material_t& material);
-    
-private:
-    ShaderManager *shaderManager;
-    TextureLibrary *textureLibrary;
+    class MaterialLibrary {
+    public:
+        MaterialLibrary(ShaderManager *shaderManager, TextureLibrary *textureLibrary) : shaderManager(shaderManager), textureLibrary(textureLibrary) {};
+        
+        Material *getMaterial(tinyobj::material_t& material);
+        
+    private:
+        ShaderManager *shaderManager;
+        TextureLibrary *textureLibrary;
+    };
 };
 
 #endif /* MaterialLibrary_h */

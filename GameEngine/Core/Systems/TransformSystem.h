@@ -11,8 +11,10 @@
 
 #include <entityx.h>
 
-struct TransformSystem : public entityx::System<TransformSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+namespace GameEngine {
+    struct TransformSystem : public entityx::System<TransformSystem> {
+        void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+    };
 };
 
 #endif /* TransformSystem_h */

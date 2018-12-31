@@ -12,15 +12,18 @@
 #include <functional>
 
 class GLFWwindow;
-class InputHandler;
 
-class EngineGLFWInitializer {
-public:
-    int initialize(InputHandler *inputHandler);
-    int runLoop(std::function<void (float dt)> updateCallback);
-    
-private:
-    GLFWwindow *window;
+namespace GameEngine {
+    class InputHandler;
+
+    class EngineGLFWInitializer {
+    public:
+        int initialize(InputHandler *inputHandler);
+        int runLoop(std::function<void (float dt)> updateCallback);
+        
+    private:
+        GLFWwindow *window;
+    };
 };
-
+    
 #endif /* EngineGLFWInitializer_h */

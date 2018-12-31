@@ -10,6 +10,7 @@
 #include <glm/gtx/matrix_decompose.hpp>
 
 using namespace glm;
+using namespace GameEngine;
 
 void Transform::setTransform(const mat4& modelMatrix) {
     vec3 skew;

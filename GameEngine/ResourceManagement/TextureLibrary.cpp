@@ -11,6 +11,7 @@
 
 using namespace std;
 using namespace tdogl;
+using namespace GameEngine;
 
 Texture *TextureLibrary::getTexture(string filename) {
     Texture *texture = nullptr;

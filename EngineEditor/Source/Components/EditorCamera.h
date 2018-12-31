@@ -9,6 +9,10 @@
 #ifndef EditorCamera_h
 #define EditorCamera_h
 
-struct EditorCamera {};
+namespace GameEngine {
+    namespace Editor {
+        struct EditorCamera {};
+    };
+};
 
 #endif /* EditorCamera_h */

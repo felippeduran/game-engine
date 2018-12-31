@@ -12,12 +12,16 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct EditorCameraRotationEnableSystem : public entityx::System<EditorCameraRotationEnableSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
-    
-private:
-    void enableCameraRotation(entityx::EntityManager &es);
-    void disableCameraRotation(entityx::EntityManager &es);
+namespace GameEngine {
+    namespace Editor {
+        struct EditorCameraRotationEnableSystem : public entityx::System<EditorCameraRotationEnableSystem> {
+            void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+            
+        private:
+            void enableCameraRotation(entityx::EntityManager &es);
+            void disableCameraRotation(entityx::EntityManager &es);
+        };
+    };
 };
 
 #endif /* EditorCameraRotationEnableSystem_h */

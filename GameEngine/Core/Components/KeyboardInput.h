@@ -9,12 +9,14 @@
 #ifndef KeyboardInput_h
 #define KeyboardInput_h
 
-struct KeyboardInput {
-    KeyboardInput(int order, int key, int state) : order(order), key(key), state(state) {};
-    
-    int order;
-    int key;
-    int state;
+namespace GameEngine {
+    struct KeyboardInput {
+        KeyboardInput(int order, int key, int state) : order(order), key(key), state(state) {};
+        
+        int order;
+        int key;
+        int state;
+    };
 };
 
 #endif /* KeyboardInput_h */

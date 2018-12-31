@@ -12,8 +12,10 @@
 #include <entityx.h>
 #include <glm/glm.hpp>
 
-struct InputCleanupSystem : public entityx::System<InputCleanupSystem> {
-    void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+namespace GameEngine {
+    struct InputCleanupSystem : public entityx::System<InputCleanupSystem> {
+        void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
+    };
 };
 
 #endif /* InputCleanupSystem_h */

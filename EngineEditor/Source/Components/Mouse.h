@@ -9,6 +9,10 @@
 #ifndef Mouse_h
 #define Mouse_h
 
-struct Mouse {};
+namespace GameEngine {
+    namespace Editor {
+        struct Mouse {};
+    };
+};
 
 #endif /* Mouse_h */

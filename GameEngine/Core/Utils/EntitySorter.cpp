@@ -11,6 +11,7 @@
 
 using namespace std;
 using namespace entityx;
+using namespace GameEngine;
 
 void EntitySorter::dfsUtil(Entity entity, set<Entity::Id>& explored, vector<Entity>& sorted) {
     if (entity.valid()) {

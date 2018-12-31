@@ -12,6 +12,8 @@
 
 using namespace entityx;
 using namespace glm;
+using namespace GameEngine;
+using namespace GameEngine::Editor;
 
 void VelocitySystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
     es.each<Transform, Velocity>([this, &es, &events, dt] (Entity entity, Transform &transform, Velocity &velocity) {

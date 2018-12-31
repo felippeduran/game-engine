@@ -11,8 +11,12 @@
 
 #include <glm/glm.hpp>
 
-struct Position2d {
-    glm::vec2 position;
+namespace GameEngine {
+    namespace Editor {
+        struct Position2d {
+            glm::vec2 position;
+        };
+    };
 };
 
 #endif /* Position2d_h */

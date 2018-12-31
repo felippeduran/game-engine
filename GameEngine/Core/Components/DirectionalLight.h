@@ -11,13 +11,15 @@
 
 #include <glm/glm.hpp>
 
-struct DirectionalLight {
-    DirectionalLight() : DirectionalLight(glm::vec3(), glm::vec3(), glm::vec3()) {};
-    DirectionalLight(glm::vec3 ambient, glm::vec3 diffuse, glm::vec3 specular) : ambient(ambient), diffuse(diffuse), specular(specular) {};
-    
-    glm::vec3 ambient;
-    glm::vec3 diffuse;
-    glm::vec3 specular;
-};  
+namespace GameEngine {
+    struct DirectionalLight {
+        DirectionalLight() : DirectionalLight(glm::vec3(), glm::vec3(), glm::vec3()) {};
+        DirectionalLight(glm::vec3 ambient, glm::vec3 diffuse, glm::vec3 specular) : ambient(ambient), diffuse(diffuse), specular(specular) {};
+        
+        glm::vec3 ambient;
+        glm::vec3 diffuse;
+        glm::vec3 specular;
+    };
+};
 
 #endif /* DirectionalLight_h */
