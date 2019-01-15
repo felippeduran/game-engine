@@ -9,14 +9,19 @@
 #ifndef InputHandler_h
 #define InputHandler_h
 
+#include <set>
+
 class GLFWwindow;
 
 namespace GameEngine {
-    class Engine;
+    class EngineInterface;
     
     class InputHandler {
     public:
-        InputHandler(Engine *engine) : engine(engine), order(0) {};
+        InputHandler() : order(0) {};
+        
+        void addEngine(EngineInterface *engine);
+        void removeEngine(EngineInterface *engine);
 
         void errorCallback(int error, const char* description);
         void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
@@ -28,7 +33,7 @@ namespace GameEngine {
         void resetOrder();
         
     private:
-        Engine *engine;
+        std::set<EngineInterface *> engines;
         int order;
     };
 };

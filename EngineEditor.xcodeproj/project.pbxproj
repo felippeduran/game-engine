@@ -23,6 +23,9 @@
 		EA2DABFF21DAE145009D050D /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2DABFE21DAE145009D050D /* libGameEngine.dylib */; };
 		EA8965A721C6FD5400C3AC9D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF87821C69A230032A8DD /* main.cpp */; };
 		EA8BE55F21C885A10023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */; };
+		EAF8684B21E2B4E60097308A /* EditorPlayerStartSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */; };
+		EAF8685421E2BA9C0097308A /* EditorPlayerUpdateSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF8685321E2BA9C0097308A /* EditorPlayerUpdateSystem.cpp */; };
+		EAF8685A21E2CDB50097308A /* EditorPlayerStopSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF8685921E2CDB50097308A /* EditorPlayerStopSystem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +83,16 @@
 		EA0CF8C921C69C4B0032A8DD /* axes.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.obj; sourceTree = "<group>"; };
 		EA2DABFE21DAE145009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF8684921E2B4E60097308A /* EditorPlayerStartSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorPlayerStartSystem.h; sourceTree = "<group>"; };
+		EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EditorPlayerStartSystem.cpp; sourceTree = "<group>"; };
+		EAF8684F21E2B5BA0097308A /* Playing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playing.h; sourceTree = "<group>"; };
+		EAF8685121E2BA4F0097308A /* Play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Play.h; sourceTree = "<group>"; };
+		EAF8685221E2BA9C0097308A /* EditorPlayerUpdateSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorPlayerUpdateSystem.h; sourceTree = "<group>"; };
+		EAF8685321E2BA9C0097308A /* EditorPlayerUpdateSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EditorPlayerUpdateSystem.cpp; sourceTree = "<group>"; };
+		EAF8685821E2CDB50097308A /* EditorPlayerStopSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorPlayerStopSystem.h; sourceTree = "<group>"; };
+		EAF8685921E2CDB50097308A /* EditorPlayerStopSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EditorPlayerStopSystem.cpp; sourceTree = "<group>"; };
+		EAF8685B21E2CECD0097308A /* Stop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
+		EAF8685C21E2D24F0097308A /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +162,7 @@
 		EA0CF8B021C69C4B0032A8DD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAF8684C21E2B53C0097308A /* Player */,
 				EA0CF8A821C69C4B0032A8DD /* UI */,
 				EA0CF8A921C69C4B0032A8DD /* Movable.h */,
 				EA0CF8AA21C69C4B0032A8DD /* Velocity.h */,
@@ -157,6 +171,7 @@
 				EA0CF8AD21C69C4B0032A8DD /* Velocity2d.h */,
 				EA0CF8AE21C69C4B0032A8DD /* Mouse.h */,
 				EA0CF8AF21C69C4B0032A8DD /* EditorCamera.h */,
+				EAF8685C21E2D24F0097308A /* Project.h */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -177,6 +192,7 @@
 		EA0CF8C221C69C4B0032A8DD /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				EAF8684821E2B4C80097308A /* Player */,
 				EA0CF8B721C69C4B0032A8DD /* UI */,
 				EA0CF8B821C69C4B0032A8DD /* MouseMovementSystem.h */,
 				EA0CF8B921C69C4B0032A8DD /* MouseMovementSystem.cpp */,
@@ -234,6 +250,29 @@
 				EA0CF8CB21C69C4B0032A8DD /* Models */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EAF8684821E2B4C80097308A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8684921E2B4E60097308A /* EditorPlayerStartSystem.h */,
+				EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */,
+				EAF8685221E2BA9C0097308A /* EditorPlayerUpdateSystem.h */,
+				EAF8685321E2BA9C0097308A /* EditorPlayerUpdateSystem.cpp */,
+				EAF8685821E2CDB50097308A /* EditorPlayerStopSystem.h */,
+				EAF8685921E2CDB50097308A /* EditorPlayerStopSystem.cpp */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		EAF8684C21E2B53C0097308A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8684F21E2B5BA0097308A /* Playing.h */,
+				EAF8685121E2BA4F0097308A /* Play.h */,
+				EAF8685B21E2CECD0097308A /* Stop.h */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +337,9 @@
 				EA03440221C6F213007C86C3 /* InspectorSystem.cpp in Sources */,
 				EA03440321C6F213007C86C3 /* MouseMovementSystem.cpp in Sources */,
 				EA03440421C6F213007C86C3 /* VelocitySystem.cpp in Sources */,
+				EAF8685A21E2CDB50097308A /* EditorPlayerStopSystem.cpp in Sources */,
+				EAF8684B21E2B4E60097308A /* EditorPlayerStartSystem.cpp in Sources */,
+				EAF8685421E2BA9C0097308A /* EditorPlayerUpdateSystem.cpp in Sources */,
 				EA03440521C6F213007C86C3 /* EditorCameraRotationSystem.cpp in Sources */,
 				EA03440621C6F213007C86C3 /* KeyboardMovementSystem.cpp in Sources */,
 				EA03440721C6F213007C86C3 /* EditorCameraRotationEnableSystem.cpp in Sources */,

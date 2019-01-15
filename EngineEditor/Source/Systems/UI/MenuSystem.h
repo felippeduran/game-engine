@@ -18,7 +18,8 @@ namespace GameEngine {
             void update(entityx::EntityManager &es, entityx::EventManager &events, entityx::TimeDelta dt) override;
             
         private:
-            void ShowMenuFile();
+            void showMenuFile();
+            void showToggledPlay();
         };
     };
 };

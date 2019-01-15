@@ -28,19 +28,14 @@
 #include "MeshLibrary.h"
 
 using namespace entityx;
-using namespace std;
 using namespace GameEngine;
 
-Engine::Engine() {
+Engine::Engine(InputHandler *inputHandler) : inputHandler(inputHandler) {
     systems.add<InputCleanupSystem>();
 }
 
-int Engine::initialize() {
-    inputHandler = new InputHandler(this);
-    initializer = new EngineGLFWInitializer();
-    
-    int error = 0;
-    error = initializer->initialize(inputHandler);
+void Engine::initialize() {
+    inputHandler->addEngine(this);
     
     systems.add<deps::Dependency<MeshRenderer, Transform>>();
     systems.add<deps::Dependency<Camera, Transform>>();
@@ -55,21 +50,21 @@ int Engine::initialize() {
     textureLibrary = new TextureLibrary();
     materialLibrary = new MaterialLibrary(shaderManager, textureLibrary);
     meshLibrary = new MeshLibrary(materialLibrary);
-    
-    return error;
+}
+
+void Engine::cleanup() {
+    inputHandler->removeEngine(this);
 }
 
 void Engine::configure() {
     systems.configure();
 }
 
-int Engine::start() {
-    return initializer->runLoop(bind(&Engine::update, this, placeholders::_1));
+Entity Engine::create() {
+    return entities.create();
 }
 
 Engine::~Engine() {
-    delete inputHandler;
-    delete initializer;
     delete shaderManager;
     delete textureLibrary;
     delete materialLibrary;

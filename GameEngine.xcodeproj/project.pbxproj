@@ -132,6 +132,7 @@
 		EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseScrollPositionEvent.h; path = Core/Components/MouseScrollPositionEvent.h; sourceTree = "<group>"; };
 		EADEAAA621165C2000450F5F /* InputCleanupSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputCleanupSystem.h; path = Core/Systems/InputCleanupSystem.h; sourceTree = "<group>"; };
 		EADEAAA721165C2000450F5F /* InputCleanupSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InputCleanupSystem.cpp; path = Core/Systems/InputCleanupSystem.cpp; sourceTree = "<group>"; };
+		EAF8685521E2BD1D0097308A /* EngineInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EngineInterface.h; path = Core/EngineInterface.h; sourceTree = "<group>"; };
 		EAFB15DB1E8B60740026EC1B /* slot_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot_map.h; path = Core/CustomContainers/slot_map.h; sourceTree = "<group>"; };
 		EAFE822C1EC95F79007C5743 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
 		EAFE822D1EC95F79007C5743 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
@@ -316,6 +317,7 @@
 				EA1980211F3FCF9C00350E7F /* Engine.h */,
 				EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */,
 				EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */,
+				EAF8685521E2BD1D0097308A /* EngineInterface.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";

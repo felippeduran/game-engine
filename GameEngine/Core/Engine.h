@@ -9,35 +9,34 @@
 #ifndef Engine_h
 #define Engine_h
 
+#include "EngineInterface.h"
 #include <entityx.h>
 
 namespace GameEngine {
-    class EngineGLFWInitializer;
     class ShaderManager;
     class TextureLibrary;
     class MaterialLibrary;
     class MeshLibrary;
     class InputHandler;
     
-    class Engine : public entityx::EntityX {
+    class Engine : public entityx::EntityX, public EngineInterface {
     public:
-        explicit Engine();
+        explicit Engine(InputHandler *inputHandler);
         ~Engine();
         
-        int initialize();
-        void configure();
-        int start();
+        void initialize() override;
+        void configure() override;
+        void cleanup() override;
         
-        void update(entityx::TimeDelta dt);
+        entityx::Entity create() override;
+        
+        void update(entityx::TimeDelta dt) override;
         
         ShaderManager *shaderManager;
         TextureLibrary *textureLibrary;
         MaterialLibrary *materialLibrary;
         MeshLibrary *meshLibrary;
         InputHandler *inputHandler;
-        
-    private:
-        EngineGLFWInitializer *initializer;
     };
 };
 
