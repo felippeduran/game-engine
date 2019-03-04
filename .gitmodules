@@ -4,3 +4,6 @@
 [submodule "imgui"]
 	path = imgui
 	url = https://github.com/ocornut/imgui.git
+[submodule "rttr"]
+	path = rttr
+	url = https://github.com/rttrorg/rttr.git
