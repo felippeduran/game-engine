@@ -48,6 +48,8 @@
 		EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
 		EA2DABFD21DABA1A009D050D /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1980211F3FCF9C00350E7F /* Engine.h */; };
+		EA6D4D1122222EA40060247A /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1022222EA40060247A /* DirectionalLight.cpp */; };
+		EA6D4D1322230BFC0060247A /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */; };
 		EA806E75222D764600D1300F /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E74222D764600D1300F /* libimgui.a */; };
 		EA806E83222D839F00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
 		EA806E84222D83B400D1300F /* librttr_core_d.0.9.7.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
@@ -105,6 +107,9 @@
 		EA4C8BED1F4FDDDB006C49A5 /* TransformSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TransformSystem.cpp; path = Core/Systems/TransformSystem.cpp; sourceTree = "<group>"; };
 		EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InputHandler.cpp; path = Core/InputHandler.cpp; sourceTree = "<group>"; };
 		EA4C8BF21F51D1D1006C49A5 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Core/InputHandler.h; sourceTree = "<group>"; };
+		EA6D4D0F222202700060247A /* MetadataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetadataType.h; sourceTree = "<group>"; };
+		EA6D4D1022222EA40060247A /* DirectionalLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DirectionalLight.cpp; path = Core/Components/DirectionalLight.cpp; sourceTree = "<group>"; };
+		EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = Core/Components/MeshRenderer.cpp; sourceTree = "<group>"; };
 		EA806E74222D764600D1300F /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
@@ -182,12 +187,14 @@
 				EA16ABBE1F40A0DA0030FF64 /* Transform.h */,
 				EA2D88B51F46A24E00ED7B8D /* Camera.cpp */,
 				EA2D88B41F469F7400ED7B8D /* Camera.h */,
+				EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */,
 				EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */,
 				EADEAAA12116510800450F5F /* KeyboardInput.h */,
 				EADEAAA22116515200450F5F /* MouseInput.h */,
 				EADEAAA32116527F00450F5F /* MouseEnter.h */,
 				EADEAAA42116529800450F5F /* MousePositionEvent.h */,
 				EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */,
+				EA6D4D1022222EA40060247A /* DirectionalLight.cpp */,
 				EA135B95211FBCFF00C6C231 /* DirectionalLight.h */,
 				EAD00E1A2128CCD8002BF92B /* Name.h */,
 			);
@@ -266,6 +273,7 @@
 				EAD00E1F2128D843002BF92B /* FileWriter.cpp */,
 				EACB6DAC2145EE200092AF4F /* EntitySorter.h */,
 				EACB6DAD2145EE200092AF4F /* EntitySorter.cpp */,
+				EA6D4D0F222202700060247A /* MetadataType.h */,
 			);
 			name = Utils;
 			path = Core/Utils;
@@ -443,6 +451,7 @@
 				EA0343D021C6A105007C86C3 /* Bitmap.cpp in Sources */,
 				EA0343D121C6A105007C86C3 /* Camera.cpp in Sources */,
 				EA0343D221C6A105007C86C3 /* InputCleanupSystem.cpp in Sources */,
+				EA6D4D1122222EA40060247A /* DirectionalLight.cpp in Sources */,
 				EA0343D321C6A105007C86C3 /* Shader.cpp in Sources */,
 				EA0343D421C6A105007C86C3 /* MeshLibrary.cpp in Sources */,
 				EA0343D521C6A105007C86C3 /* Texture.cpp in Sources */,
@@ -452,6 +461,7 @@
 				EA0343D921C6A105007C86C3 /* ShaderManager.cpp in Sources */,
 				EA0343DA21C6A105007C86C3 /* EntitySorter.cpp in Sources */,
 				EA0343DB21C6A105007C86C3 /* TransformSystem.cpp in Sources */,
+				EA6D4D1322230BFC0060247A /* MeshRenderer.cpp in Sources */,
 				EA0343DC21C6A105007C86C3 /* KeyboardInputSystem.cpp in Sources */,
 				EA0343DD21C6A105007C86C3 /* tiny_obj_loader.cc in Sources */,
 				EA0343DE21C6A105007C86C3 /* Material.cpp in Sources */,

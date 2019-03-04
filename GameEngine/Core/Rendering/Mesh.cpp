@@ -9,11 +9,14 @@
 #include "Mesh.h"
 #include "Material.h"
 #include "Submesh.h"
+#include "MetadataType.h"
+#include <rttr/registration>
 
 using namespace std;
 using namespace glm;
 using namespace tinyobj;
 using namespace GameEngine;
+using namespace rttr;
 
 Mesh::Mesh(vector<vec3> combinedVertices, vector<vec3> combinedNormals, vector<vec2> combinedTexCoords, vector<int> combinedIndices, vector<Submesh> submeshes, vector<Material *> materials) : combinedVertices(combinedVertices), combinedNormals(combinedNormals), combinedTexCoords(combinedTexCoords), combinedIndices(combinedIndices), submeshes(submeshes), materials(materials) {
     glGenBuffers(1, &vertexVBO);
@@ -82,3 +85,11 @@ Mesh::~Mesh() {
         glDeleteVertexArrays(1, &shapeVAOs[i]);
     }
 }
+
+RTTR_REGISTRATION
+{
+    registration::class_<Mesh>("Mesh")
+    .constructor<>()
+    .property("Materials", &Mesh::materials);
+}
+

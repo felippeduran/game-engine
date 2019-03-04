@@ -18,6 +18,7 @@ namespace GameEngine {
     struct Material;
 
     struct MeshRenderer {
+        MeshRenderer() : MeshRenderer(nullptr) {};
         MeshRenderer(Mesh *mesh) : mesh(mesh) {};
         Mesh *mesh;
     };

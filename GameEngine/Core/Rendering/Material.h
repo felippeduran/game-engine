@@ -23,6 +23,7 @@ namespace GameEngine {
     } TextureType;
     
     struct Material {
+        Material() {};
         Material(tinyobj::material_t& materialData, tdogl::Program *program, std::vector<tdogl::Texture *>& textures, std::vector<TextureType>& textureTypes) :
         colorAmbient(glm::vec3(materialData.ambient[0], materialData.ambient[1], materialData.ambient[2])),
         colorDiffuse(glm::vec3(materialData.diffuse[0], materialData.diffuse[1], materialData.diffuse[2])),

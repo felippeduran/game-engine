@@ -32,6 +32,7 @@ namespace GameEngine {
         GLuint IBO = 0;
         std::vector<GLuint> shapeVAOs;
         
+        Mesh() : Mesh({}, {}, {}, {}, {}, {}) {};
         Mesh(std::vector<glm::vec3> combinedVertices, std::vector<glm::vec3> combinedNormals, std::vector<glm::vec2> combinedTexCoords, std::vector<int> combinedIndices, std::vector<Submesh> submeshes, std::vector<Material *> materials);
         ~Mesh();
     };
