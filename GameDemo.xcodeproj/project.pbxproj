@@ -39,8 +39,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA0343EE21C6A148007C86C3 /* libEntityX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntityX.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngineLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0343F221C6A148007C86C3 /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CF89121C69AAE0032A8DD /* GameDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CF89421C69AAE0032A8DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -78,8 +76,6 @@
 			children = (
 				EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */,
 				EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */,
-				EA0343EE21C6A148007C86C3 /* libEntityX.a */,
-				EA0343F021C6A148007C86C3 /* libGameEngineLibrary.dylib */,
 				EA0343F221C6A148007C86C3 /* libimgui.a */,
 			);
 			name = Frameworks;
