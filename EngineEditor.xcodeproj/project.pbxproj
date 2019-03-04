@@ -21,6 +21,7 @@
 		EA2DABE321D9079D009D050D /* axes.mtl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C821C69C4B0032A8DD /* axes.mtl */; };
 		EA2DABE421D9079D009D050D /* axes.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C921C69C4B0032A8DD /* axes.obj */; };
 		EA2DABFF21DAE145009D050D /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2DABFE21DAE145009D050D /* libGameEngine.dylib */; };
+		EA806E88222D83F800D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E87222D83F800D1300F /* librttr_core_d.0.9.7.dylib */; };
 		EA8965A721C6FD5400C3AC9D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF87821C69A230032A8DD /* main.cpp */; };
 		EA8BE55F21C885A10023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */; };
 		EAF8684B21E2B4E60097308A /* EditorPlayerStartSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */; };
@@ -80,6 +81,7 @@
 		EA0CF8C821C69C4B0032A8DD /* axes.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.mtl; sourceTree = "<group>"; };
 		EA0CF8C921C69C4B0032A8DD /* axes.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.obj; sourceTree = "<group>"; };
 		EA2DABFE21DAE145009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA806E87222D83F800D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
 		EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF8684921E2B4E60097308A /* EditorPlayerStartSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorPlayerStartSystem.h; sourceTree = "<group>"; };
 		EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EditorPlayerStartSystem.cpp; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA806E88222D83F800D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */,
 				EA2DABFF21DAE145009D050D /* libGameEngine.dylib in Frameworks */,
 				EA8BE55F21C885A10023A6E6 /* libEntityXLibrary.dylib in Frameworks */,
 				EA0343EC21C6A121007C86C3 /* libimgui.a in Frameworks */,
@@ -110,6 +113,7 @@
 		EA0343E621C6A121007C86C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA806E87222D83F800D1300F /* librttr_core_d.0.9.7.dylib */,
 				EA2DABFE21DAE145009D050D /* libGameEngine.dylib */,
 				EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */,
 				EA0343EB21C6A121007C86C3 /* libimgui.a */,
@@ -467,6 +471,11 @@
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/imgui/**",
 					"$(SRCROOT)/GameEngine/**",
+					"$(SRCROOT)/rttr/install/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rttr/install/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -485,6 +494,11 @@
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/imgui/**",
 					"$(SRCROOT)/GameEngine/**",
+					"$(SRCROOT)/rttr/install/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rttr/install/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

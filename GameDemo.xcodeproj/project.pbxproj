@@ -15,6 +15,7 @@
 		EA2DABE721D97025009D050D /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F221C6A148007C86C3 /* libimgui.a */; };
 		EA2DAC0121DAE14E009D050D /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */; };
 		EA2DAC0221DAE16B009D050D /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */; };
+		EA806E86222D83DB00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E85222D83DB00D1300F /* librttr_core_d.0.9.7.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		EA0CF89F21C69AFD0032A8DD /* libGameDemoLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameDemoLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA806E85222D83DB00D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA806E86222D83DB00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */,
 				EA2DAC0121DAE14E009D050D /* libGameEngine.dylib in Frameworks */,
 				EA2DABE521D97025009D050D /* libEntityXLibrary.dylib in Frameworks */,
 				EA2DABE721D97025009D050D /* libimgui.a in Frameworks */,
@@ -74,6 +77,7 @@
 		EA0343ED21C6A148007C86C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA806E85222D83DB00D1300F /* librttr_core_d.0.9.7.dylib */,
 				EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */,
 				EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */,
 				EA0343F221C6A148007C86C3 /* libimgui.a */,
@@ -396,6 +400,11 @@
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/imgui/**",
 					"$(SRCROOT)/GameEngine/**",
+					"$(SRCROOT)/rttr/install/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rttr/install/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -418,6 +427,11 @@
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/imgui/**",
 					"$(SRCROOT)/GameEngine/**",
+					"$(SRCROOT)/rttr/install/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rttr/install/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
