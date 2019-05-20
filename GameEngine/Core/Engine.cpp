@@ -19,6 +19,8 @@
 #include "Camera.h"
 #include "MeshRenderer.h"
 #include "DirectionalLight.h"
+#include "SpotLight.h"
+#include "PointLight.h"
 
 #include "ShaderManager.h"
 #include "Program.h"
@@ -40,6 +42,8 @@ void Engine::initialize() {
     systems.add<deps::Dependency<MeshRenderer, Transform>>();
     systems.add<deps::Dependency<Camera, Transform>>();
     systems.add<deps::Dependency<DirectionalLight, Transform>>();
+    systems.add<deps::Dependency<SpotLight, Transform>>();
+    systems.add<deps::Dependency<PointLight, Transform>>();
     systems.add<CameraSystem>();
     systems.add<TransformSystem>();
     

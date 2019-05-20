@@ -31,9 +31,7 @@ RTTR_REGISTRATION
         metadata(MetadataType::Component, true)
     )
     .constructor<>()
-    .property("Ambient Color", &DirectionalLight::ambient)
-    .property("Diffuse Color", &DirectionalLight::diffuse)
-    .property("Specular Color", &DirectionalLight::specular)
+    .property("Color", &DirectionalLight::color)
     .method("retrieveComponent", &component)
     .method("hasComponent", &has_component);
 }
