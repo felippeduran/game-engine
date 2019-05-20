@@ -17,6 +17,9 @@
 #include "Camera.h"
 #include "EditorCamera.h"
 #include "DirectionalLight.h"
+#include "AmbientLight.h"
+#include "PointLight.h"
+#include "SpotLight.h"
 
 #include "VelocitySystem.h"
 #include "MouseMovementSystem.h"
@@ -43,10 +46,15 @@
 #include "Position2d.h"
 #include "Velocity2d.h"
 #include "Mouse.h"
+#include "SceneElement.h"
+#include "EditorElement.h"
 
 #include "Project.h"
 
 #include <dlfcn.h>
+
+#include "MeshRenderer.h"
+#include "MeshLibrary.h"
 
 using namespace std;
 using namespace entityx;
@@ -102,8 +110,21 @@ int main(int argc, const char * argv[]) {
 void setupScene(Engine *engine) {
     Entity lightEntity = engine->entities.create();
     lightEntity.assign<Name>("Light");
-    lightEntity.assign<DirectionalLight>();
-    lightEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 15.0f, -20.0f);
+    lightEntity.assign<SceneElement>();
+    lightEntity.assign<PointLight>();
+//    lightEntity.assign<Transform>();
+    lightEntity.assign<AmbientLight>(glm::vec3(0.1f, 0.1f, 0.1f));
+    lightEntity.component<Transform>()->localScale = glm::vec3(0.2f, 0.2f, 0.2f);
+    lightEntity.assign<MeshRenderer>(engine->meshLibrary->loadMesh("cube.obj"));
+    
+    Entity lightEntity2 = engine->entities.create();
+    lightEntity2.assign<Name>("SpotLight");
+    lightEntity2.assign<SceneElement>();
+    lightEntity2.assign<SpotLight>();
+    lightEntity2.assign<MeshRenderer>(engine->meshLibrary->loadMesh("cube.obj"));
+    lightEntity2.component<Transform>()->localScale = glm::vec3(0.2f, 0.2f, 0.2f);
+    lightEntity2.component<Transform>()->localPosition = glm::vec3(5.0f, 5.0f, -5.0f);
+    lightEntity2.component<Transform>()->localRotation = glm::quat(glm::radians(glm::vec3(-150, -45, 0)));
     
     
     Entity menuEntity = engine->entities.create();
@@ -115,10 +136,6 @@ void setupScene(Engine *engine) {
     Entity inspectorEntity = engine->entities.create();
     inspectorEntity.assign<Inspector>();
     
-    Entity parentEntity = engine->entities.create();
-    parentEntity.assign<Transform>();
-    parentEntity.assign<Name>("Root");
-
     Entity mouseEntity = engine->entities.create();
     mouseEntity.assign<Name>("Mouse");
     mouseEntity.assign<Mouse>();
@@ -129,6 +146,26 @@ void setupScene(Engine *engine) {
     cameraEntity.assign<Movable>();
     cameraEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 0.0f, 5.0f);
     cameraEntity.component<Velocity>()->speed = 10.0f;
+    
+    
+    Entity cubeEntity = engine->entities.create();
+    cubeEntity.assign<Name>("Cube");
+    cubeEntity.assign<SceneElement>();
+    cubeEntity.assign<MeshRenderer>(engine->meshLibrary->loadMesh("cube.obj"));
+    cubeEntity.component<Transform>()->localPosition = glm::vec3(0.0f, 2.0f, 0.0f);
+    cubeEntity.component<Transform>()->localRotation = glm::quat(glm::radians(glm::vec3(45, 45, 0)));
+    
+    Entity cubeEntity2 = engine->entities.create();
+    cubeEntity2.assign<Name>("Cube");
+    cubeEntity2.assign<SceneElement>();
+    cubeEntity2.assign<MeshRenderer>(engine->meshLibrary->loadMesh("cube.obj"));
+    cubeEntity2.component<Transform>()->localPosition = glm::vec3(2.0f, 0.0f, 0.0f);
+    
+    Entity cubeEntity3 = engine->entities.create();
+    cubeEntity3.assign<Name>("Cube");
+    cubeEntity3.assign<SceneElement>();
+    cubeEntity3.assign<MeshRenderer>(engine->meshLibrary->loadMesh("cube.obj"));
+    cubeEntity3.component<Transform>()->localPosition = glm::vec3(-2.0f, 0.0f, 0.0f);
     
     
     typedef int (*game_initialize)(Engine *engine);

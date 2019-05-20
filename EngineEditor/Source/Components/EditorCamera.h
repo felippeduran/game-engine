@@ -9,10 +9,21 @@
 #ifndef EditorCamera_h
 #define EditorCamera_h
 
+#include <rttr/registration>
+
+using namespace rttr;
+
 namespace GameEngine {
     namespace Editor {
         struct EditorCamera {};
     };
 };
+
+RTTR_REGISTRATION
+{
+    registration::class_<GameEngine::Editor::EditorCamera>("EditorCamera")
+    .constructor<>();
+}
+
 
 #endif /* EditorCamera_h */

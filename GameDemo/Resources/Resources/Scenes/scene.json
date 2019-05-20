@@ -1,0 +1,17 @@
+{
+    "entities": [
+        {
+             "transform": {
+                 "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                 "scale": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                 "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+             },
+             "camera": {
+                 "fieldOfView": 0.872664626,
+                 "aspect": 1.3333333333,
+                 "zNear": 0.1,
+                 "zFar": 10.0f
+             }
+        }
+    ]
+}

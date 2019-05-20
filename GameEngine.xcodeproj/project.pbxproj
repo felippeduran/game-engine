@@ -53,9 +53,12 @@
 		EA806E75222D764600D1300F /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E74222D764600D1300F /* libimgui.a */; };
 		EA806E83222D839F00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
 		EA806E84222D83B400D1300F /* librttr_core_d.0.9.7.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
+		EA806E8B222DD99E00D1300F /* SceneElement.h in Headers */ = {isa = PBXBuildFile; fileRef = EA806E89222DD99E00D1300F /* SceneElement.h */; };
 		EA806E93222E1B0600D1300F /* format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA806E91222E1B0600D1300F /* format.cpp */; };
 		EA806E94222E1B0600D1300F /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = EA806E92222E1B0600D1300F /* format.h */; };
 		EA8BE55D21C8858D0023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */; };
+		EA8F1CCC21ED5E6D0087C6FD /* MaterialSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8F1CCA21ED5E6D0087C6FD /* MaterialSerializer.h */; };
+		EA8F1CCD21ED5E6D0087C6FD /* MaterialSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8F1CCB21ED5E6D0087C6FD /* MaterialSerializer.cpp */; };
 		EAD5639E2288CB690093CC80 /* PointLight.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD5639C2288CB690093CC80 /* PointLight.h */; };
 		EAD5639F2288CB690093CC80 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD5639D2288CB690093CC80 /* PointLight.cpp */; };
 		EAD563A22288CB780093CC80 /* SpotLight.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD563A02288CB780093CC80 /* SpotLight.h */; };
@@ -109,6 +112,9 @@
 		EA1B3D881F6B6EDD003CEA9E /* tiny_obj_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_obj_loader.h; sourceTree = "<group>"; };
 		EA2D88B41F469F7400ED7B8D /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Core/Components/Camera.h; sourceTree = "<group>"; };
 		EA2D88B51F46A24E00ED7B8D /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Core/Components/Camera.cpp; sourceTree = "<group>"; };
+		EA2DABFA21D98766009D050D /* untextured_fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = untextured_fragment_shader.glsl; sourceTree = "<group>"; };
+		EA2DABFB21D98766009D050D /* unlit_color_fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unlit_color_fragment_shader.glsl; sourceTree = "<group>"; };
+		EA2DABFC21D98766009D050D /* unlit_color_vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unlit_color_vertex_shader.glsl; sourceTree = "<group>"; };
 		EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CameraSystem.cpp; path = Core/Systems/CameraSystem.cpp; sourceTree = "<group>"; };
 		EA4C8BE81F4FC5AA006C49A5 /* CameraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraSystem.h; path = Core/Systems/CameraSystem.h; sourceTree = "<group>"; };
 		EA4C8BEA1F4FCCDC006C49A5 /* Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = Core/Components/Transform.cpp; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = Core/Components/MeshRenderer.cpp; sourceTree = "<group>"; };
 		EA806E74222D764600D1300F /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
+		EA806E89222DD99E00D1300F /* SceneElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneElement.h; path = Core/Components/SceneElement.h; sourceTree = "<group>"; };
 		EA806E91222E1B0600D1300F /* format.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = format.cpp; sourceTree = "<group>"; };
 		EA806E92222E1B0600D1300F /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format.h; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
@@ -134,6 +141,8 @@
 		EA8D71AE1F42AD6C00FC79DE /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		EA8D71AF1F42AD6C00FC79DE /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		EA8D71B01F42AD6C00FC79DE /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		EA8F1CCA21ED5E6D0087C6FD /* MaterialSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialSerializer.h; sourceTree = "<group>"; };
+		EA8F1CCB21ED5E6D0087C6FD /* MaterialSerializer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaterialSerializer.cpp; sourceTree = "<group>"; };
 		EA8F22BD1F54FECC0012AED5 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Core/Components/MeshRenderer.h; sourceTree = "<group>"; };
 		EA8F22BF1F5504B70012AED5 /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Core/Rendering/Material.cpp; sourceTree = "<group>"; };
 		EA8F22C01F5504B70012AED5 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Core/Rendering/Material.h; sourceTree = "<group>"; };
@@ -190,6 +199,9 @@
 		EA091A481E88CA220044C3A1 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				EA2DABFB21D98766009D050D /* unlit_color_fragment_shader.glsl */,
+				EA2DABFC21D98766009D050D /* unlit_color_vertex_shader.glsl */,
+				EA2DABFA21D98766009D050D /* untextured_fragment_shader.glsl */,
 				EA091A491E88CA220044C3A1 /* fragment_shader.glsl */,
 				EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */,
 			);
@@ -212,6 +224,7 @@
 				EADEAAA42116529800450F5F /* MousePositionEvent.h */,
 				EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */,
 				EAD00E1A2128CCD8002BF92B /* Name.h */,
+				EA806E89222DD99E00D1300F /* SceneElement.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -288,9 +301,19 @@
 			path = tdogl;
 			sourceTree = "<group>";
 		};
+		EA8F1CC921ED5E100087C6FD /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F1CCA21ED5E6D0087C6FD /* MaterialSerializer.h */,
+				EA8F1CCB21ED5E6D0087C6FD /* MaterialSerializer.cpp */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
 		EA8F22C51F55246F0012AED5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA806E90222E1B0600D1300F /* StringFormat */,
 				EAD00E1B2128D800002BF92B /* FileReader.h */,
 				EAD00E1C2128D800002BF92B /* FileReader.cpp */,
 				EAD00E1E2128D843002BF92B /* FileWriter.h */,
@@ -347,6 +370,7 @@
 		EABCC9ED1E4436E4008A9484 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA8F1CC921ED5E100087C6FD /* Serializers */,
 				EA091A481E88CA220044C3A1 /* Shaders */,
 				EA1B3D7C1F6B692D003CEA9E /* ResourceManagement */,
 				EA8F22C51F55246F0012AED5 /* Utils */,
@@ -418,8 +442,10 @@
 				EA806E94222E1B0600D1300F /* format.h in Headers */,
 				EA0343F921C6A1ED007C86C3 /* FileReader.h in Headers */,
 				EA0343F821C6A1E4007C86C3 /* TextureLibrary.h in Headers */,
+				EA806E8B222DD99E00D1300F /* SceneElement.h in Headers */,
 				EA0343F621C6A1E4007C86C3 /* MeshLibrary.h in Headers */,
 				EA0343FF21C6A1F4007C86C3 /* KeyboardInputSystem.h in Headers */,
+				EA8F1CCC21ED5E6D0087C6FD /* MaterialSerializer.h in Headers */,
 				EA0343F521C6A1E4007C86C3 /* ShaderManager.h in Headers */,
 				EA0343F721C6A1E4007C86C3 /* MaterialLibrary.h in Headers */,
 				EAD5639E2288CB690093CC80 /* PointLight.h in Headers */,
@@ -486,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8F1CCD21ED5E6D0087C6FD /* MaterialSerializer.cpp in Sources */,
 				EA0CF8E521C69F1E0032A8DD /* FileWriter.cpp in Sources */,
 				EA0343CC21C6A105007C86C3 /* CameraSystem.cpp in Sources */,
 				EA0343CD21C6A105007C86C3 /* FileReader.cpp in Sources */,

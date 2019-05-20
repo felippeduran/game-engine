@@ -40,6 +40,8 @@ void MenuSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
             } else if (ImGui::Button("Play")) entity.assign<Play>();
             
             ImGui::EndMainMenuBar();
+            
+            ImGui::ShowDemoWindow();
         }
     });
 };

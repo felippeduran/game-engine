@@ -26,6 +26,8 @@ void logMat4(mat4& mat) {
 };
 
 void TransformSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
+//    std::cout << "TransformSystem" << std::endl;
+    
     std::vector<Entity> entities = EntitySorter().topsort(es.entities_with_components<Transform>());
     for (Entity entity : entities) {
         ComponentHandle<Transform> transform = entity.component<Transform>();
@@ -37,5 +39,20 @@ void TransformSystem::update(EntityManager &es, EventManager &events, TimeDelta 
         glm::mat4 parentTransformMatrix;
         if (transform->parent.valid()) parentTransformMatrix = transform->parent.component<Transform>()->localToWorldMatrix;
         transform->localToWorldMatrix = parentTransformMatrix * (modelMatrix);
+        
+//        std::cout << "Entity:" << entity.component<Name>()->name << std::endl;
+//        if (transform->parent.valid()) std::cout << "Parent:" << &transform->parent << std::endl;
+//                std::cout << "Composing matrices:" << std::endl;
+//                logMat4(translationMatrix);
+        //        logMat4(rotationMatrix);
+        //        logMat4(scalingMatrix);
+        //
+        //        std::cout << std::endl << "Model matrix:" << std::endl;
+//                logMat4(modelMatrix);
+        //
+        //        std::cout << std::endl << "Local to world matrix:" << std::endl;
+//                logMat4(transform->localToWorldMatrix);
+
+//        std::cout << std::endl;
     }
 };
