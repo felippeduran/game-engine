@@ -26,3 +26,8 @@ Pods/
 *_PList.Dir/
 bin/
 *.udf
+
+
+# VSCode settings
+*/.vscode
+**/.vscode/*
