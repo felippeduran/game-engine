@@ -29,8 +29,6 @@
 		EA0343DF21C6A105007C86C3 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4C8BF11F51D1D1006C49A5 /* InputHandler.cpp */; };
 		EA0343E021C6A105007C86C3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E24212A4F5E002BF92B /* Mesh.cpp */; };
 		EA0343E121C6A105007C86C3 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1980201F3FCF9C00350E7F /* Engine.cpp */; };
-		EA0343E321C6A105007C86C3 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */; };
-		EA0343E421C6A105007C86C3 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9EB1E4432F2008A9484 /* libGLEW.2.0.0.dylib */; };
 		EA0343E521C6A105007C86C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABCC9E71E442E57008A9484 /* OpenGL.framework */; };
 		EA0343F421C6A1D9007C86C3 /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = EA16ABBE1F40A0DA0030FF64 /* Transform.h */; };
 		EA0343F521C6A1E4007C86C3 /* ShaderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFE822D1EC95F79007C5743 /* ShaderManager.h */; };
@@ -47,12 +45,13 @@
 		EA0CF8E521C69F1E0032A8DD /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
+		EA1CF2CC22A4C36400D7224C /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CB22A4C36400D7224C /* librttr_core_d.0.9.7.dylib */; };
+		EA1CF2CE22A4C56100D7224C /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CD22A4C56100D7224C /* libGLEW.2.1.0.dylib */; };
+		EA1CF2D022A4C58000D7224C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CF22A4C58000D7224C /* libglfw.3.3.dylib */; };
 		EA2DABFD21DABA1A009D050D /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1980211F3FCF9C00350E7F /* Engine.h */; };
 		EA6D4D1122222EA40060247A /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1022222EA40060247A /* DirectionalLight.cpp */; };
 		EA6D4D1322230BFC0060247A /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */; };
 		EA806E75222D764600D1300F /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E74222D764600D1300F /* libimgui.a */; };
-		EA806E83222D839F00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
-		EA806E84222D83B400D1300F /* librttr_core_d.0.9.7.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */; };
 		EA806E93222E1B0600D1300F /* format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA806E91222E1B0600D1300F /* format.cpp */; };
 		EA806E94222E1B0600D1300F /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = EA806E92222E1B0600D1300F /* format.h */; };
 		EA8BE55D21C8858D0023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */; };
@@ -73,16 +72,6 @@
 			files = (
 				EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */,
 				EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA806E7D222D7A2400D1300F /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				EA806E84222D83B400D1300F /* librttr_core_d.0.9.7.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +96,9 @@
 		EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureLibrary.cpp; sourceTree = "<group>"; };
 		EA1B3D841F6B69D0003CEA9E /* TextureLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureLibrary.h; sourceTree = "<group>"; };
 		EA1B3D881F6B6EDD003CEA9E /* tiny_obj_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_obj_loader.h; sourceTree = "<group>"; };
+		EA1CF2CB22A4C36400D7224C /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = ../../../../../usr/local/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
+		EA1CF2CD22A4C56100D7224C /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		EA1CF2CF22A4C58000D7224C /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		EA2D88B41F469F7400ED7B8D /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Core/Components/Camera.h; sourceTree = "<group>"; };
 		EA2D88B51F46A24E00ED7B8D /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Core/Components/Camera.cpp; sourceTree = "<group>"; };
 		EA4C8BE71F4FC5AA006C49A5 /* CameraSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CameraSystem.cpp; path = Core/Systems/CameraSystem.cpp; sourceTree = "<group>"; };
@@ -175,11 +167,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA806E83222D839F00D1300F /* librttr_core_d.0.9.7.dylib in Frameworks */,
+				EA1CF2D022A4C58000D7224C /* libglfw.3.3.dylib in Frameworks */,
+				EA1CF2CE22A4C56100D7224C /* libGLEW.2.1.0.dylib in Frameworks */,
+				EA1CF2CC22A4C36400D7224C /* librttr_core_d.0.9.7.dylib in Frameworks */,
 				EA806E75222D764600D1300F /* libimgui.a in Frameworks */,
 				EA8BE55D21C8858D0023A6E6 /* libEntityXLibrary.dylib in Frameworks */,
-				EA0343E321C6A105007C86C3 /* libglfw.3.3.dylib in Frameworks */,
-				EA0343E421C6A105007C86C3 /* libGLEW.2.0.0.dylib in Frameworks */,
 				EA0343E521C6A105007C86C3 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +283,7 @@
 		EA8F22C51F55246F0012AED5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA806E90222E1B0600D1300F /* StringFormat */,
 				EAD00E1B2128D800002BF92B /* FileReader.h */,
 				EAD00E1C2128D800002BF92B /* FileReader.cpp */,
 				EAD00E1E2128D843002BF92B /* FileWriter.h */,
@@ -333,7 +326,10 @@
 		EABCC9E61E442E57008A9484 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA1CF2CF22A4C58000D7224C /* libglfw.3.3.dylib */,
+				EA1CF2CD22A4C56100D7224C /* libGLEW.2.1.0.dylib */,
 				EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */,
+				EA1CF2CB22A4C36400D7224C /* librttr_core_d.0.9.7.dylib */,
 				EA806E74222D764600D1300F /* libimgui.a */,
 				EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */,
 				EA19801C1F3FBFE800350E7F /* libglfw.3.3.dylib */,
@@ -434,7 +430,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0CF8E021C69EC30032A8DD /* Build configuration list for PBXNativeTarget "GameEngine" */;
 			buildPhases = (
-				EA806E7D222D7A2400D1300F /* CopyFiles */,
 				EA0CF8DB21C69EC30032A8DD /* Headers */,
 				EA0CF8DC21C69EC30032A8DD /* Sources */,
 				EA0CF8DD21C69EC30032A8DD /* Frameworks */,
@@ -547,20 +542,25 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GameEngine/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"$(SRCROOT)/entityx/entityx",
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/GameEngine/thirdparty/**",
 					"$(SRCROOT)/imgui/**",
-					"$(SRCROOT)/rttr/install/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
 					"/usr/local/Cellar/glfw/HEAD-3ee7f8f/lib",
-					"$(PROJECT_DIR)/rttr/install/lib",
+					/usr/local/lib,
 					"$(PROJECT_DIR)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -601,14 +601,15 @@
 					"$(SRCROOT)/entityx",
 					"$(SRCROOT)/GameEngine/thirdparty/**",
 					"$(SRCROOT)/imgui/**",
-					"$(SRCROOT)/rttr/install/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glfw/3.2.1/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
 					"/usr/local/Cellar/glfw/HEAD-3ee7f8f/lib",
-					"$(PROJECT_DIR)/rttr/install/lib",
+					/usr/local/lib,
 					"$(PROJECT_DIR)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";

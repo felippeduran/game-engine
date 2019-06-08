@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  EngineEditor
+//
+//  Created by Felippe Durán on 06/06/19.
+//  Copyright © 2019 Felippe Durán. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#include <iostream>
+
+#endif /* PrefixHeader_pch */
