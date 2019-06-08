@@ -9,8 +9,6 @@
 #include "SceneHierarchySystem.h"
 #include "SceneHierarchy.h"
 #include "imgui.h"
-#include "Transform.h"
-#include "Name.h"
 #include "InspectorHighlight.h"
 
 using namespace entityx;
@@ -23,7 +21,7 @@ void SceneHierarchySystem::update(EntityManager &es, EventManager &events, TimeD
     es.each<SceneHierarchy>([this, &es, &events, dt] (Entity entity, SceneHierarchy &menu) {
         if (ImGui::Begin("Scene Hierarchy", NULL, 0)) {
             Entity node_clicked;
-            showChildNodes(es.entities_with_components<Transform, Name>(), Entity::INVALID, node_clicked);
+            showChildNodes(es.entities_with_components<Transform, SceneElement, Name>(), Entity::INVALID, node_clicked);
             if (node_clicked.valid()) {
                 if (ImGui::GetIO().KeyCtrl) {
                     if (node_clicked.has_component<InspectorHighlight>()) node_clicked.remove<InspectorHighlight>();
@@ -40,10 +38,10 @@ void SceneHierarchySystem::update(EntityManager &es, EventManager &events, TimeD
     });
 };
 
-void SceneHierarchySystem::showChildNodes(EntityManager::View<Transform, Name> view, Entity::Id parentId, Entity& node_clicked)
+void SceneHierarchySystem::showChildNodes(EntityManager::View<Transform, SceneElement, Name> view, Entity::Id parentId, Entity& node_clicked)
 {
     int i = 0;
-    view.each([this, &view, &parentId, &node_clicked, &i] (Entity entity, Transform &transform, Name &name) {
+    view.each([this, &view, &parentId, &node_clicked, &i] (Entity entity, Transform &transform, SceneElement &sceneElement, Name &name) {
         if (entity.component<Transform>()->parent.id() == parentId) {
             ImGuiTreeNodeFlags node_flags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | entity.has_component<InspectorHighlight>();
             
@@ -60,10 +58,10 @@ void SceneHierarchySystem::showChildNodes(EntityManager::View<Transform, Name> v
     });
 }
 
-int SceneHierarchySystem::countChildNodes(EntityManager::View<Transform, Name> view, Entity::Id parentId)
+int SceneHierarchySystem::countChildNodes(EntityManager::View<Transform, SceneElement, Name> view, Entity::Id parentId)
 {
     int children = 0;
-    view.each([this, &view, &parentId, &children] (Entity entity, Transform &transform, Name &name) {
+    view.each([this, &view, &parentId, &children] (Entity entity, Transform &transform, SceneElement &sceneElement, Name &name) {
         if (entity.component<Transform>()->parent.id() == parentId) children++;
     });
     

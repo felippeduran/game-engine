@@ -52,6 +52,7 @@
 		EA6D4D1122222EA40060247A /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1022222EA40060247A /* DirectionalLight.cpp */; };
 		EA6D4D1322230BFC0060247A /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */; };
 		EA806E75222D764600D1300F /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA806E74222D764600D1300F /* libimgui.a */; };
+		EA806E8B222DD99E00D1300F /* SceneElement.h in Headers */ = {isa = PBXBuildFile; fileRef = EA806E89222DD99E00D1300F /* SceneElement.h */; };
 		EA806E93222E1B0600D1300F /* format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA806E91222E1B0600D1300F /* format.cpp */; };
 		EA806E94222E1B0600D1300F /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = EA806E92222E1B0600D1300F /* format.h */; };
 		EA8BE55D21C8858D0023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */; };
@@ -112,6 +113,7 @@
 		EA6D4D1222230BFC0060247A /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = Core/Components/MeshRenderer.cpp; sourceTree = "<group>"; };
 		EA806E74222D764600D1300F /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA806E82222D839F00D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
+		EA806E89222DD99E00D1300F /* SceneElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneElement.h; path = Core/Components/SceneElement.h; sourceTree = "<group>"; };
 		EA806E91222E1B0600D1300F /* format.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = format.cpp; sourceTree = "<group>"; };
 		EA806E92222E1B0600D1300F /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format.h; sourceTree = "<group>"; };
 		EA88A0501E776D1700A2B9B6 /* EngineGLFWInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineGLFWInitializer.cpp; path = Core/EngineGLFWInitializer.cpp; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				EADEAAA42116529800450F5F /* MousePositionEvent.h */,
 				EADEAAA521165B5000450F5F /* MouseScrollPositionEvent.h */,
 				EAD00E1A2128CCD8002BF92B /* Name.h */,
+				EA806E89222DD99E00D1300F /* SceneElement.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				EA806E94222E1B0600D1300F /* format.h in Headers */,
 				EA0343F921C6A1ED007C86C3 /* FileReader.h in Headers */,
 				EA0343F821C6A1E4007C86C3 /* TextureLibrary.h in Headers */,
+				EA806E8B222DD99E00D1300F /* SceneElement.h in Headers */,
 				EA0343F621C6A1E4007C86C3 /* MeshLibrary.h in Headers */,
 				EA0343FF21C6A1F4007C86C3 /* KeyboardInputSystem.h in Headers */,
 				EA0343F521C6A1E4007C86C3 /* ShaderManager.h in Headers */,
