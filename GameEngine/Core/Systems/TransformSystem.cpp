@@ -26,7 +26,7 @@ void logMat4(mat4& mat) {
 };
 
 void TransformSystem::update(EntityManager &es, EventManager &events, TimeDelta dt) {
-    std::vector<Entity> entities = EntitySorter().topsort(es.entities_with_components<Transform>());
+    std::vector<Entity> entities = EntitySorter(es).topsort(es.entities_with_components<Transform>());
     for (Entity entity : entities) {
         ComponentHandle<Transform> transform = entity.component<Transform>();
         glm::mat4 translationMatrix = glm::translate(transform->localPosition);
@@ -35,7 +35,7 @@ void TransformSystem::update(EntityManager &es, EventManager &events, TimeDelta 
         glm::mat4 modelMatrix = translationMatrix * rotationMatrix * scalingMatrix;
         
         glm::mat4 parentTransformMatrix;
-        if (transform->parent.valid()) parentTransformMatrix = transform->parent.component<Transform>()->localToWorldMatrix;
+        if (es.valid(transform->parent)) parentTransformMatrix = es.get(transform->parent).component<Transform>()->localToWorldMatrix;
         transform->localToWorldMatrix = parentTransformMatrix * (modelMatrix);
     }
 };

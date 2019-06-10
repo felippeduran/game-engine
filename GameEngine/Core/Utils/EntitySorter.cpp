@@ -13,11 +13,11 @@ using namespace std;
 using namespace entityx;
 using namespace GameEngine;
 
-void EntitySorter::dfsUtil(Entity entity, set<Entity::Id>& explored, vector<Entity>& sorted) {
-    if (entity.valid()) {
-        explored.insert(entity.id());
-        Entity parent = entity.component<Transform>()->parent;
-        if (explored.find(parent.id()) == explored.end()) dfsUtil(parent, explored, sorted);
+void EntitySorter::dfsUtil(Entity::Id entityId, set<Entity::Id>& explored, vector<Entity>& sorted) {
+    if (entityManager.valid(entityId)) {
+        explored.insert(entityId);
+        Entity entity = entityManager.get(entityId);
+        if (explored.find(entity.component<Transform>()->parent) == explored.end()) dfsUtil(entity.component<Transform>()->parent, explored, sorted);
         sorted.push_back(entity);
     }
 }

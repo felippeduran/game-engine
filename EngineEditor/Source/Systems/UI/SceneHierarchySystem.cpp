@@ -42,7 +42,7 @@ void SceneHierarchySystem::showChildNodes(EntityManager::View<Transform, SceneEl
 {
     int i = 0;
     view.each([this, &view, &parentId, &node_clicked, &i] (Entity entity, Transform &transform, SceneElement &sceneElement, Name &name) {
-        if (entity.component<Transform>()->parent.id() == parentId) {
+        if (entity.component<Transform>()->parent == parentId) {
             ImGuiTreeNodeFlags node_flags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | entity.has_component<InspectorHighlight>();
             
             int children = countChildNodes(view, entity.id());
@@ -62,7 +62,7 @@ int SceneHierarchySystem::countChildNodes(EntityManager::View<Transform, SceneEl
 {
     int children = 0;
     view.each([this, &view, &parentId, &children] (Entity entity, Transform &transform, SceneElement &sceneElement, Name &name) {
-        if (entity.component<Transform>()->parent.id() == parentId) children++;
+        if (entity.component<Transform>()->parent == parentId) children++;
     });
     
     return children;

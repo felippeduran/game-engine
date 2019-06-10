@@ -17,18 +17,22 @@ namespace GameEngine {
 
     class EntitySorter {
     public:
+        EntitySorter(entityx::EntityManager& entityManager) : entityManager(entityManager) {}
+        
         template <typename ... Components>
         std::vector<entityx::Entity> topsort(const entityx::EntityManager::View<Transform, Components ...>& entities) {
             std::vector<entityx::Entity> sorted;
             std::set<entityx::Entity::Id> explored;
             for (entityx::Entity entity : entities) {
-                if (explored.find(entity.id()) == explored.end()) dfsUtil(entity, explored, sorted);
+                if (explored.find(entity.id()) == explored.end()) dfsUtil(entity.id(), explored, sorted);
             }
             return sorted;
         };
         
     private:
-        void dfsUtil(entityx::Entity entity, std::set<entityx::Entity::Id>& explored, std::vector<entityx::Entity>& sorted);
+        entityx::EntityManager& entityManager;
+        
+        void dfsUtil(entityx::Entity::Id entityId, std::set<entityx::Entity::Id>& explored, std::vector<entityx::Entity>& sorted);
     };
 };
 

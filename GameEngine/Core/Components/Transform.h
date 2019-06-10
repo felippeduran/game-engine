@@ -25,7 +25,7 @@ namespace GameEngine {
         glm::vec3 localScale;
         glm::quat localRotation;
         glm::mat4 localToWorldMatrix;
-        entityx::Entity parent;
+        entityx::Entity::Id parent;
     };
 };
 
