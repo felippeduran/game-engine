@@ -97,6 +97,13 @@ GLint Program::attrib(const GLchar* attribName) const {
     return attrib;
 }
 
+bool Program::hasUniform(const GLchar* uniformName) const {
+    if(!uniformName)
+        throw std::runtime_error("uniformName was NULL");
+    
+    return glGetUniformLocation(_object, uniformName) >= 0;
+}
+
 GLint Program::uniform(const GLchar* uniformName) const {
     if(!uniformName)
         throw std::runtime_error("uniformName was NULL");

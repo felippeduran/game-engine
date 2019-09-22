@@ -40,80 +40,87 @@ void CameraSystem::updateRenderers(EntityManager &es, EventManager &events, Time
             Material *material = mesh->materials[submesh.materialId];
             material->program->use();
             
-            material->program->setUniform("projection", projection);
-            material->program->setUniform("view", view);
-            material->program->setUniform("model", transform.localToWorldMatrix);
-            material->program->setUniform("viewPos", viewPosition);
+            if (material->program->hasUniform("projection")) material->program->setUniform("projection", projection);
+            if (material->program->hasUniform("view")) material->program->setUniform("view", view);
+            if (material->program->hasUniform("model")) material->program->setUniform("model", transform.localToWorldMatrix);
+            if (material->program->hasUniform("viewPos")) material->program->setUniform("viewPos", viewPosition);
             
+            if (material->program->hasUniform("viewPos")) {
+                es.each<AmbientLight>([&material] (Entity entity, AmbientLight &light) {
+                    material->program->setUniform("ambientLightColor", light.color);
+                });
+            }
             
-            es.each<AmbientLight>([&material] (Entity entity, AmbientLight &light) {
-                material->program->setUniform("ambientLightColor", light.color);
-            });
+            if (material->program->hasUniform("directionalLightsCount")) {
+                int directionalLightIndex = 0;
+                es.each<DirectionalLight, Transform>([&material, &directionalLightIndex] (Entity entity, DirectionalLight &light, Transform &lightTransform) {
+                    material->program->setUniform(fmt::format("directionalLights[{0}].direction", directionalLightIndex).c_str(), lightTransform.forward());
+                    material->program->setUniform(fmt::format("directionalLights[{0}].color", directionalLightIndex).c_str(), light.color);
+                    directionalLightIndex++;
+                });
+                material->program->setUniform("directionalLightsCount", directionalLightIndex);
+            }
             
-            int directionalLightIndex = 0;
-            es.each<DirectionalLight, Transform>([&material, &directionalLightIndex] (Entity entity, DirectionalLight &light, Transform &lightTransform) {
-                material->program->setUniform(fmt::format("directionalLights[{0}].direction", directionalLightIndex).c_str(), lightTransform.forward());
-                material->program->setUniform(fmt::format("directionalLights[{0}].color", directionalLightIndex).c_str(), light.color);
-                directionalLightIndex++;
-            });
-            material->program->setUniform("directionalLightsCount", directionalLightIndex);
+            if (material->program->hasUniform("pointLightsCount")) {
+                int pointLightIndex = 0;
+                es.each<PointLight, Transform>([&material, &pointLightIndex] (Entity entity, PointLight &light, Transform &lightTransform) {
+                    material->program->setUniform(fmt::format("pointLights[{0}].position", pointLightIndex).c_str(), lightTransform.localPosition);
+                    material->program->setUniform(fmt::format("pointLights[{0}].color", pointLightIndex).c_str(), light.color);
+                    material->program->setUniform(fmt::format("pointLights[{0}].linear", pointLightIndex).c_str(), light.linearAttenuation);
+                    material->program->setUniform(fmt::format("pointLights[{0}].quadratic", pointLightIndex).c_str(), light.quadraticAttenuation);
+                    pointLightIndex++;
+                });
+                material->program->setUniform("pointLightsCount", pointLightIndex);
+            }
             
-            int pointLightIndex = 0;
-            es.each<PointLight, Transform>([&material, &pointLightIndex] (Entity entity, PointLight &light, Transform &lightTransform) {
-                material->program->setUniform(fmt::format("pointLights[{0}].position", pointLightIndex).c_str(), lightTransform.localPosition);
-                material->program->setUniform(fmt::format("pointLights[{0}].color", pointLightIndex).c_str(), light.color);
-                material->program->setUniform(fmt::format("pointLights[{0}].linear", pointLightIndex).c_str(), light.linearAttenuation);
-                material->program->setUniform(fmt::format("pointLights[{0}].quadratic", pointLightIndex).c_str(), light.quadraticAttenuation);
-                pointLightIndex++;
-            });
-            material->program->setUniform("pointLightsCount", pointLightIndex);
-            
-            int spotLightIndex = 0;
-            es.each<SpotLight, Transform>([&material, &spotLightIndex] (Entity entity, SpotLight &light, Transform &lightTransform) {
-                material->program->setUniform(fmt::format("spotLights[{0}].position", spotLightIndex).c_str(), lightTransform.localPosition);
-                material->program->setUniform(fmt::format("spotLights[{0}].direction", spotLightIndex).c_str(), lightTransform.forward());
-                material->program->setUniform(fmt::format("spotLights[{0}].color", spotLightIndex).c_str(), light.color);
-                material->program->setUniform(fmt::format("spotLights[{0}].linear", spotLightIndex).c_str(), light.linearAttenuation);
-                material->program->setUniform(fmt::format("spotLights[{0}].quadratic", spotLightIndex).c_str(), light.quadraticAttenuation);
-                material->program->setUniform(fmt::format("spotLights[{0}].cutOff", spotLightIndex).c_str(), glm::cos(glm::radians(light.cutOff)));
-                spotLightIndex++;
-            });
-            material->program->setUniform("spotLightsCount", spotLightIndex);
+            if (material->program->hasUniform("spotLightsCount")) {
+                int spotLightIndex = 0;
+                es.each<SpotLight, Transform>([&material, &spotLightIndex] (Entity entity, SpotLight &light, Transform &lightTransform) {
+                    material->program->setUniform(fmt::format("spotLights[{0}].position", spotLightIndex).c_str(), lightTransform.localPosition);
+                    material->program->setUniform(fmt::format("spotLights[{0}].direction", spotLightIndex).c_str(), lightTransform.forward());
+                    material->program->setUniform(fmt::format("spotLights[{0}].color", spotLightIndex).c_str(), light.color);
+                    material->program->setUniform(fmt::format("spotLights[{0}].linear", spotLightIndex).c_str(), light.linearAttenuation);
+                    material->program->setUniform(fmt::format("spotLights[{0}].quadratic", spotLightIndex).c_str(), light.quadraticAttenuation);
+                    material->program->setUniform(fmt::format("spotLights[{0}].cutOff", spotLightIndex).c_str(), glm::cos(glm::radians(light.cutOff)));
+                    spotLightIndex++;
+                });
+                material->program->setUniform("spotLightsCount", spotLightIndex);
+            }
             
             unsigned int diffuseNr = 0;
             unsigned int specularNr = 0;
             unsigned int normalNr = 0;
-            for (int i = 0; i < material->textures.size(); i++)
-            {
+            for (int i = 0; i < material->textures.size(); i++) {
                 tdogl::Texture *texture = material->textures[i];
                 TextureType type = material->textureTypes[i];
-                
-                glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
-                // retrieve texture number (the N in diffuse_textureN)
-                string number;
-                string name;
-                if (type == TextureType::Diffuse) {
-                    number = to_string(diffuseNr++);
-                    name = "diffuse";
+                if (type < TextureType::Count) {
+                    glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
+                    // retrieve texture number (the N in diffuse_textureN)
+                    string number;
+                    string name;
+                    if (type == TextureType::Diffuse) {
+                        number = to_string(diffuseNr++);
+                        name = "diffuse";
+                    }
+                    if (type == TextureType::Specular) {
+                        number = to_string(specularNr++);
+                        name = "specular";
+                    }
+                    if (type == TextureType::Normal) {
+                        number = to_string(normalNr++);
+                        name = "normal";
+                    }
+                    
+                    material->program->setUniform(("material." + name + number).c_str(), i);
+                    glBindTexture(GL_TEXTURE_2D, texture->object());
                 }
-                if (type == TextureType::Specular) {
-                    number = to_string(specularNr++);
-                    name = "specular";
-                }
-                if (type == TextureType::Normal) {
-                    number = to_string(normalNr++);
-                    name = "normal";
-                }
-                
-                material->program->setUniform(("material." + name + number).c_str(), i);
-                glBindTexture(GL_TEXTURE_2D, texture->object());
             }
             
-            material->program->setUniform("material.ambient", material->colorAmbient);
-            material->program->setUniform("material.diffuse", material->colorDiffuse);
-            material->program->setUniform("material.specular", material->colorSpecular);
-            material->program->setUniform("material.shininess", material->specularExponent);
-            material->program->setUniform("material.dissolve", material->dissolve);
+            if (material->program->hasUniform("material.ambient")) material->program->setUniform("material.ambient", material->colorAmbient);
+            if (material->program->hasUniform("material.diffuse")) material->program->setUniform("material.diffuse", material->colorDiffuse);
+            if (material->program->hasUniform("material.specular")) material->program->setUniform("material.specular", material->colorSpecular);
+            if (material->program->hasUniform("material.shininess")) material->program->setUniform("material.shininess", material->specularExponent);
+            if (material->program->hasUniform("material.dissolve")) material->program->setUniform("material.dissolve", material->dissolve);
             
             glActiveTexture(GL_TEXTURE0);
             

@@ -58,6 +58,10 @@ namespace tdogl {
          */
         GLint attrib(const GLchar* attribName) const;
         
+        /**
+         @result Wether a uniform with the given name exists, as returned from glGetUniformLocation.
+         */
+        bool hasUniform(const GLchar* uniformName) const;
         
         /**
          @result The uniform index for the given name, as returned from glGetUniformLocation.
