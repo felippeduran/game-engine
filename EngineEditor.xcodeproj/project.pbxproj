@@ -16,11 +16,8 @@
 		EA03440521C6F213007C86C3 /* EditorCameraRotationSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF8BD21C69C4B0032A8DD /* EditorCameraRotationSystem.cpp */; };
 		EA03440621C6F213007C86C3 /* KeyboardMovementSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF8BF21C69C4B0032A8DD /* KeyboardMovementSystem.cpp */; };
 		EA03440721C6F213007C86C3 /* EditorCameraRotationEnableSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF8C121C69C4B0032A8DD /* EditorCameraRotationEnableSystem.cpp */; };
+		EA12CB99232EE43C00D04CCD /* Resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA12CB98232EE41B00D04CCD /* Resources */; };
 		EA1CF2D222A4C5FB00D7224C /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2D122A4C5FB00D7224C /* librttr_core_d.0.9.7.dylib */; };
-		EA2DABE121D9079D009D050D /* cube.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C521C69C4B0032A8DD /* cube.obj */; };
-		EA2DABE221D9079D009D050D /* cube.mtl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C621C69C4B0032A8DD /* cube.mtl */; };
-		EA2DABE321D9079D009D050D /* axes.mtl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C821C69C4B0032A8DD /* axes.mtl */; };
-		EA2DABE421D9079D009D050D /* axes.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0CF8C921C69C4B0032A8DD /* axes.obj */; };
 		EA2DABFF21DAE145009D050D /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2DABFE21DAE145009D050D /* libGameEngine.dylib */; };
 		EA8965A721C6FD5400C3AC9D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF87821C69A230032A8DD /* main.cpp */; };
 		EA8BE55F21C885A10023A6E6 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */; };
@@ -36,10 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				EA2DABE121D9079D009D050D /* cube.obj in CopyFiles */,
-				EA2DABE221D9079D009D050D /* cube.mtl in CopyFiles */,
-				EA2DABE321D9079D009D050D /* axes.mtl in CopyFiles */,
-				EA2DABE421D9079D009D050D /* axes.obj in CopyFiles */,
+				EA12CB99232EE43C00D04CCD /* Resources in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +74,7 @@
 		EA0CF8C621C69C4B0032A8DD /* cube.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.mtl; sourceTree = "<group>"; };
 		EA0CF8C821C69C4B0032A8DD /* axes.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.mtl; sourceTree = "<group>"; };
 		EA0CF8C921C69C4B0032A8DD /* axes.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = axes.obj; sourceTree = "<group>"; };
+		EA12CB98232EE41B00D04CCD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		EA1CF2D122A4C5FB00D7224C /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = ../../../../../usr/local/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
 		EA1CF2D322AA014A00D7224C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EA2DABFE21DAE145009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +139,7 @@
 		EA0CF87721C69A230032A8DD /* EngineEditor */ = {
 			isa = PBXGroup;
 			children = (
+				EA12CB98232EE41B00D04CCD /* Resources */,
 				EA0CF8C421C69C4B0032A8DD /* Source */,
 				EA0CF8CC21C69C4B0032A8DD /* Resources */,
 				EA0CF87821C69A230032A8DD /* main.cpp */,

@@ -10,6 +10,8 @@
 		EA0343F321C6A148007C86C3 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F221C6A148007C86C3 /* libimgui.a */; };
 		EA0CF89521C69AAE0032A8DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF89421C69AAE0032A8DD /* main.cpp */; };
 		EA0CF8A321C69BFC0032A8DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0CF89421C69AAE0032A8DD /* main.cpp */; };
+		EA12CB92231CBC1400D04CCD /* Resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA12CB91231CBB9F00D04CCD /* Resources */; };
+		EA12CB93231CBC2C00D04CCD /* Resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA12CB91231CBB9F00D04CCD /* Resources */; };
 		EA29FAB521C9CEE0004656FC /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */; };
 		EA2DABE521D97025009D050D /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */; };
 		EA2DABE721D97025009D050D /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0343F221C6A148007C86C3 /* libimgui.a */; };
@@ -25,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				EA12CB92231CBC1400D04CCD /* Resources in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				EA12CB93231CBC2C00D04CCD /* Resources in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +48,7 @@
 		EA0CF89121C69AAE0032A8DD /* GameDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CF89421C69AAE0032A8DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EA0CF89F21C69AFD0032A8DD /* libGameDemoLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameDemoLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA12CB91231CBB9F00D04CCD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		EA29FAB421C9CEE0004656FC /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2DAC0021DAE14E009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA806E85222D83DB00D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
@@ -106,34 +111,10 @@
 		EA0CF89321C69AAE0032A8DD /* GameDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EA0CF8DA21C69D0F0032A8DD /* Resources */,
+				EA12CB91231CBB9F00D04CCD /* Resources */,
 				EA0CF89421C69AAE0032A8DD /* main.cpp */,
 			);
 			path = GameDemo;
-			sourceTree = "<group>";
-		};
-		EA0CF8D721C69D0F0032A8DD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		EA0CF8D921C69D0F0032A8DD /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Scenes;
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		EA0CF8DA21C69D0F0032A8DD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EA0CF8D721C69D0F0032A8DD /* Models */,
-				EA0CF8D921C69D0F0032A8DD /* Scenes */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
