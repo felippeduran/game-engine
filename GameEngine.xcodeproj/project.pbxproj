@@ -45,6 +45,8 @@
 		EA0CF8E521C69F1E0032A8DD /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
+		EA12CB96231CBE9700D04CCD /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA12CB94231CBE9700D04CCD /* Path.cpp */; };
+		EA12CB97231CBE9700D04CCD /* Path.h in Headers */ = {isa = PBXBuildFile; fileRef = EA12CB95231CBE9700D04CCD /* Path.h */; };
 		EA1CF2CC22A4C36400D7224C /* librttr_core_d.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CB22A4C36400D7224C /* librttr_core_d.0.9.7.dylib */; };
 		EA1CF2CE22A4C56100D7224C /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CD22A4C56100D7224C /* libGLEW.2.1.0.dylib */; };
 		EA1CF2D022A4C58000D7224C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1CF2CF22A4C58000D7224C /* libglfw.3.3.dylib */; };
@@ -82,6 +84,8 @@
 		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
 		EA0CF8DF21C69EC30032A8DD /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA12CB94231CBE9700D04CCD /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
+		EA12CB95231CBE9700D04CCD /* Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		EA135B88211F3BD900C6C231 /* KeyboardInputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardInputSystem.h; path = Core/Systems/KeyboardInputSystem.h; sourceTree = "<group>"; };
 		EA135B89211F3BD900C6C231 /* KeyboardInputSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardInputSystem.cpp; path = Core/Systems/KeyboardInputSystem.cpp; sourceTree = "<group>"; };
 		EA135B95211FBCFF00C6C231 /* DirectionalLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionalLight.h; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				EA1B3D811F6B69C2003CEA9E /* MaterialLibrary.h */,
 				EA1B3D831F6B69D0003CEA9E /* TextureLibrary.cpp */,
 				EA1B3D841F6B69D0003CEA9E /* TextureLibrary.h */,
+				EA12CB94231CBE9700D04CCD /* Path.cpp */,
+				EA12CB95231CBE9700D04CCD /* Path.h */,
 			);
 			path = ResourceManagement;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 				EA0343F721C6A1E4007C86C3 /* MaterialLibrary.h in Headers */,
 				EAD5639E2288CB690093CC80 /* PointLight.h in Headers */,
 				EAD563A62288D7000093CC80 /* AmbientLight.h in Headers */,
+				EA12CB97231CBE9700D04CCD /* Path.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +506,7 @@
 				EA0343D521C6A105007C86C3 /* Texture.cpp in Sources */,
 				EA0343D621C6A105007C86C3 /* TextureLibrary.cpp in Sources */,
 				EA0343D721C6A105007C86C3 /* Transform.cpp in Sources */,
+				EA12CB96231CBE9700D04CCD /* Path.cpp in Sources */,
 				EA0343D821C6A105007C86C3 /* Program.cpp in Sources */,
 				EA0343D921C6A105007C86C3 /* ShaderManager.cpp in Sources */,
 				EA0343DA21C6A105007C86C3 /* EntitySorter.cpp in Sources */,

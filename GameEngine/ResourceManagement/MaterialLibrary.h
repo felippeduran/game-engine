@@ -21,7 +21,7 @@ namespace GameEngine {
     public:
         MaterialLibrary(ShaderManager *shaderManager, TextureLibrary *textureLibrary) : shaderManager(shaderManager), textureLibrary(textureLibrary) {};
         
-        Material *getMaterial(tinyobj::material_t& material);
+        Material *getMaterial(tinyobj::material_t& material, std::string basedir);
         
     private:
         ShaderManager *shaderManager;

@@ -11,6 +11,8 @@
 #include "Mesh.h"
 #include "MaterialLibrary.h"
 
+#include "Path.h"
+
 using namespace std;
 using namespace tinyobj;
 using namespace GameEngine;
@@ -27,7 +29,7 @@ Mesh *MeshLibrary::loadMesh(const string& filename) {
     vector<material_t> materialDatas;
     
     string err;
-    LoadObj(&attrib, &shapes, &materialDatas, &err, filename.c_str());
+    LoadObj(&attrib, &shapes, &materialDatas, &err, filename.c_str(), (Path(filename).dirname() + "/").c_str());
     
     if (!err.empty()) { // `err` may contain warning message.
         cerr << err << endl;
@@ -37,7 +39,7 @@ Mesh *MeshLibrary::loadMesh(const string& filename) {
     materials.reserve(materialDatas.size());
     for (int i = 0; i < materialDatas.size(); i++) {
         material_t materialData = materialDatas[i];
-        Material *material = materialLibrary->getMaterial(materialData);
+        Material *material = materialLibrary->getMaterial(materialData, Path(filename).dirname());
         materials.push_back(material);
     }
     

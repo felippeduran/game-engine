@@ -16,19 +16,19 @@ using namespace tdogl;
 using namespace tinyobj;
 using namespace GameEngine;
 
-Material *MaterialLibrary::getMaterial(material_t& materialData) {
+Material *MaterialLibrary::getMaterial(material_t& materialData, string basedir) {
     vector<Texture *> textures;
     vector<TextureType> textureTypes;
     if (!materialData.diffuse_texname.empty()) {
-        textures.push_back(textureLibrary->getTexture(materialData.diffuse_texname));
+        textures.push_back(textureLibrary->getTexture(basedir + "/" + materialData.diffuse_texname));
         textureTypes.push_back(TextureType::Diffuse);
     }
     if (!materialData.specular_texname.empty()) {
-        textures[TextureType::Specular] = textureLibrary->getTexture(materialData.specular_texname);
+        textures[TextureType::Specular] = textureLibrary->getTexture(basedir + "/" + materialData.specular_texname);
         textureTypes.push_back(TextureType::Specular);
     }
     if (!materialData.bump_texname.empty()) {
-        textures[TextureType::Normal] = textureLibrary->getTexture(materialData.bump_texname);
+        textures[TextureType::Normal] = textureLibrary->getTexture(basedir + "/" + materialData.bump_texname);
         textureTypes.push_back(TextureType::Normal);
     }
     Program *program = shaderManager->getProgram("basic_program");
