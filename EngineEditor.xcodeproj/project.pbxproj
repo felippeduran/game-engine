@@ -79,6 +79,7 @@
 		EA1CF2D322AA014A00D7224C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EA2DABFE21DAE145009D050D /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA806E87222D83F800D1300F /* librttr_core_d.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librttr_core_d.0.9.7.dylib; path = rttr/install/lib/librttr_core_d.0.9.7.dylib; sourceTree = "<group>"; };
+		EA806E8E222DDBE800D1300F /* EditorElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorElement.h; sourceTree = "<group>"; };
 		EA8BE55E21C885A10023A6E6 /* libEntityXLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEntityXLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF8684921E2B4E60097308A /* EditorPlayerStartSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorPlayerStartSystem.h; sourceTree = "<group>"; };
 		EAF8684A21E2B4E60097308A /* EditorPlayerStartSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EditorPlayerStartSystem.cpp; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 				EA0CF8AE21C69C4B0032A8DD /* Mouse.h */,
 				EA0CF8AF21C69C4B0032A8DD /* EditorCamera.h */,
 				EAF8685C21E2D24F0097308A /* Project.h */,
+				EA806E8E222DDBE800D1300F /* EditorElement.h */,
 			);
 			path = Components;
 			sourceTree = "<group>";

@@ -10,5 +10,6 @@
 #define PrefixHeader_pch
 
 #include <iostream>
+#include "Logger.h"
 
 #endif /* PrefixHeader_pch */
