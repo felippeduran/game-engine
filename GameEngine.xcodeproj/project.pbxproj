@@ -42,6 +42,10 @@
 		EA0343FD21C6A1F4007C86C3 /* CameraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4C8BE81F4FC5AA006C49A5 /* CameraSystem.h */; };
 		EA0343FE21C6A1F4007C86C3 /* InputCleanupSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EADEAAA621165C2000450F5F /* InputCleanupSystem.h */; };
 		EA0343FF21C6A1F4007C86C3 /* KeyboardInputSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EA135B88211F3BD900C6C231 /* KeyboardInputSystem.h */; };
+		EA09790F241444DC00AC9679 /* GameEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA09790E241444DC00AC9679 /* GameEngineTests.m */; };
+		EA097911241444DC00AC9679 /* libGameEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0CF8DF21C69EC30032A8DD /* libGameEngine.dylib */; };
+		EA097919241445D000AC9679 /* TransformSystemTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA097918241445D000AC9679 /* TransformSystemTests.mm */; };
+		EA09791A241446C500AC9679 /* libEntityXLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BE55C21C8858D0023A6E6 /* libEntityXLibrary.dylib */; };
 		EA0CF8E521C69F1E0032A8DD /* FileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD00E1F2128D843002BF92B /* FileWriter.cpp */; };
 		EA0CF8E721C69F440032A8DD /* vertex_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */; };
 		EA0CF8E821C69F4A0032A8DD /* fragment_shader.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA091A491E88CA220044C3A1 /* fragment_shader.glsl */; };
@@ -68,6 +72,16 @@
 		EAD563A72288D7000093CC80 /* AmbientLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD563A52288D7000093CC80 /* AmbientLight.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA097912241444DC00AC9679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EABCC9D41E442D76008A9484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0CF8DE21C69EC30032A8DD;
+			remoteInfo = GameEngine;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EA0CF8E621C69F330032A8DD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -85,6 +99,10 @@
 /* Begin PBXFileReference section */
 		EA091A491E88CA220044C3A1 /* fragment_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment_shader.glsl; sourceTree = "<group>"; };
 		EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_shader.glsl; sourceTree = "<group>"; };
+		EA09790C241444DC00AC9679 /* GameEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA09790E241444DC00AC9679 /* GameEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameEngineTests.m; sourceTree = "<group>"; };
+		EA097910241444DC00AC9679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA097918241445D000AC9679 /* TransformSystemTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TransformSystemTests.mm; sourceTree = "<group>"; };
 		EA0CF8DF21C69EC30032A8DD /* libGameEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA12CB94231CBE9700D04CCD /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		EA12CB95231CBE9700D04CCD /* Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
@@ -173,6 +191,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA097909241444DC00AC9679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA09791A241446C500AC9679 /* libEntityXLibrary.dylib in Frameworks */,
+				EA097911241444DC00AC9679 /* libGameEngine.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA0CF8DD21C69EC30032A8DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +223,16 @@
 				EA091A4A1E88CA220044C3A1 /* vertex_shader.glsl */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		EA09790D241444DC00AC9679 /* GameEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA097918241445D000AC9679 /* TransformSystemTests.mm */,
+				EA09790E241444DC00AC9679 /* GameEngineTests.m */,
+				EA097910241444DC00AC9679 /* Info.plist */,
+			);
+			path = GameEngineTests;
 			sourceTree = "<group>";
 		};
 		EA16ABBC1F40A0980030FF64 /* Components */ = {
@@ -315,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				EABCC9DE1E442D76008A9484 /* GameEngine */,
+				EA09790D241444DC00AC9679 /* GameEngineTests */,
 				EABCC9DD1E442D76008A9484 /* Products */,
 				EABCC9E61E442E57008A9484 /* Frameworks */,
 			);
@@ -324,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				EA0CF8DF21C69EC30032A8DD /* libGameEngine.dylib */,
+				EA09790C241444DC00AC9679 /* GameEngineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -444,6 +483,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EA09790B241444DC00AC9679 /* GameEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA097916241444DC00AC9679 /* Build configuration list for PBXNativeTarget "GameEngineTests" */;
+			buildPhases = (
+				EA097908241444DC00AC9679 /* Sources */,
+				EA097909241444DC00AC9679 /* Frameworks */,
+				EA09790A241444DC00AC9679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA097913241444DC00AC9679 /* PBXTargetDependency */,
+			);
+			name = GameEngineTests;
+			productName = GameEngineTests;
+			productReference = EA09790C241444DC00AC9679 /* GameEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EA0CF8DE21C69EC30032A8DD /* GameEngine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0CF8E021C69EC30032A8DD /* Build configuration list for PBXNativeTarget "GameEngine" */;
@@ -471,6 +528,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Felippe Durán";
 				TargetAttributes = {
+					EA09790B241444DC00AC9679 = {
+						CreatedOnToolsVersion = 11.3.1;
+						ProvisioningStyle = Automatic;
+					};
 					EA0CF8DE21C69EC30032A8DD = {
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
@@ -482,6 +543,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = EABCC9D31E442D76008A9484;
@@ -490,11 +552,31 @@
 			projectRoot = "";
 			targets = (
 				EA0CF8DE21C69EC30032A8DD /* GameEngine */,
+				EA09790B241444DC00AC9679 /* GameEngineTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		EA09790A241444DC00AC9679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		EA097908241444DC00AC9679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA09790F241444DC00AC9679 /* GameEngineTests.m in Sources */,
+				EA097919241445D000AC9679 /* TransformSystemTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA0CF8DC21C69EC30032A8DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,7 +617,80 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA097913241444DC00AC9679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0CF8DE21C69EC30032A8DD /* GameEngine */;
+			targetProxy = EA097912241444DC00AC9679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EA097914241444DC00AC9679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = GameEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duranduran.GameEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA097915241444DC00AC9679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/entityx/entityx",
+					"$(SRCROOT)/entityx",
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = GameEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duranduran.GameEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EA0CF8E121C69EC30032A8DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -727,6 +882,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA097916241444DC00AC9679 /* Build configuration list for PBXNativeTarget "GameEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA097914241444DC00AC9679 /* Debug */,
+				EA097915241444DC00AC9679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA0CF8E021C69EC30032A8DD /* Build configuration list for PBXNativeTarget "GameEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
